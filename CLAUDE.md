@@ -37,6 +37,12 @@ npm run audit index.html # Lighthouse (perf/a11y/seo) -> tools/reports/
 
 Après une modif CSS/HTML, faire un `npm run shot <page>` et **regarder le rendu** (les PNG sont lisibles directement) plutôt que de modifier à l'aveugle. Le skill `/design-review` enchaîne capture + critique UX.
 
+### Skills design
+
+- `/design-review` — capture + critique UX de l'existant.
+- `frontend-design` (plugin) — création de nouveaux composants/sections. **À ancrer sur le design-system existant** (tokens `:root`, palette crème + `--accent`, Bricolage Grotesque) : l'utiliser pour la qualité d'exécution, **pas** pour réinventer la direction visuelle d'Akago à chaque fois.
+- MCP **Figma** — parité avec le design-system source.
+
 Baseline Lighthouse `index.html` : Perf 99 · A11y 93 · Best Practices 100 · SEO 100 — ne pas régresser.
 
 ## Déploiement
