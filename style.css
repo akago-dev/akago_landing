@@ -203,7 +203,7 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
   box-shadow: var(--shadow-soft);
 }
 .marquee-item img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.marquee-item.wide { width: 360px; height: 240px; }
+.marquee-item.wide { width: 708px; height: 460px; }
 .marquee-item.wide img { object-position: center; }
 @keyframes scroll {
   0% { transform: translateX(0); }
@@ -976,6 +976,7 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
   .nav-links a:not(.btn) { display: none; }
   .nav-links { gap: 6px; }
   .marquee-item { width: 180px; height: 380px; }
+  .marquee-item.wide { width: 585px; height: 380px; }
 }
 @media (max-width: 600px) {
   .wrap { padding: 0 20px; }
