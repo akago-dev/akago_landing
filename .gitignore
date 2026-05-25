@@ -1,9 +1,15 @@
-# Outillage / configuration locale
-.claude/
+# Configuration locale Claude (mais on versionne les skills projet)
+.claude/*
+!.claude/skills/
 .serena/
 
 # Ancien miroir Framer (non versionné)
 _old/
+
+# Dépendances & artefacts d'outillage
+node_modules/
+tools/screenshots/
+tools/reports/
 
 # macOS
 .DS_Store
