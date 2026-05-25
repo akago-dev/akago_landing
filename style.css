@@ -371,13 +371,21 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
    CAROUSEL — phone screenshots
    ============================================================ */
 .marquee {
-  margin-top: 60px;
-  overflow: hidden;
   position: relative;
-  padding: 32px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: linear-gradient(180deg, transparent, rgba(244, 236, 222, 0.5) 50%, transparent);
+  overflow-x: clip;
+  overflow-y: visible;     /* let rotated items poke into neighbors without clipping */
+  height: 500px;
+  margin: 0 0 -22px;        /* petit espace sous le CTA ; déborde seulement sur les pillars en dessous */
+  z-index: 1;
+}
+.marquee-inner {
+  position: absolute;
+  top: 50%; left: 0;
+  width: 140%;
+  margin-left: -20%;
+  translate: 0 -50%;
+  transform: rotate(-4deg);
+  transform-origin: center;
 }
 .marquee-track {
   display: flex; gap: 24px;
@@ -402,6 +410,9 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
   100% { transform: translateX(-50%); }
 }
 .marquee:hover .marquee-track { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
 
 /* ============================================================
    SECTIONS
@@ -1167,6 +1178,8 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
   .coop-block { grid-template-columns: 1fr; gap: 32px; padding: 36px; }
   .nav-links a:not(.btn) { display: none; }
   .nav-links { gap: 6px; }
+  .marquee { height: 420px; margin: -18px 0; overflow-x: clip; overflow-y: visible; }
+  .marquee-inner { width: 160%; margin-left: -30%; transform: rotate(-3deg); }
   .marquee-item { width: 180px; height: 380px; }
   .marquee-item.wide { width: 585px; height: 380px; }
 }
