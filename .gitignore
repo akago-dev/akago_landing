@@ -1,0 +1,13 @@
+# Outillage / configuration locale
+.claude/
+.serena/
+
+# Ancien miroir Framer (non versionné)
+_old/
+
+# macOS
+.DS_Store
+
+# Éditeurs
+.vscode/
+.idea/
