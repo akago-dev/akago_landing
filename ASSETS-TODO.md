@@ -56,6 +56,17 @@ pour les 6 membres, sur `index.html` et `about.html`.
 > Doublons de titres assumés : 2 « Directeur technique » (Antoine + Dorian),
 > 2 « Product Designer » (Eve + Émilie) — choix validé, on les garde.
 
+---
+
+## 🟪 SEO / partage social & domaine
+
+- [ ] **Bannière Open Graph 1200×630** (logo + baseline sur fond crème) → `assets/akago/og-cover.png`.
+      Une fois fournie : remplacer les `og:image`/`twitter:image` (logo carré actuel) et
+      passer `twitter:card` de `summary` à `summary_large_image` sur `index/about/legal`.
+- [ ] **Fichier `CNAME`** (`akago.fr`) à ajouter à la racine le jour où le DNS du domaine
+      custom résout — pas avant, sous peine de casser l'accès via `akago-dev.github.io`.
+      Les meta (canonical, og:url, og:image) pointent déjà sur `https://akago.fr/`.
+
 ## TODO rajouté par Antoine
 
 - [x] “semaine par semaine” → “semaine après semaine” ✅
