@@ -15,10 +15,10 @@ sont le **symbole** de la marque (pas le logo complet).
 
 - [x] **Moofize** — icône = `clients/moofize.png` (symbole), distincte du logo complet ✅
 - [x] **Famyhelp** — icône = `clients/famyhelp.png` (symbole), distincte du logo complet ✅
-- [ ] **Libélaw** — *actuellement : lettre « L »* → fournir `clients/libelaw.png`
-- [ ] **Leezay** — *actuellement : lettre « L »* → fournir `clients/leezay.png`
-- [ ] **Ping** — *actuellement : lettre « P »* → fournir `clients/ping.png`
-- [ ] **Yippylingo** — *actuellement : lettre « Y »* → fournir `clients/yippylingo.png`
+- [ ] **Libélaw** — _actuellement : lettre « L »_ → fournir `clients/libelaw.png`
+- [ ] **Leezay** — _actuellement : lettre « L »_ → fournir `clients/leezay.png`
+- [ ] **Ping** — _actuellement : lettre « P »_ → fournir `clients/ping.png`
+- [ ] **Yippylingo** — _actuellement : lettre « Y »_ → fournir `clients/yippylingo.png`
 
 ---
 
@@ -33,8 +33,7 @@ Grille « Une vingtaine de structures accompagnées » (À propos).
 - [x] `assets/clients/zicomatic-full-logo.png`
 - [x] `assets/clients/lyon-full-logo.png` (cellule « Erasme · Grand Lyon »)
 
-- [ ] **À faire : normaliser les exports** (même canvas/marges/proportions) pour un rendu
-  uniforme — noms de fichiers inchangés, donc aucune modif HTML/CSS ensuite.
+- [x] **Exports normalisés** (même canvas/marges/proportions) — rendu uniforme ✅
 
 ✅ Déjà présents (15) : moofize (`moofize-full-logo.png`), diagoplus, yippylingo,
 bulle-autonomie, famyhelp, younow, inook, biogaran, cerba-healthcare, hub-one,
@@ -44,13 +43,21 @@ bolle, aviva-cuisines, paris-je-taime, strate-ecole-design, mobbles.
 
 ## 🟩 Photos d'équipe — `assets/people/`
 
-Section « Qui sommes-nous ? » (À propos). Membres en placeholder lettre, sans photo :
+Section « Qui sommes-nous ? » (À propos). **✅ Équipe complète** — photo + nom + rôle
+pour les 6 membres, sur `index.html` et `about.html`.
 
-- [x] `assets/people/dorian-rodot.png` — ✅ photo + nom + rôle (« Directeur technique ») + bio complétés
-- [x] `assets/people/emilie-crassard.png` — ✅ photo + nom + rôle (« Product Designer ») + bio complétés
-- [ ] `assets/people/adrien.png` — *actuellement : lettre « A »* — rôle à compléter
+- [x] `assets/people/dorian-rodot.png` — ✅ photo + nom + rôle (« Directeur technique ») + bio
+- [x] `assets/people/emilie-crassard.png` — ✅ photo + nom + rôle (« Product Designer ») + bio
+- [x] `assets/people/adrien-mangournet.png` — ✅ photo + nom + rôle (« Brand designer »)
 
-- [ ] Remplacer le `team-card-photo placeholder` restant (Adrien) par un `<img>`
-- [ ] Renseigner le rôle/bio manquant (Adrien — actuellement « À compléter »)
+- [ ] Bio d'Adrien à rédiger (à voir plus tard — pas de bio affichée pour l'instant)
 
-✅ Déjà présents (5) : antoine-josnin, eve-manin, eugenie-robin, dorian-rodot, emilie-crassard.
+✅ Présents (6) : antoine-josnin, eve-manin, eugenie-robin, dorian-rodot, emilie-crassard, adrien-mangournet.
+
+> Doublons de titres assumés : 2 « Directeur technique » (Antoine + Dorian),
+> 2 « Product Designer » (Eve + Émilie) — choix validé, on les garde.
+
+## TODO rajouté par Antoine
+
+- [x] “semaine par semaine” → “semaine après semaine” ✅
+- [x] Retirer les points en fin de titres (display) ✅ — hero, « zéro temps perdu », « semaine après semaine », « durent », « demander » (index) + « une question » (about)
