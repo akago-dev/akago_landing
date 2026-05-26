@@ -5,20 +5,19 @@ Convention : noms en minuscules-tirets, rangés par usage dans `assets/`.
 
 ---
 
-## 🟦 Icônes témoignages — `assets/testimony/`
+## 🟦 Icônes témoignages — `assets/icons/`
 
 Section « Des collaborations qui durent » (accueil). Les icônes des témoignages
-sont le **symbole** de la marque (pas le logo complet).
+sont le **symbole** de la marque (pas le logo complet), rangées dans `assets/icons/`.
 
-**Convention adoptée** dans `assets/clients/` :
-`nom.png` = symbole/icône (témoignages) · `nom-full-logo.png` = logo complet (grille clients).
+**Convention** : `icons/nom.png` = symbole/icône (témoignages) · `clients/nom-full-logo.png` = logo complet (grille clients).
 
-- [x] **Moofize** — icône = `clients/moofize.png` (symbole), distincte du logo complet ✅
-- [x] **Famyhelp** — icône = `clients/famyhelp.png` (symbole), distincte du logo complet ✅
-- [ ] **Libélaw** — _actuellement : lettre « L »_ → fournir `clients/libelaw.png`
-- [ ] **Leezay** — _actuellement : lettre « L »_ → fournir `clients/leezay.png`
-- [ ] **Ping** — _actuellement : lettre « P »_ → fournir `clients/ping.png`
-- [ ] **Yippylingo** — _actuellement : lettre « Y »_ → fournir `clients/yippylingo.png`
+- [x] **Moofize** — icône = `icons/moofize.png` (symbole), distincte du logo complet ✅
+- [x] **Famyhelp** — icône = `icons/famyhelp.png` (symbole), distincte du logo complet ✅
+- [x] **Libélaw** — icône = `icons/libelaw.png` ✅
+- [x] **Leezay** — icône = `icons/leezay.png` ✅
+- [x] **Ping** — icône = `icons/ping.png` ✅
+- [x] **Yippylingo** — icône = `icons/yippylingo.png` ✅
 
 ---
 
