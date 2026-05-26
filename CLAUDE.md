@@ -16,8 +16,10 @@ Landing page **statique** d'Akago (collectif numérique pour projets engagés). 
 - `about.html` — à propos.
 - `legal.html` — mentions légales.
 - `style.css` — toutes les styles. Sections balisées par des bandeaux `/* ===== ZONE ===== */`.
-- `assets/` — logo et images de marque (versionné).
-- `uploads/` — médias additionnels (versionné).
+- `assets/` — images, organisées par usage (noms intelligibles en minuscules-tirets) :
+  - `akago/` — logo / marque · `people/` — photos d'équipe · `clients/` — logos clients
+  - `showcase/` — captures d'app du défilé (`desktop-*`, `mobile-*`) · `icons/` — icônes SVG (packs, étoile)
+  - `fonts/` — polices self-hosted (voir `@font-face` en tête de `style.css`)
 - `_old/` — ancien miroir Framer, **non versionné** (`.gitignore`), à ne pas toucher.
 
 ## Conventions
