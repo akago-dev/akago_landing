@@ -397,8 +397,8 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
   display: flex; gap: 16px;
   width: fit-content;
 }
-.marquee-track--left  { animation: marquee-scroll-left  60s linear infinite; }
-.marquee-track--right { animation: marquee-scroll-right 75s linear infinite; }
+.marquee-track--left  { animation: marquee-scroll-left  120s linear infinite; }
+.marquee-track--right { animation: marquee-scroll-right 150s linear infinite; }
 .marquee-item {
   flex-shrink: 0;
   width: 180px;
@@ -420,7 +420,7 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
   0% { transform: translateX(-50%); }
   100% { transform: translateX(0); }
 }
-.marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee-track:hover { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) {
   .marquee-track--left, .marquee-track--right { animation: none; }
 }
