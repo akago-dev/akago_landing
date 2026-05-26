@@ -1667,8 +1667,23 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
   .coop-block { grid-template-columns: 1fr; gap: 32px; padding: 36px; }
   .nav-links a:not(.btn) { display: none; }
   .nav-links { gap: 6px; }
-  .marquee { height: 420px; margin: -18px 0; overflow-x: clip; overflow-y: visible; }
-  .marquee-inner { width: 160%; margin-left: -30%; transform: rotate(-3deg); }
+  .marquee {
+    height: auto;
+    margin: 56px 0 32px;
+    overflow-x: clip;
+    overflow-y: visible;
+    padding: 0;
+  }
+  .marquee-inner {
+    position: static;
+    width: 100%;
+    margin: 0;
+    translate: none;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
   .marquee-item { width: 180px; height: 380px; }
   .marquee-item.wide { width: 585px; height: 380px; }
 }
