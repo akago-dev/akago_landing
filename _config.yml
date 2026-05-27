@@ -1,0 +1,10 @@
+# Configuration GitHub Pages (Jekyll).
+# Fichiers internes au projet : versionnés dans le dépôt mais EXCLUS du site publié.
+# (Les fichiers/dossiers commençant par "." ou "_" sont déjà ignorés par Jekyll.)
+exclude:
+  - TODO.md
+  - ASSETS-TODO.md
+  - CLAUDE.md
+  - package.json
+  - package-lock.json
+  - tools/
