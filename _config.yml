@@ -8,3 +8,4 @@ exclude:
   - package.json
   - package-lock.json
   - tools/
+  - archive/        # captures d'archive (ancienne version du site), non publiées
