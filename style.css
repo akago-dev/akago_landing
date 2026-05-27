@@ -622,15 +622,22 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
   position: relative;
   align-items: flex-start;
 }
-.parcours-step + .parcours-step .parcours-marker::before {
-  /* Vertical line connecting steps */
+.parcours-step:not(:last-child)::before {
+  /* Vertical line connecting one dot to the next.
+     Anchored on the dot column (188px from step left = 200px col − dot half).
+     Starts at this dot's center (top: 44px = 28 step pad + 4 marker pad + 12 dot half)
+     and runs 100% of the step height, landing exactly on the next dot's center. */
   content: "";
   position: absolute;
-  top: -28px;
-  left: 11px;
+  top: 44px;
+  left: 187px;
   width: 2px;
-  height: 28px;
+  height: 100%;
   background: var(--line);
+  transition: background 0.45s ease;
+}
+.parcours-step.is-active:not(:last-child)::before {
+  background: var(--accent);
 }
 .parcours-marker {
   display: flex;
@@ -641,6 +648,7 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
 }
 .parcours-dot {
   flex-shrink: 0;
+  margin-left: auto;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -648,8 +656,9 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
   border: 2px solid var(--accent);
   position: relative;
   box-shadow: 0 0 0 6px var(--bg-cream);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
 }
-.parcours-step:hover .parcours-dot {
+.parcours-step.is-active .parcours-dot {
   background: var(--accent);
 }
 .parcours-week {
@@ -693,9 +702,10 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
   color: var(--accent-deep);
   font-weight: 600;
 }
-.parcours-step--final .parcours-dot {
-  background: var(--accent);
-  box-shadow: 0 0 0 6px var(--bg-cream), 0 0 0 8px var(--accent-soft);
+.parcours-step--final.is-active .parcours-dot {
+  /* L'étape finale se colore comme les autres (via .is-active),
+     plus un anneau accentué une fois réellement atteinte. */
+  box-shadow: 0 0 0 6px var(--bg-cream), 0 0 0 8px var(--accent);
 }
 
 @media (max-width: 720px) {
@@ -704,9 +714,10 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
     gap: 14px;
     padding: 20px 0;
   }
-  .parcours-step + .parcours-step .parcours-marker::before {
+  .parcours-step:not(:last-child)::before {
     display: none;
   }
+  .parcours-dot { margin-left: 0; }
   .parcours-body p { font-size: 15.5px; }
 }
 
