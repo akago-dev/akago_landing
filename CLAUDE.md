@@ -50,7 +50,7 @@ Baseline Lighthouse `index.html` : Perf 99 · A11y 93 · Best Practices 100 · S
 
 ## Déploiement
 
-Hébergé sur **GitHub Pages** depuis `main` / racine → https://akago-dev.github.io/akago_landing/
+Hébergé sur **GitHub Pages** depuis `main` / racine, domaine custom **https://akago.fr** (fichier `CNAME` à la racine). URL technique de repli : https://akago-dev.github.io/akago_landing/
 Chaque `git push` sur `main` redéploie automatiquement. Pas d'étape de build.
 
 ⚠️ Ne **jamais signer les commits** (pas de trailer `Co-Authored-By`).
