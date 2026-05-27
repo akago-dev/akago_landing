@@ -1580,7 +1580,8 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
   color: var(--ink-soft);
   font-size: 16.5px;
   line-height: 1.55;
-  max-width: 64ch;
+  max-width: none;
+  padding-right: 60px; /* réserve la place du bouton +/fermer à droite */
 }
 .faq-item .answer p { margin: 0 0 12px; }
 .faq-item .answer p:last-child { margin-bottom: 0; }
