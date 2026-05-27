@@ -3,6 +3,12 @@
 !.claude/skills/
 .serena/
 
+# Skill impeccable (non versionné — installé à la demande)
+.claude/skills/impeccable
+.impeccable/
+.agents/
+skills-lock.json
+
 # Ancien miroir Framer (non versionné)
 _old/
 

@@ -456,8 +456,8 @@
         </div>
         <span class="hint">Voir le retour <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M3 2h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <div class="testimonial-quote">
-          <blockquote class="placeholder">Projet en cours de développement.</blockquote>
-          <div class="who">Ping</div>
+          <blockquote>« Une équipe très compétente que je recommande sans hésiter. De véritables partenaires, investis et force de proposition, qui ont su s'adapter à mes contraintes et dépasser ma vision initiale, notamment sur le design et la fluidité. 🚀 »</blockquote>
+          <div class="who">Ping · en cours de lancement</div>
         </div>
       </article>
 
@@ -670,6 +670,35 @@
     window.addEventListener('scroll', function() {
       if (window.scrollY > 10) nav.classList.add('scrolled');
       else nav.classList.remove('scrolled');
+    });
+  })();
+
+  // Témoignages : clic (ou Entrée/Espace) ouvre la citation ; une seule carte
+  // ouverte à la fois ; Échap referme. Accessible au clavier et au tactile.
+  (function() {
+    var cards = document.querySelectorAll('.testimonial');
+    function closeAll() {
+      cards.forEach(function(c) {
+        c.classList.remove('is-open');
+        c.setAttribute('aria-expanded', 'false');
+      });
+    }
+    cards.forEach(function(card) {
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-expanded', 'false');
+      function open() {
+        var wasOpen = card.classList.contains('is-open');
+        closeAll();
+        if (!wasOpen) {
+          card.classList.add('is-open');
+          card.setAttribute('aria-expanded', 'true');
+        }
+      }
+      card.addEventListener('click', open);
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+        else if (e.key === 'Escape') { closeAll(); }
+      });
     });
   })();
 </script>
