@@ -9,6 +9,11 @@ Liste des évolutions à apporter au site. Cocher une fois fait.
 - [x] **RGPD** : Q/R ajoutée à la FAQ accueil (hébergement en France, privacy by design, accompagnement conformité + DPO). Pas de contrat de sous-traitance art. 28 mentionné (pas encore en place).
 - [x] **IA** : Q/R « Vous utilisez de l'IA pour coder mon app ? » ajoutée à la FAQ accueil (transparence dev). Reste optionnel : en parler aussi dans le bloc 2 (section *Approche*).
 
+## Design / Identité
+
+- [ ] **Illustrations** : ajouter des illustrations propres pour renforcer l'identité visuelle d'Akago et casser l'« effet IA »/générique du site. À ancrer sur le design-system (palette crème + `--accent`, Bricolage Grotesque).
+- [ ] **Charte graphique & logo** : revoir un jour la charte graphique globale ainsi que le logo.
+
 ## Accessibilité
 
 - [ ] **Contraste du texte atténué (global)** : `--ink-mute` (#8A7F71) sur fond clair ≈ 3,9:1, sous le seuil AA (4,5:1) pour les petits textes (taglines, descriptifs témoignages, `.pack-for`…). Assombrir le token (ou en ajouter un plus foncé), correctif à passer globalement, pas section par section.
