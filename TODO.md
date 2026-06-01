@@ -4,8 +4,8 @@ Liste des évolutions à apporter au site. Cocher une fois fait.
 
 ## Contenu
 
-- [ ] **Témoignages** : ajouter un lien vers le site du projet sur chaque carte témoignage (Leezay, Ping, Libélaw, Yippylingo, Moofize, Famyhelp…). Récupérer les URLs au préalable.
-- [ ] **Témoignages** : récupérer puis réintégrer les citations de **Leezay** et **Yippylingo** (leurs cartes sont retirées du site en attendant). Ping, Libélaw, Moofize, Famyhelp affichées.
+- [x] **Témoignages** : ~~ajouter un lien vers le site du projet sur chaque carte~~ — abandonné : plusieurs sites projets n'existent plus.
+- [ ] **Témoignages** : récupérer puis réintégrer la citation de **Leezay** (sa carte est retirée du site en attendant). YippyLingo, Ping, Libélaw, Moofize, Famyhelp affichées.
 - [x] **RGPD** : Q/R ajoutée à la FAQ accueil (hébergement en France, privacy by design, accompagnement conformité + DPO). Pas de contrat de sous-traitance art. 28 mentionné (pas encore en place).
 - [x] **IA** : Q/R « Vous utilisez de l'IA pour coder mon app ? » ajoutée à la FAQ accueil (transparence dev). Reste optionnel : en parler aussi dans le bloc 2 (section *Approche*).
 
