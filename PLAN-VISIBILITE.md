@@ -61,9 +61,10 @@ d'entraînement (lent, durable) et la recherche web en direct des assistants
 - [ ] **Pages réalisations** : une page par cas client (problème → solution → résultat
       chiffré + témoignage). Répond au retour de Charlotte (du concret, du chiffré)
       et capte la longue traîne (« application pour avocats », « app pour aidants »…).
-- [ ] **Deux pages d'offre dédiées** : « Créer votre application mobile » et
-      « Développer votre SaaS sur mesure » — une page par requête commerciale,
-      maillées depuis les packs.
+- [x] **Deux pages d'offre dédiées** — publiées le 11/06/2026 :
+      `creer-application-mobile.html` et `developper-saas.html`. Pages commerciales
+      (Service + FAQPage en JSON-LD), témoignages ciblés (mobile : Ping/YippyLingo/
+      Famyhelp ; SaaS : Libélaw/Moofize), grille de prix, liens footer sur tout le site.
 - [ ] **3 à 5 guides** sur les requêtes de la phase de réflexion :
       - [x] « Combien coûte une application en 2026 ? » — publié le 11/06/2026
         (`guides/combien-coute-une-application.html`, gabarit CSS `GUIDE` réutilisable

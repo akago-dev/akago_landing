@@ -20,6 +20,11 @@ Points clés :
   Ping, Libélaw, YippyLingo, Moofize, Famyhelp, Leezay, Erasme · Grand Lyon…
 - Premier échange gratuit : visio découverte de 30 minutes.
 
+## Offres
+
+- [Créer votre application mobile](https://akago.fr/creer-application-mobile.html) : iOS, Android et web avec une seule base de code Flutter ; notifications, paiement, hors-ligne ; publication App Store / Google Play incluse, comptes développeur au nom du client.
+- [Développer votre SaaS sur mesure](https://akago.fr/developper-saas.html) : abonnements et facturation récurrente (Stripe), rôles et organisations, tableaux de bord, intégrations CRM/ERP, reprise de SaaS existants ; données hébergées en France.
+
 ## Pages
 
 - [Accueil](https://akago.fr/) : offres et prix, méthode semaine par semaine, équipe, témoignages clients, FAQ (propriété du code, RGPD, usage de l'IA, ESS).

@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Créer votre application mobile : design, dev Flutter, stores — Akago</title>
+<meta name="description" content="Une équipe design, dev et produit pour créer votre application mobile : iOS, Android et web avec une seule base de code Flutter. Prix publics dès 6 500 € HT, démo chaque semaine, publication sur les stores incluse." />
+<link rel="canonical" href="https://akago.fr/creer-application-mobile.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Akago" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://akago.fr/creer-application-mobile.html" />
+<meta property="og:title" content="Créer votre application mobile : design, dev Flutter, stores — Akago" />
+<meta property="og:description" content="Une équipe design, dev et produit pour créer votre application mobile : iOS, Android et web avec une seule base de code. Prix publics, démo chaque semaine." />
+<meta property="og:image" content="https://akago.fr/assets/akago/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Créer votre application mobile : design, dev Flutter, stores — Akago" />
+<meta name="twitter:description" content="iOS, Android et web avec une seule base de code. Prix publics, démo chaque semaine, publication sur les stores incluse." />
+<meta name="twitter:image" content="https://akago.fr/assets/akago/og-image.png" />
+
+<link rel="icon" type="image/png" href="assets/akago/logo.png" />
+<link rel="preload" href="assets/fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2" as="font" type="font/woff2" crossorigin />
+<!-- Analytics (Plausible, sans cookie) -->
+<script defer data-domain="akago.fr" data-api="https://plausible.io/api/event" src="assets/js/stats.js"></script>
+<link rel="stylesheet" href="style.css" />
+
+<!-- Données structurées -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Création d'application mobile",
+  "serviceType": "Conception et développement d'applications mobiles (iOS, Android, web)",
+  "description": "Conception et développement d'applications mobiles en Flutter : une seule base de code pour iOS, Android et le web. Recherche utilisateurs, design, développement, publication sur les stores et accompagnement.",
+  "provider": { "@type": "Organization", "name": "Akago", "url": "https://akago.fr/", "logo": "https://akago.fr/assets/akago/logo.png" },
+  "areaServed": "FR",
+  "url": "https://akago.fr/creer-application-mobile.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://akago.fr/" },
+    { "@type": "ListItem", "position": 2, "name": "Créer une application mobile" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien coûte la création d'une application mobile ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Chez Akago, les prix sont publics : prototype testé avec de vrais utilisateurs à partir de 6 500 € HT, MVP en production à partir de 25 000 € HT, projets d'envergure sur devis. Sur le marché français, comptez 15 000 à 35 000 € pour un MVP mobile professionnel. Le détail complet est dans notre guide « Combien coûte une application en 2026 ? »." }
+    },
+    {
+      "@type": "Question",
+      "name": "Faut-il développer iOS et Android séparément ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Non. Nous développons en Flutter : une seule base de code produit l'application iOS, Android et web. Vous payez un développement, vous touchez tous vos utilisateurs — et chaque évolution sort partout en même temps." }
+    },
+    {
+      "@type": "Question",
+      "name": "Qui s'occupe de la publication sur l'App Store et Google Play ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nous. Création des fiches, captures, conformité aux règles d'Apple et Google, soumission et suivi de validation font partie du projet. Les comptes développeur (99 $/an chez Apple, 25 $ une fois chez Google) sont ouverts à votre nom : vos applications vous appartiennent." }
+    },
+    {
+      "@type": "Question",
+      "name": "Application mobile ou site web mobile : comment choisir ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si votre service s'utilise au quotidien, a besoin de notifications, du hors-ligne ou des capteurs du téléphone (position, photo), c'est une application. Si c'est de la consultation occasionnelle, un site web responsive suffit souvent. Avec Flutter, la question est moins tranchante : la même base de code produit l'app et la version web — on choisit ensemble ce qu'on publie en premier." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps pour créer une application mobile ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "2 à 3 mois pour un MVP en production, recherche utilisateurs et design compris, avec une démo chaque vendredi pour suivre l'avancement. Le déroulé semaine par semaine est détaillé sur notre page d'accueil." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="logo">
+      <img src="assets/akago/logo.png" alt="Akago" />
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-primary plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero compact" data-screen-label="01 Offre Hero">
+  <div class="wrap">
+    <span class="eyebrow">Application mobile</span>
+    <h1 class="display">Créer votre application mobile, de l'idée <em>aux stores</em></h1>
+    <p class="lead">Une équipe design, dev et produit qui devient la vôtre pour concevoir, coder et publier votre app — iOS, Android et web avec une seule base de code. Démo chaque vendredi, prix publics, code 100 % à vous.</p>
+    <div class="hero-ctas">
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-accent btn-lg plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ CE QU'ON CONSTRUIT ============================ -->
+<section class="section section-cream" data-screen-label="02 Ce qu'on construit">
+  <div class="wrap">
+    <div class="section-head" style="max-width: 760px;">
+      <span class="eyebrow">Ce qu'on construit pour vous</span>
+      <h2 class="display">Une app que vos utilisateurs <em>gardent</em></h2>
+    </div>
+
+    <div class="pillars">
+      <article class="pillar">
+        <div class="pillar-num">01</div>
+        <h3>iOS + Android + web, un seul développement</h3>
+        <p>Nous développons en Flutter : une base de code unique produit l'application iPhone, Android et la version web. Vous payez une fois, vous touchez tout le monde — et chaque évolution sort partout en même temps.</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar-num">02</div>
+        <h3>Tout ce qu'une vraie app exige</h3>
+        <p>Notifications push, paiement (Stripe, abonnements), mode hors-ligne, géolocalisation, photo, messagerie : nos modules éprouvés sur les projets précédents accélèrent le vôtre — sans rogner sur la qualité.</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar-num">03</div>
+        <h3>Stores et conformité inclus</h3>
+        <p>Publication App Store et Google Play (fiches, captures, validation), données hébergées en France, RGPD dès la conception. Les comptes développeur sont à votre nom : votre app vous appartient, vraiment.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ MÉTHODE + PRIX ============================ -->
+<section class="section" data-screen-label="03 Méthode et prix">
+  <div class="wrap-tight">
+    <div class="section-head">
+      <span class="eyebrow">Méthode &amp; budget</span>
+      <h2 class="display">Vous voyez votre app grandir <em>chaque semaine</em></h2>
+      <p class="lead">Ateliers de cadrage, maquettes testées avec de vrais utilisateurs, puis développement par sprints avec une démo chaque vendredi — <a href="index.html#comment">le déroulé complet est ici</a>. Et comme nos prix sont publics, vous savez où vous allez :</p>
+    </div>
+
+    <table class="guide-table">
+      <thead>
+        <tr>
+          <th>Formule</th>
+          <th>Prix</th>
+          <th>Durée</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>On teste l'idée — prototype Figma testé utilisateurs</td>
+          <td class="price">à partir de 6 500 € HT</td>
+          <td>2 à 4 semaines</td>
+        </tr>
+        <tr>
+          <td>On lance un MVP — app en production sur les stores</td>
+          <td class="price">à partir de 25 000 € HT</td>
+          <td>2 à 3 mois</td>
+        </tr>
+        <tr>
+          <td>On construit en grand — équipe produit sur la durée</td>
+          <td class="price">sur devis</td>
+          <td>4 mois et plus</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size: 15px; color: var(--ink-mute); margin-top: -12px;">Le détail des formules est sur <a href="index.html#packs" style="color: var(--accent-deep);">la page d'accueil</a> · Agréés CII : jusqu'à 20 % récupérés en crédit d'impôt (<a href="guides/financer-application-cii.html" style="color: var(--accent-deep);">notre guide</a>) · Fourchettes du marché : <a href="guides/combien-coute-une-application.html" style="color: var(--accent-deep);">guide des prix</a>.</p>
+  </div>
+</section>
+
+<!-- ============================ TÉMOIGNAGES ============================ -->
+<section class="section section-alt" data-screen-label="04 Témoignages">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Ils ont lancé leur app avec nous</span>
+      <h2 class="display">Des apps mobiles <em>en production</em></h2>
+    </div>
+
+    <div class="testimonials">
+      <figure class="testimonial">
+        <p class="testimonial-tenure">En cours de lancement</p>
+        <blockquote>« Une équipe très compétente que je recommande sans hésiter. De véritables partenaires, investis et force de proposition, qui ont su s'adapter à mes contraintes et dépasser ma vision initiale. 🚀 »</blockquote>
+        <figcaption class="testimonial-by">
+          <span class="testimonial-logo"><img src="assets/icons/ping.png" alt="Ping" loading="lazy" /></span>
+          <span class="testimonial-id">
+            <span class="testimonial-name">Ping</span>
+            <span class="testimonial-role">Le signal qui transforme un regard en rencontre.</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <figure class="testimonial">
+        <p class="testimonial-tenure">2 ans de collaboration</p>
+        <blockquote>« Collaboration au top sur le développement de notre application : consciencieux, organisés et très impliqués, ils nous tiennent régulièrement informés des évolutions à prévoir. 👌 »</blockquote>
+        <figcaption class="testimonial-by">
+          <span class="testimonial-logo"><img src="assets/icons/yippylingo.png" alt="YippyLingo" loading="lazy" /></span>
+          <span class="testimonial-id">
+            <span class="testimonial-name">YippyLingo</span>
+            <span class="testimonial-role">Le premier kit d'apprentissage de l'anglais pour les enfants.</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <figure class="testimonial">
+        <p class="testimonial-tenure">2 ans de collaboration</p>
+        <blockquote>« J'ai travaillé avec Akago pendant environ 2 ans, ils ont été de bons conseils et ont su s'adapter à nos demandes ! »</blockquote>
+        <figcaption class="testimonial-by">
+          <span class="testimonial-logo"><img src="assets/icons/famyhelp.png" alt="Famyhelp" loading="lazy" /></span>
+          <span class="testimonial-id">
+            <span class="testimonial-name">Famyhelp</span>
+            <span class="testimonial-role">La première application 100% gratuite dédiée aux aidants.</span>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section" data-screen-label="05 FAQ">
+  <div class="wrap-tight">
+    <div class="section-head">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2 class="display">Avant de créer votre <em>app mobile</em></h2>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>
+          <span>Combien coûte la création d'une application mobile ?</span>
+          <span class="toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="answer">
+          <p>Nos prix sont publics : prototype testé dès 6 500 € HT, MVP en production dès 25 000 € HT, projets d'envergure sur devis. Sur le marché français, comptez 15 000 à 35 000 € pour un MVP professionnel — toutes les fourchettes sont dans notre <a href="guides/combien-coute-une-application.html">guide des prix</a>.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Faut-il développer iOS et Android séparément ?</span>
+          <span class="toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="answer">
+          <p>Non. Avec Flutter, une seule base de code produit l'application iOS, Android et web. Vous payez un développement, chaque évolution sort partout en même temps.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Qui s'occupe de la publication sur les stores ?</span>
+          <span class="toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="answer">
+          <p>Nous : fiches, captures, conformité aux règles d'Apple et Google, soumission et suivi de validation. Les comptes développeur sont ouverts à votre nom — votre app vous appartient.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Application mobile ou site web mobile ?</span>
+          <span class="toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="answer">
+          <p>Usage quotidien, notifications, hors-ligne, capteurs (position, photo) → application. Consultation occasionnelle → un site responsive suffit souvent. Avec Flutter, la même base de code produit les deux : on choisit ensemble ce qu'on publie en premier.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Combien de temps pour lancer ?</span>
+          <span class="toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="answer">
+          <p>2 à 3 mois pour un MVP en production, recherche et design compris, avec une démo chaque vendredi. Le détail est dans notre <a href="guides/mvp-budget-delais.html">guide MVP</a>.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta-final" id="contact" data-screen-label="06 CTA final">
+  <div class="wrap cta-inner">
+    <img class="cta-star" src="assets/illustrations/star.svg" alt="" />
+    <h2>Votre app mérite mieux qu'un <em>devis opaque</em></h2>
+    <p>Racontez votre idée en visio : on vous dit le budget réaliste, le planning, et ce qu'on couperait du MVP. 30 minutes, gratuit, sans jargon.</p>
+    <div class="hero-ctas">
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-accent btn-lg plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="mailto:contact@akago.fr" class="btn btn-ghost-dark btn-lg plausible-event-name=Contact+Email">Je suis plus branché.e email</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <a href="index.html" class="logo">
+      <img src="assets/akago/logo.png" alt="Akago" />
+    </a>
+        <p>Des alliés numériques pour faire avancer les projets engagés et les coopératives vite et bien.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="creer-application-mobile.html">Créer une app mobile</a></li>
+          <li><a href="developper-saas.html">Développer un SaaS</a></li>
+          <li><a href="guides/">Guides pratiques</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@akago.fr" class="plausible-event-name=Contact+Email">↪︎ contact@akago.fr</a></li>
+          <li><a href="https://tally.so/r/wdA0DA" class="plausible-event-name=Reserver+Appel">Réserver un appel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Légal</h5>
+        <ul>
+          <li><a href="legal.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Akago. Tous droits réservés.</span>
+      <span>Fait avec ♥ en France</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 10) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+  })();
+</script>
+
+</body>
+</html>

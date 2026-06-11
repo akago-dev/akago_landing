@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Développer votre SaaS sur mesure : du MVP à l'échelle — Akago</title>
+<meta name="description" content="Une équipe design, dev et produit pour développer votre SaaS : abonnements, rôles et organisations, tableaux de bord, intégrations CRM/ERP. Prix publics dès 25 000 € HT, données hébergées en France, code 100 % à vous." />
+<link rel="canonical" href="https://akago.fr/developper-saas.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Akago" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://akago.fr/developper-saas.html" />
+<meta property="og:title" content="Développer votre SaaS sur mesure : du MVP à l'échelle — Akago" />
+<meta property="og:description" content="Abonnements, rôles et organisations, tableaux de bord, intégrations CRM/ERP. Prix publics, données hébergées en France, code 100 % à vous." />
+<meta property="og:image" content="https://akago.fr/assets/akago/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Développer votre SaaS sur mesure : du MVP à l'échelle — Akago" />
+<meta name="twitter:description" content="Abonnements, rôles et organisations, tableaux de bord, intégrations. Prix publics, code 100 % à vous." />
+<meta name="twitter:image" content="https://akago.fr/assets/akago/og-image.png" />
+
+<link rel="icon" type="image/png" href="assets/akago/logo.png" />
+<link rel="preload" href="assets/fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2" as="font" type="font/woff2" crossorigin />
+<!-- Analytics (Plausible, sans cookie) -->
+<script defer data-domain="akago.fr" data-api="https://plausible.io/api/event" src="assets/js/stats.js"></script>
+<link rel="stylesheet" href="style.css" />
+
+<!-- Données structurées -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Développement de SaaS sur mesure",
+  "serviceType": "Conception et développement de logiciels SaaS (web et mobile)",
+  "description": "Conception et développement de SaaS sur mesure : abonnements et facturation récurrente, gestion des rôles et organisations, tableaux de bord, intégrations CRM/ERP, hébergement des données en France.",
+  "provider": { "@type": "Organization", "name": "Akago", "url": "https://akago.fr/", "logo": "https://akago.fr/assets/akago/logo.png" },
+  "areaServed": "FR",
+  "url": "https://akago.fr/developper-saas.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://akago.fr/" },
+    { "@type": "ListItem", "position": 2, "name": "Développer un SaaS" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien coûte le développement d'un SaaS ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Chez Akago, les prix sont publics : MVP SaaS en production à partir de 25 000 € HT (2 à 3 mois), produit complet avec intégrations et flux financiers complexes sur devis. Le Crédit d'Impôt Innovation peut couvrir jusqu'à 20 % du projet pour les PME éligibles. Les fourchettes détaillées du marché sont dans notre guide des prix." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps pour lancer un SaaS ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "2 à 3 mois pour une première version en production avec de vrais clients : cadrage, recherche utilisateurs, design, développement et mise en ligne, avec une démo chaque vendredi. Les fonctionnalités avancées (intégrations, facturation complexe, gestion fine des rôles) arrivent ensuite par itérations." }
+    },
+    {
+      "@type": "Question",
+      "name": "Pouvez-vous reprendre un SaaS existant ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, c'est un cas fréquent : un produit lancé avec un autre prestataire ou en no-code qui atteint ses limites. On commence par un audit du code et de l'infrastructure, puis on propose un plan — reprise progressive, refonte partielle ou réécriture — avec un chiffrage transparent à chaque étape." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment gérez-vous les abonnements et les paiements ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Avec des briques éprouvées sur nos projets précédents : Stripe pour les abonnements récurrents et la facturation, gestion des essais gratuits, des changements de formule et des paiements multi-bénéficiaires pour les places de marché. La comptabilité peut être automatisée (exports, factures conformes)." }
+    },
+    {
+      "@type": "Question",
+      "name": "À qui appartiennent le code et les données du SaaS ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "À vous, à 100 % : code source, maquettes, documentation, accès aux serveurs. Les données sont hébergées en France, jamais revendues ni exploitées. En fin de projet, un dossier de passation complet permet à n'importe quelle équipe de reprendre la main — pas de dépendance, pas de verrouillage." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="logo">
+      <img src="assets/akago/logo.png" alt="Akago" />
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-primary plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero compact" data-screen-label="01 Offre Hero">
+  <div class="wrap">
+    <span class="eyebrow">SaaS sur mesure</span>
+    <h1 class="display">Développer votre SaaS, du MVP <em>à l'échelle</em></h1>
+    <p class="lead">Abonnements, rôles et organisations, tableaux de bord, intégrations : une équipe produit complète pour construire le logiciel que vos clients paieront chaque mois — et qui vous appartient à 100 %.</p>
+    <div class="hero-ctas">
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-accent btn-lg plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ CE QU'ON CONSTRUIT ============================ -->
+<section class="section section-cream" data-screen-label="02 Ce qu'on construit">
+  <div class="wrap">
+    <div class="section-head" style="max-width: 760px;">
+      <span class="eyebrow">Ce qu'on construit pour vous</span>
+      <h2 class="display">Un SaaS qui encaisse, gère et <em>grandit</em></h2>
+    </div>
+
+    <div class="pillars">
+      <article class="pillar">
+        <div class="pillar-num">01</div>
+        <h3>Le modèle économique câblé dedans</h3>
+        <p>Abonnements récurrents (Stripe), essais gratuits, changements de formule, paiements multi-bénéficiaires pour les places de marché, facturation et exports comptables : le revenu n'est pas une option qu'on ajoute après.</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar-num">02</div>
+        <h3>Des rôles et des organisations, pas juste des comptes</h3>
+        <p>Multi-organisations, permissions fines, espaces d'équipe, workflows de validation, messagerie : nos modules éprouvés (authentification, notifications, temps réel) donnent à votre v1 des fondations de v3.</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar-num">03</div>
+        <h3>Branché sur vos outils, conforme dès le départ</h3>
+        <p>Intégrations CRM/ERP, API documentée, tableaux de bord. Données hébergées en France, RGPD by design, architecture qui tient la montée en charge — et un code documenté qu'une autre équipe pourrait reprendre demain.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ MÉTHODE + PRIX ============================ -->
+<section class="section" data-screen-label="03 Méthode et prix">
+  <div class="wrap-tight">
+    <div class="section-head">
+      <span class="eyebrow">Méthode &amp; budget</span>
+      <h2 class="display">Des clients payants en <em>3 mois</em>, pas en 18</h2>
+      <p class="lead">On cadre avec vos futurs clients, on maquette, on développe par sprints avec une démo chaque vendredi — <a href="index.html#comment">le déroulé est ici</a>. Le MVP encaisse ses premiers abonnements en 2 à 3 mois ; les intégrations et workflows avancés suivent par itérations. Prix publics :</p>
+    </div>
+
+    <table class="guide-table">
+      <thead>
+        <tr>
+          <th>Formule</th>
+          <th>Prix</th>
+          <th>Durée</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>On teste l'idée — prototype testé avec vos futurs clients</td>
+          <td class="price">à partir de 6 500 € HT</td>
+          <td>2 à 4 semaines</td>
+        </tr>
+        <tr>
+          <td>On lance un MVP — SaaS en production, premiers abonnés</td>
+          <td class="price">à partir de 25 000 € HT</td>
+          <td>2 à 3 mois</td>
+        </tr>
+        <tr>
+          <td>On construit en grand — intégrations, flux financiers complexes</td>
+          <td class="price">sur devis</td>
+          <td>4 mois et plus</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size: 15px; color: var(--ink-mute); margin-top: -12px;">Le détail des formules est sur <a href="index.html#packs" style="color: var(--accent-deep);">la page d'accueil</a> · Agréés CII : jusqu'à 20 % récupérés en crédit d'impôt (<a href="guides/financer-application-cii.html" style="color: var(--accent-deep);">notre guide</a>) · Fourchettes du marché : <a href="guides/combien-coute-une-application.html" style="color: var(--accent-deep);">guide des prix</a>.</p>
+  </div>
+</section>
+
+<!-- ============================ TÉMOIGNAGES ============================ -->
+<section class="section section-alt" data-screen-label="04 Témoignages">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Ils nous confient leur produit</span>
+      <h2 class="display">Des SaaS qui tournent depuis <em>des années</em></h2>
+    </div>
+
+    <div class="testimonials">
+      <figure class="testimonial">
+        <p class="testimonial-tenure">2 ans de collaboration</p>
+        <blockquote>« Ça fait 2 ans qu'on bosse avec la team Akago : livraison en avance, features bonus et exigence qualité au top. 💪 Une équipe qui n'a pas peur des sprints et qui délivre, foncez ! 🚀 »</blockquote>
+        <figcaption class="testimonial-by">
+          <span class="testimonial-logo"><img src="assets/icons/libelaw.png" alt="Libélaw" loading="lazy" /></span>
+          <span class="testimonial-id">
+            <span class="testimonial-name">Libélaw</span>
+            <span class="testimonial-role">Le réseau de confiance pour la postulation entre avocats.</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <figure class="testimonial">
+        <p class="testimonial-tenure">4 ans de collaboration</p>
+        <blockquote>« Nous collaborons avec Akago depuis 4 ans pour le développement de notre application web et mobile, nous sommes pleinement satisfaits de leur accompagnement. »</blockquote>
+        <figcaption class="testimonial-by">
+          <span class="testimonial-logo"><img src="assets/icons/moofize.png" alt="Moofize" loading="lazy" /></span>
+          <span class="testimonial-id">
+            <span class="testimonial-name">Moofize</span>
+            <span class="testimonial-role">Le point de rencontre des professionnels de santé.</span>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section" data-screen-label="05 FAQ">
+  <div class="wrap-tight">
+    <div class="section-head">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2 class="display">Avant de lancer votre <em>SaaS</em></h2>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>
+          <span>Combien coûte le développement d'un SaaS ?</span>
+          <span class="toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="answer">
+          <p>MVP en production dès 25 000 € HT, produit complet sur devis — et jusqu'à 20 % récupérés via le <a href="guides/financer-application-cii.html">CII</a> pour les PME éligibles. Les fourchettes du marché sont dans notre <a href="guides/combien-coute-une-application.html">guide des prix</a>.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Combien de temps pour lancer ?</span>
+          <span class="toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="answer">
+          <p>2 à 3 mois pour une première version en production avec de vrais clients. Les intégrations et la facturation complexe arrivent ensuite par itérations — notre <a href="guides/mvp-budget-delais.html">guide MVP</a> détaille le déroulé.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Pouvez-vous reprendre un SaaS existant ?</span>
+          <span class="toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="answer">
+          <p>Oui, c'est un cas fréquent : un produit lancé ailleurs (ou en no-code) qui atteint ses limites. Audit du code et de l'infrastructure, puis plan transparent : reprise progressive, refonte partielle ou réécriture.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Comment gérez-vous abonnements et paiements ?</span>
+          <span class="toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="answer">
+          <p>Stripe pour les abonnements et la facturation, essais gratuits, changements de formule, paiements multi-bénéficiaires pour les places de marché, exports comptables. Des briques éprouvées sur nos projets précédents.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>À qui appartiennent le code et les données ?</span>
+          <span class="toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="answer">
+          <p>À vous, à 100 % : code, maquettes, documentation, accès serveurs. Données hébergées en France, dossier de passation complet en fin de projet — pas de verrouillage.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta-final" id="contact" data-screen-label="06 CTA final">
+  <div class="wrap cta-inner">
+    <img class="cta-star" src="assets/illustrations/star.svg" alt="" />
+    <h2>Votre SaaS, chiffré en <em>30 minutes</em></h2>
+    <p>Racontez votre produit en visio : on vous dit le périmètre du premier MVP rentable, le budget réaliste et les aides mobilisables. Gratuit, sans engagement, sans jargon.</p>
+    <div class="hero-ctas">
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-accent btn-lg plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="mailto:contact@akago.fr" class="btn btn-ghost-dark btn-lg plausible-event-name=Contact+Email">Je suis plus branché.e email</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <a href="index.html" class="logo">
+      <img src="assets/akago/logo.png" alt="Akago" />
+    </a>
+        <p>Des alliés numériques pour faire avancer les projets engagés et les coopératives vite et bien.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="creer-application-mobile.html">Créer une app mobile</a></li>
+          <li><a href="developper-saas.html">Développer un SaaS</a></li>
+          <li><a href="guides/">Guides pratiques</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@akago.fr" class="plausible-event-name=Contact+Email">↪︎ contact@akago.fr</a></li>
+          <li><a href="https://tally.so/r/wdA0DA" class="plausible-event-name=Reserver+Appel">Réserver un appel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Légal</h5>
+        <ul>
+          <li><a href="legal.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Akago. Tous droits réservés.</span>
+      <span>Fait avec ♥ en France</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 10) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+  })();
+</script>
+
+</body>
+</html>
