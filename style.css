@@ -1734,6 +1734,10 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
   text-underline-offset: 3px;
 }
 .guide-body a:hover { color: var(--accent); }
+/* Les boutons placés dans le corps d'un guide gardent leur style propre. */
+.guide-body a.btn { text-decoration: none; }
+.guide-body a.btn-accent { color: #fff; }
+.guide-body a.btn-accent:hover { color: #fff; }
 .guide-table {
   width: 100%;
   border-collapse: collapse;
