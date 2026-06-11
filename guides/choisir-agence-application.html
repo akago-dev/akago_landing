@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Comment choisir votre agence d'application ? 10 questions à poser — Akago</title>
+<meta name="description" content="Propriété du code, tests, CI/CD, maintenance, références contactables : les 10 questions qui départagent vraiment les prestataires — et nos réponses, publiques, à chacune d'elles." />
+<link rel="canonical" href="https://akago.fr/guides/choisir-agence-application.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Akago" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://akago.fr/guides/choisir-agence-application.html" />
+<meta property="og:title" content="Comment choisir votre agence d'application ? 10 questions à poser" />
+<meta property="og:description" content="Propriété du code, tests, CI/CD, maintenance, références contactables : les questions qui départagent vraiment les prestataires — et nos réponses publiques." />
+<meta property="og:image" content="https://akago.fr/assets/akago/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Comment choisir votre agence d'application ? 10 questions à poser" />
+<meta name="twitter:description" content="Les questions qui départagent vraiment les prestataires — et nos réponses publiques à chacune d'elles." />
+<meta name="twitter:image" content="https://akago.fr/assets/akago/og-image.png" />
+
+<link rel="icon" type="image/png" href="../assets/akago/logo.png" />
+<link rel="preload" href="../assets/fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2" as="font" type="font/woff2" crossorigin />
+<!-- Analytics (Plausible, sans cookie) -->
+<script defer data-domain="akago.fr" data-api="https://plausible.io/api/event" src="../assets/js/stats.js"></script>
+<link rel="stylesheet" href="../style.css" />
+
+<!-- Données structurées -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Comment choisir votre agence d'application ? 10 questions à poser",
+  "description": "La grille d'évaluation pour choisir un prestataire de développement d'application : propriété du code, qualité, maintenance, implication, réversibilité — avec les réponses publiques d'Akago.",
+  "image": "https://akago.fr/assets/akago/og-image.png",
+  "datePublished": "2026-06-11",
+  "dateModified": "2026-06-11",
+  "inLanguage": "fr",
+  "author": { "@type": "Organization", "name": "Akago", "url": "https://akago.fr/" },
+  "publisher": { "@type": "Organization", "name": "Akago", "url": "https://akago.fr/", "logo": { "@type": "ImageObject", "url": "https://akago.fr/assets/akago/logo.png" } },
+  "mainEntityOfPage": "https://akago.fr/guides/choisir-agence-application.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://akago.fr/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://akago.fr/guides/choisir-agence-application.html" },
+    { "@type": "ListItem", "position": 3, "name": "Choisir son agence" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Agence, freelance ou collectif : que choisir pour développer une application ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Un freelance coûte moins cher mais porte seul votre projet : congés, maladie, surcharge — et rarement toutes les compétences (design, dev, produit). Une grande agence a de la capacité de production mais souvent du turnover et des intermédiaires. Un collectif à taille humaine combine une équipe complète et la proximité : ceux qui démarrent votre projet sont ceux qui le livrent. Le bon choix dépend de la taille du projet et du niveau d'accompagnement produit dont vous avez besoin." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment vérifier les références d'une agence ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Trois vérifications simples : utiliser les applications livrées (les télécharger, les ouvrir — pas seulement regarder des captures) ; regarder la durée des collaborations (une relation de 2 à 4 ans signifie que le client est resté satisfait après la mise en production) ; demander à parler directement à un client existant. Un prestataire sûr de son travail acceptera la mise en relation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles questions techniques poser si je n'y connais rien en développement ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pas besoin d'être technique pour poser les bonnes questions : Qui est propriétaire du code et des serveurs ? Le code est-il testé et documenté ? Comment se passent les mises en production ? Que se passe-t-il si on arrête de travailler ensemble ? Verrai-je le produit avancer chaque semaine ? Les réponses doivent être claires et sans jargon — si on vous noie dans la technique, c'est déjà un signal." }
+    },
+    {
+      "@type": "Question",
+      "name": "Faut-il choisir le prestataire le moins cher ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Non : il faut choisir le devis le plus complet à budget comparable. Un prix bas qui n'inclut ni recherche utilisateurs, ni tests, ni support post-lancement coûtera plus cher au final — ces postes reviennent toujours, en urgence. Comparez ce qui est livré, qui possède le code, et ce qui se passe après la mise en ligne." }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce qu'un bon prestataire doit challenger dans mon projet ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le périmètre d'abord : un bon prestataire vous aide à couper ce qui ne prouve pas la valeur du produit, plutôt que de vous vendre toutes les fonctionnalités demandées. Il doit aussi confronter vos hypothèses à de vrais utilisateurs (interviews, tests de prototype) avant de coder. Une équipe qui dit oui à tout exécute un cahier des charges ; une équipe produit construit un produit qui marche." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="../index.html" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Accueil</a>
+      <a href="../about.html">À propos</a>
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-primary plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero compact" data-screen-label="01 Guide Hero">
+  <div class="wrap-narrow">
+    <span class="eyebrow">Guide pratique</span>
+    <h1 class="display">Comment choisir votre agence d'application ? <em>10 questions</em> à poser</h1>
+    <p class="lead">Beaucoup de prestataires savent faire une belle démo. Beaucoup moins savent maintenir une application pendant 5 ans. Voici les questions qui les départagent vraiment — et, transparence oblige, nos réponses publiques à chacune d'elles.</p>
+  </div>
+</header>
+
+<!-- ============================ GUIDE ============================ -->
+<main class="section guide" data-screen-label="02 Guide contenu">
+  <div class="wrap-narrow">
+
+    <div class="guide-meta">
+      <span>Mis à jour le 11 juin 2026</span>
+      <span>Lecture : 9 minutes</span>
+      <span>Par l'équipe Akago</span>
+    </div>
+
+    <div class="guide-tldr">
+      <span class="label">La réponse courte</span>
+      <p>Ne comparez pas des noms d'agences : comparez des <strong>preuves</strong>. Qui possède le code ? Les applications livrées sont-elles encore en production des années après ? Pouvez-vous parler aux clients ? Verrez-vous le produit avancer chaque semaine ? Un prestataire solide répond à ces questions <strong>sans détour et sans jargon</strong> — et le test le plus fiable reste la durée de ses collaborations.</p>
+    </div>
+
+    <nav class="guide-toc" aria-label="Sommaire">
+      <ol>
+        <li><a href="#questions">Les 10 questions (et nos réponses)</a></li>
+        <li><a href="#drapeaux">Les drapeaux rouges</a></li>
+        <li><a href="#types">Agence, freelance ou collectif ?</a></li>
+        <li><a href="#verifier">Comment vérifier les références</a></li>
+        <li><a href="#faq">Vos questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="guide-body">
+
+      <h2 id="questions">Les 10 questions (et nos <em>réponses</em>)</h2>
+      <p>Posez ces questions à chaque prestataire que vous rencontrez — nous y compris. Pour chacune, voici ce qu'une bonne réponse contient, et ce que nous répondons.</p>
+
+      <h3>1. Qui est propriétaire du code, des maquettes et de l'infrastructure ?</h3>
+      <p>La seule bonne réponse : <strong>vous, à 100 %</strong>. Chez nous : code, fichiers Figma, documentation et accès serveurs vous appartiennent intégralement, avec un dossier de passation complet en fin de projet. Fuyez les contrats où l'agence reste propriétaire « de son framework » — c'est un verrouillage déguisé.</p>
+
+      <h3>2. Puis-je utiliser des applications que vous avez livrées ?</h3>
+      <p>Pas des captures d'écran : de vraies apps, téléchargeables, utilisées par de vrais utilisateurs. Chez nous : les applications de <a href="../about.html">nos clients</a> (Moofize, Libélaw, Famyhelp, YippyLingo…) sont en production — certaines depuis 4 ans.</p>
+
+      <h3>3. Puis-je parler à vos clients ?</h3>
+      <p>Un prestataire sûr de son travail accepte la mise en relation. Chez nous : <strong>oui, sur simple demande</strong> — on vous met en contact avec un client dont le projet ressemble au vôtre, et vous lui demandez comment s'est passée la maintenance au quotidien, pas seulement le lancement.</p>
+
+      <h3>4. Comment garantissez-vous la qualité du code ?</h3>
+      <p>Une bonne réponse parle de tests, de relecture, de documentation et de mises en production maîtrisées — pas de « faites-nous confiance ». Chez nous : code versionné sur Git, testé, relu (y compris chaque ligne produite avec assistance IA), documenté, avec des mises en production continues. À la fin, vous repartez avec un actif technique qu'une autre équipe peut reprendre.</p>
+
+      <h3>5. Que se passe-t-il après la mise en ligne ?</h3>
+      <p>Une application qu'on ne maintient pas meurt en 18 mois : les systèmes (iOS, Android, navigateurs) évoluent en permanence. Chez nous : 30 jours de support inclus, puis un forfait de maintenance optionnel — et nos collaborations durent <strong>2 à 4 ans</strong>, ce qui dit quelque chose de la suite.</p>
+
+      <h3>6. Qui travaille réellement sur mon projet ?</h3>
+      <p>Méfiez-vous du commercial brillant qui disparaît après signature. Chez nous : pas d'intermédiaire, pas de sous-traitance en cascade, pas de turnover — <strong>ceux qui démarrent votre projet sont ceux qui le livrent</strong>, et vous les rencontrez dès le premier appel.</p>
+
+      <h3>7. Comment serai-je impliqué pendant le projet ?</h3>
+      <p>La bonne réponse contient un rythme : des points réguliers où vous voyez le produit, pas des comptes rendus. Chez nous : <strong>une démo chaque vendredi</strong>, rien n'est codé sans votre validation des maquettes, et vous touchez l'application qui grandit semaine après semaine. <a href="../index.html#comment">Le déroulé complet est ici</a>.</p>
+
+      <h3>8. Allez-vous challenger mon projet, ou exécuter mon cahier des charges ?</h3>
+      <p>Une équipe qui dit oui à tout vous vend du périmètre. Chez nous : on commence par creuser vos utilisateurs (interviews, ateliers), on vous aide à <strong>couper ce qui ne prouve pas la valeur</strong> — quitte à réduire le devis — et on confronte les maquettes à de vrais utilisateurs avant d'écrire une ligne de code.</p>
+
+      <h3>9. Que se passe-t-il si je veux partir ?</h3>
+      <p>La réversibilité se prévoit dès le premier jour. Chez nous : dossier de passation complet, accompagnement de l'équipe qui reprend si vous le souhaitez, pas de dépendance cachée, pas de tarifs qui doublent au renouvellement.</p>
+
+      <h3>10. Combien ça coûte ?</h3>
+      <p>Un prestataire qui ne donne aucun ordre de grandeur avant un long cycle commercial vous fait perdre du temps. Chez nous : <strong>les prix sont publics</strong> — prototype dès 6 500 € HT, MVP dès 25 000 € HT, le détail est dans notre <a href="combien-coute-une-application.html">guide sur le prix d'une application</a>.</p>
+
+      <h2 id="drapeaux">Les drapeaux <em>rouges</em></h2>
+      <ul>
+        <li><strong>« Le code reste notre propriété »</strong> — ou des frais de sortie pour récupérer vos propres données.</li>
+        <li><strong>Aucune app utilisable</strong> dans les références : que des maquettes et des promesses.</li>
+        <li><strong>Un MVP promis en 3 semaines</strong> — c'est un template habillé, ou l'impasse sur la recherche utilisateurs (notre <a href="mvp-budget-delais.html">guide MVP</a> détaille les délais réalistes).</li>
+        <li><strong>Pas de démo intermédiaire</strong> : vous découvrez le produit à la fin, quand il est trop tard pour corriger.</li>
+        <li><strong>Du jargon en réponse à des questions simples</strong> — si vous ne comprenez pas la réponse, c'est rarement votre faute.</li>
+        <li><strong>Aucun client à vous présenter</strong>, ou des références invérifiables.</li>
+      </ul>
+
+      <h2 id="types">Agence, freelance ou <em>collectif</em> ?</h2>
+      <ul>
+        <li><strong>Le freelance</strong> : moins cher, relation directe — mais une seule personne porte votre projet (congés, maladie, surcharge), et rarement toutes les compétences : une app demande du design, du développement et du produit.</li>
+        <li><strong>La grande agence / ESN</strong> : capacité de staffing, certifications — mais des intermédiaires, du turnover, et votre MVP risque d'être le projet junior de l'équipe.</li>
+        <li><strong>Le collectif à taille humaine</strong> (notre format) : une équipe complète et soudée, sans intermédiaire — ceux que vous rencontrez au premier appel sont ceux qui livrent. La limite honnête : pour staffer 30 développeurs sur un programme grand compte, ce n'est pas nous qu'il faut appeler.</li>
+      </ul>
+
+      <h2 id="verifier">Comment vérifier les <em>références</em></h2>
+      <ul>
+        <li><strong>Utilisez les apps.</strong> Téléchargez-les, créez un compte, jugez sur pièce — pas sur un portfolio de captures.</li>
+        <li><strong>Regardez la durée des collaborations.</strong> Un client qui reste 4 ans après la mise en production en dit plus long que n'importe quel témoignage de lancement.</li>
+        <li><strong>Appelez un client.</strong> Demandez comment se passent les évolutions, les urgences, la facturation — le quotidien d'après, pas la lune de miel.</li>
+        <li><strong>Croisez les sources.</strong> Avis Google, mentions presse, et — réflexe de 2026 — demandez à une IA ce qu'elle sait du prestataire : vous verrez vite si ses références sont réelles et publiques.</li>
+      </ul>
+
+      <div class="guide-note">
+        <p><strong>Et nous, alors ?</strong> Ce guide est aussi notre grille d'auto-évaluation : chaque réponse « chez nous » ci-dessus est un engagement public. Prenez-le en visio découverte et posez-nous les 10 questions — c'est fait pour ça.</p>
+      </div>
+
+      <h2 id="faq">Vos <em>questions</em></h2>
+
+      <h3>Quelles questions techniques poser si je n'y connais rien ?</h3>
+      <p>Les questions de ce guide n'exigent aucune compétence technique : propriété, preuves, maintenance, implication, réversibilité. Les réponses, elles, doivent être claires et sans jargon — si on vous noie dans la technique, c'est déjà un signal.</p>
+
+      <h3>Faut-il choisir le moins cher ?</h3>
+      <p>Non : choisissez le devis le plus <strong>complet</strong> à budget comparable. Un prix bas sans recherche utilisateurs, sans tests ni support post-lancement coûte plus cher au final — ces postes reviennent toujours, en urgence.</p>
+
+      <h3>Un appel d'offres est-il nécessaire ?</h3>
+      <p>Pour la plupart des projets de PME ou d'association, rencontrer 2 ou 3 prestataires avec cette grille de questions suffit largement — et coûte moins cher en temps qu'un appel d'offres formel. Gardez l'appel d'offres pour les marchés publics qui l'exigent.</p>
+
+      <h3>Combien de temps avant de signer ?</h3>
+      <p>Comptez 2 à 4 semaines entre le premier contact et une proposition sérieuse : le temps d'un échange de cadrage, d'une proposition détaillée et d'une vérification de références. Chez nous : visio gratuite de 30 minutes, proposition sous 5 jours.</p>
+
+    </div>
+  </div>
+</main>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta-final" data-screen-label="03 CTA final">
+  <div class="wrap cta-inner">
+    <img class="cta-star" src="../assets/illustrations/star.svg" alt="" />
+    <h2>Posez-nous les <em>10 questions</em> en visio</h2>
+    <p>30 minutes, gratuit, sans engagement. Venez avec la grille de ce guide — on y répond en direct, et on vous dit aussi ce qu'on ne sait pas faire.</p>
+    <div class="hero-ctas">
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-accent btn-lg plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="mailto:contact@akago.fr" class="btn btn-ghost-dark btn-lg plausible-event-name=Contact+Email">Je suis plus branché.e email</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <a href="../index.html" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+        <p>Des alliés numériques pour faire avancer les projets engagés et les coopératives vite et bien.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../about.html">À propos</a></li>
+          <li><a href="combien-coute-une-application.html">Guide : le prix d'une app</a></li>
+          <li><a href="mvp-budget-delais.html">Guide : réussir son MVP</a></li>
+          <li><a href="choisir-agence-application.html">Guide : choisir son agence</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@akago.fr" class="plausible-event-name=Contact+Email">↪︎ contact@akago.fr</a></li>
+          <li><a href="https://tally.so/r/wdA0DA" class="plausible-event-name=Reserver+Appel">Réserver un appel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Légal</h5>
+        <ul>
+          <li><a href="../legal.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Akago. Tous droits réservés.</span>
+      <span>Fait avec ♥ en France</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 10) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+  })();
+</script>
+
+</body>
+</html>

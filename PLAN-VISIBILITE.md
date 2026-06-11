@@ -70,6 +70,11 @@ d'entraînement (lent, durable) et la recherche web en direct des assistants
         dans `style.css` pour les guides suivants) ;
       - [x] « MVP : quel budget et quels délais en 2026 ? » — publié le 11/06/2026
         (`guides/mvp-budget-delais.html`) ;
+      - [x] « Comment choisir votre agence d'application ? » — publié le 11/06/2026
+        (`guides/choisir-agence-application.html`). Inspiré d'une vraie réponse d'IA
+        sur Akago : répond publiquement aux critères qu'un acheteur (ou une IA)
+        utilise pour évaluer un prestataire (propriété du code, qualité, maintenance,
+        clients contactables) ;
       - « No-code ou sur-mesure ? » ;
       - « CII : financer 20 % de votre application ».
 
