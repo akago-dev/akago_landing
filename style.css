@@ -1627,6 +1627,173 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
 }
 
 /* ============================================================
+   GUIDE (pages éditoriales longues — guides/)
+   ============================================================ */
+.guide {
+  padding: 8px 0 90px;
+}
+.guide-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin: 0 0 36px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.guide-tldr {
+  background: var(--bg-cream);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 26px 30px;
+  margin: 0 0 48px;
+}
+.guide-tldr .label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  display: block;
+  margin-bottom: 12px;
+}
+.guide-tldr p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.guide-tldr strong { color: var(--ink); }
+.guide-toc {
+  margin: 0 0 56px;
+  padding: 0 0 0 2px;
+}
+.guide-toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: toc;
+  display: grid;
+  gap: 8px;
+}
+.guide-toc a {
+  counter-increment: toc;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  color: var(--ink-soft);
+  font-size: 15.5px;
+  border-bottom: none;
+}
+.guide-toc a::before {
+  content: counter(toc, decimal-leading-zero);
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+}
+.guide-toc a:hover { color: var(--accent-deep); }
+.guide-body {
+  max-width: 70ch;
+}
+.guide-body h2 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(26px, 3.2vw, 34px);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 64px 0 20px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+.guide-body h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+.guide-body h2 em { font-style: italic; color: var(--accent); }
+.guide-body h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  margin: 36px 0 12px;
+}
+.guide-body p,
+.guide-body li {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+.guide-body p { margin: 0 0 18px; }
+.guide-body ul { margin: 0 0 22px; padding-left: 22px; }
+.guide-body li { margin-bottom: 10px; }
+.guide-body strong { color: var(--ink); font-weight: 600; }
+.guide-body a {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.guide-body a:hover { color: var(--accent); }
+.guide-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0 32px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+.guide-table th {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--ink-mute);
+  text-align: left;
+  padding: 14px 18px;
+  background: var(--bg-cream);
+  border-bottom: 1px solid var(--line);
+}
+.guide-table td {
+  padding: 16px 18px;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--line-soft);
+  vertical-align: top;
+}
+.guide-table tr:last-child td { border-bottom: none; }
+.guide-table td:first-child {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 16.5px;
+  color: var(--ink);
+}
+.guide-table .price {
+  font-weight: 600;
+  color: var(--accent-deep);
+  white-space: nowrap;
+}
+.guide-note {
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  margin: 28px 0 32px;
+}
+.guide-note p {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--accent-deep);
+}
+@media (max-width: 720px) {
+  .guide-table { display: block; overflow-x: auto; }
+  .guide-tldr { padding: 22px 20px; }
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 980px) {
