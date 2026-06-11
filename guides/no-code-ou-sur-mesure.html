@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>No-code ou développement sur mesure : que choisir en 2026 ? — Akago</title>
+<meta name="description" content="Bubble, Glide, FlutterFlow ou sur-mesure ? Ce que le no-code fait très bien, où il casse, le coût réel sur 3 ans et une grille de décision honnête — par une équipe qui vend du sur-mesure et l'assume." />
+<link rel="canonical" href="https://akago.fr/guides/no-code-ou-sur-mesure.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Akago" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://akago.fr/guides/no-code-ou-sur-mesure.html" />
+<meta property="og:title" content="No-code ou développement sur mesure : que choisir en 2026 ?" />
+<meta property="og:description" content="Ce que le no-code fait très bien, où il casse, le coût réel sur 3 ans et une grille de décision honnête." />
+<meta property="og:image" content="https://akago.fr/assets/akago/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="No-code ou développement sur mesure : que choisir en 2026 ?" />
+<meta name="twitter:description" content="Ce que le no-code fait très bien, où il casse, le coût réel sur 3 ans et une grille de décision honnête." />
+<meta name="twitter:image" content="https://akago.fr/assets/akago/og-image.png" />
+
+<link rel="icon" type="image/png" href="../assets/akago/logo.png" />
+<link rel="preload" href="../assets/fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2" as="font" type="font/woff2" crossorigin />
+<!-- Analytics (Plausible, sans cookie) -->
+<script defer data-domain="akago.fr" data-api="https://plausible.io/api/event" src="../assets/js/stats.js"></script>
+<link rel="stylesheet" href="../style.css" />
+
+<!-- Données structurées -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "No-code ou développement sur mesure : que choisir en 2026 ?",
+  "description": "Comparatif honnête entre no-code et développement sur mesure : cas d'usage, limites, coût total sur 3 ans, grille de décision et piège de la migration.",
+  "image": "https://akago.fr/assets/akago/og-image.png",
+  "datePublished": "2026-06-11",
+  "dateModified": "2026-06-11",
+  "inLanguage": "fr",
+  "author": { "@type": "Organization", "name": "Akago", "url": "https://akago.fr/" },
+  "publisher": { "@type": "Organization", "name": "Akago", "url": "https://akago.fr/", "logo": { "@type": "ImageObject", "url": "https://akago.fr/assets/akago/logo.png" } },
+  "mainEntityOfPage": "https://akago.fr/guides/no-code-ou-sur-mesure.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://akago.fr/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://akago.fr/guides/" },
+    { "@type": "ListItem", "position": 3, "name": "No-code ou sur-mesure ?" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Le no-code est-il moins cher que le sur-mesure ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Au lancement, oui, nettement : quelques milliers d'euros contre plusieurs dizaines de milliers. Sur 3 ans, l'écart se resserre : abonnements de plateforme qui montent avec l'usage, prestataires no-code pour les évolutions, contournements de plus en plus coûteux des limites — et, si le produit décolle, une réécriture complète. Pour un test de marché, le no-code reste imbattable ; pour un produit cœur de métier, le sur-mesure est souvent plus économique sur la durée." }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on migrer du no-code vers du sur-mesure ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Il n'existe pas de migration : c'est une réécriture. Le code généré par les plateformes no-code n'est pas réutilisable comme base d'un développement sur mesure (à l'exception partielle d'outils comme FlutterFlow qui exportent du code, rarement maintenable tel quel). Ce qui se transfère : les apprentissages, les parcours validés, les données — si la plateforme permet de les exporter proprement. Si vous choisissez le no-code pour valider, budgétez la réécriture dès le départ." }
+    },
+    {
+      "@type": "Question",
+      "name": "Le no-code est-il compatible RGPD ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pas toujours simplement : beaucoup de plateformes no-code hébergent les données hors Union européenne ou ne permettent pas de choisir la localisation, et l'export complet des données n'est pas toujours garanti. Pour des données sensibles (santé, mineurs, social), vérifiez la localisation de l'hébergement, l'encadrement des transferts et la réversibilité avant de choisir une plateforme — ou partez sur du sur-mesure hébergé en France." }
+    },
+    {
+      "@type": "Question",
+      "name": "FlutterFlow est-il un bon compromis entre no-code et sur-mesure ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "FlutterFlow a un vrai avantage sur les autres plateformes : il génère du code Flutter exportable, donc vous n'êtes pas totalement enfermé. C'est un bon outil de prototypage avancé. Ses limites : le code généré est difficile à maintenir tel quel par une équipe de développement, et les logiques métier complexes restent à l'étroit. Pour un produit durable, il sert mieux de brouillon que de fondation." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="../index.html" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Accueil</a>
+      <a href="../about.html">À propos</a>
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-primary plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero compact" data-screen-label="01 Guide Hero">
+  <div class="wrap-narrow">
+    <span class="eyebrow">Guide pratique</span>
+    <h1 class="display">No-code ou <em>sur-mesure</em> : que choisir en 2026 ?</h1>
+    <p class="lead">Transparence d'abord : nous vendons du développement sur mesure. Raison de plus pour être précis sur les cas — réels et nombreux — où le no-code est le bon choix, et sur ceux où il vous coûtera très cher.</p>
+  </div>
+</header>
+
+<!-- ============================ GUIDE ============================ -->
+<main class="section guide" data-screen-label="02 Guide contenu">
+  <div class="wrap-narrow">
+
+    <div class="guide-meta">
+      <span>Mis à jour le 11 juin 2026</span>
+      <span>Lecture : 8 minutes</span>
+      <span>Par l'équipe Akago</span>
+    </div>
+
+    <div class="guide-tldr">
+      <span class="label">La réponse courte</span>
+      <p><strong>No-code</strong> pour tester une demande, outiller une équipe en interne ou lancer un service simple avec moins de 10 000 € : imbattable. <strong>Sur-mesure</strong> dès que l'application <em>est</em> votre projet : expérience différenciante, données sensibles, intégrations, montée en charge. Le vrai critère n'est pas le budget de départ — c'est ce que devient votre produit <strong>dans 3 ans</strong>.</p>
+    </div>
+
+    <nav class="guide-toc" aria-label="Sommaire">
+      <ol>
+        <li><a href="#definition">Le no-code, c'est quoi exactement ?</a></li>
+        <li><a href="#forces">Ce que le no-code fait très bien</a></li>
+        <li><a href="#limites">Où ça casse</a></li>
+        <li><a href="#cout">Le coût réel sur 3 ans</a></li>
+        <li><a href="#decision">La grille de décision</a></li>
+        <li><a href="#migration">Le piège de la « migration »</a></li>
+        <li><a href="#faq">Vos questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="guide-body">
+
+      <h2 id="definition">Le no-code, c'est <em>quoi</em> exactement ?</h2>
+      <p>Des plateformes qui permettent de construire une application sans écrire de code : <strong>Bubble</strong> (applications web complètes), <strong>Glide</strong> et <strong>Softr</strong> (apps simples sur tableurs), <strong>FlutterFlow</strong> (apps mobiles, avec export de code), <strong>Webflow</strong> (sites), <strong>Airtable</strong> + <strong>Make/Zapier</strong> (bases de données et automatisations). On assemble des briques visuelles, la plateforme héberge et fait tourner le résultat.</p>
+      <p>Le « low-code » est la variante où un développeur complète les briques avec du code. La frontière est floue ; les enjeux — dépendance, données, plafond de verre — sont les mêmes.</p>
+
+      <h2 id="forces">Ce que le no-code fait <em>très bien</em></h2>
+      <ul>
+        <li><strong>Tester une demande.</strong> Une landing page, un formulaire, une base Airtable : vous savez en 3 semaines si quelqu'un veut votre service — avant d'investir.</li>
+        <li><strong>Les outils internes.</strong> Suivi d'inventaire, tableau de bord d'équipe, petit CRM : des utilisateurs captifs et indulgents, des besoins simples, aucune image de marque en jeu.</li>
+        <li><strong>Les automatisations.</strong> Connecter vos outils existants (Zapier, Make) remplace avantageusement bien des développements.</li>
+        <li><strong>Les services à parcours simple</strong> : prise de rendez-vous, annuaire, réservation basique — tant que vous restez dans les rails prévus par la plateforme.</li>
+      </ul>
+      <p>Dans ces cas, pour 0 à 10 000 € et en quelques semaines, le no-code est <strong>objectivement le bon choix</strong> — et un prestataire honnête doit vous le dire.</p>
+
+      <h2 id="limites">Où ça <em>casse</em></h2>
+      <ul>
+        <li><strong>La dépendance.</strong> Votre application vit sur la plateforme : si elle double ses tarifs, change ses conditions ou ferme, vous subissez. Vous ne possédez pas le code — vous louez le droit d'exécuter votre produit.</li>
+        <li><strong>Le plafond de verre fonctionnel.</strong> Tout va vite… tant que votre besoin correspond aux briques prévues. Le premier besoin hors des rails (workflow métier spécifique, calcul complexe, intégration exotique) se contourne — puis le contournement de contournement devient votre quotidien.</li>
+        <li><strong>Les données.</strong> Hébergement souvent hors UE, export parfois partiel, localisation rarement choisie : pour des données de santé, de mineurs ou d'accompagnement social, c'est souvent rédhibitoire.</li>
+        <li><strong>L'expérience utilisateur.</strong> Performances et finitions plafonnées : si votre différenciation passe par l'expérience, vous êtes limité par ce que la plateforme sait faire.</li>
+        <li><strong>L'échelle.</strong> Les tarifs des plateformes grimpent avec l'usage ; les performances, rarement.</li>
+      </ul>
+
+      <h2 id="cout">Le coût réel sur <em>3 ans</em></h2>
+      <p>Le comparatif honnête ne s'arrête pas au devis initial :</p>
+
+      <table class="guide-table">
+        <thead>
+          <tr>
+            <th>Poste</th>
+            <th>No-code</th>
+            <th>Sur-mesure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lancement</td>
+            <td>0 – 10 000 € (vous-même ou un maker)</td>
+            <td class="price">15 000 – 35 000 € (MVP)</td>
+          </tr>
+          <tr>
+            <td>Coûts récurrents</td>
+            <td>Abonnements plateforme + plugins, croissants avec l'usage et les utilisateurs</td>
+            <td>Hébergement (20-300 €/mois) + maintenance (10-20 %/an)</td>
+          </tr>
+          <tr>
+            <td>Évolutions</td>
+            <td>Rapides dans les rails, coûteuses dès qu'on en sort</td>
+            <td>Libres — vous possédez le code</td>
+          </tr>
+          <tr>
+            <td>Si le produit décolle</td>
+            <td>Réécriture complète à budgéter</td>
+            <td>L'actif grandit avec vous</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Pour un test ou un outil interne, la colonne de gauche gagne haut la main. Pour un produit cœur de métier qui réussit, le no-code finit souvent par coûter <strong>le prix des deux colonnes</strong> : l'abonnement pendant 2 ans, puis la réécriture.</p>
+
+      <h2 id="decision">La grille de <em>décision</em></h2>
+      <p><strong>Choisissez le no-code si</strong> :</p>
+      <ul>
+        <li>vous testez une demande, sans certitude qu'il y a un marché ;</li>
+        <li>c'est un outil interne, pour des utilisateurs captifs ;</li>
+        <li>budget &lt; 10 000 €, horizon &lt; 1 an ;</li>
+        <li>votre différenciation ne passe pas par l'expérience ou la technique.</li>
+      </ul>
+      <p><strong>Choisissez le sur-mesure si</strong> :</p>
+      <ul>
+        <li>l'application <em>est</em> votre projet — pas un test ;</li>
+        <li>vous manipulez des données sensibles (santé, social, mineurs) ou visez une conformité RGPD stricte ;</li>
+        <li>vous avez besoin d'intégrations, de workflows métier spécifiques, de montée en charge ;</li>
+        <li>vous prévoyez une levée de fonds — les investisseurs évaluent l'actif technique ;</li>
+        <li>vous voulez posséder ce que vous payez.</li>
+      </ul>
+      <p>Et la <strong>troisième voie</strong>, souvent la meilleure pour départager : un <a href="../index.html#packs">prototype Figma testé avec de vrais utilisateurs</a> (dès 6 500 €). Aucun code, aucune dépendance — et vous choisissez no-code ou sur-mesure <em>après</em> avoir validé l'idée, pas avant.</p>
+
+      <h2 id="migration">Le piège de la <em>« migration »</em></h2>
+      <p>Disons-le clairement : <strong>il n'existe pas de migration no-code → sur-mesure</strong>. C'est une réécriture. Le code généré par les plateformes n'est pas une base de travail (FlutterFlow exporte du code Flutter, c'est mieux — mais rarement maintenable tel quel). Ce qui se transfère : les apprentissages, les parcours validés, et les données <em>si</em> la plateforme les exporte proprement.</p>
+      <p>Ce n'est pas une raison d'éviter le no-code pour tester — c'est une raison de <strong>budgéter la réécriture dès le départ</strong> si le test réussit, et de vérifier l'exportabilité de vos données avant de choisir la plateforme.</p>
+
+      <div class="guide-note">
+        <p><strong>Notre position</strong> — nous faisons du sur-mesure (Flutter : web, iOS et Android sur une seule base de code), et nous redirigeons régulièrement des porteurs de projet vers le no-code quand c'est le bon outil. Le test du périmètre se fait en 30 minutes de visio, gratuitement.</p>
+      </div>
+
+      <h2 id="faq">Vos <em>questions</em></h2>
+
+      <h3>Le no-code est-il moins cher ?</h3>
+      <p>Au lancement, oui, nettement. Sur 3 ans, l'écart se resserre : abonnements croissants, prestataires pour les évolutions, contournements — et réécriture si le produit décolle. Test de marché : no-code. Produit durable : faites le calcul complet, notre <a href="combien-coute-une-application.html">guide des prix</a> donne toutes les fourchettes.</p>
+
+      <h3>Peut-on récupérer ses données ?</h3>
+      <p>Vérifiez <em>avant</em> de choisir la plateforme : export complet (pas seulement les tables visibles), formats exploitables, et fréquence possible. C'est votre assurance-vie.</p>
+
+      <h3>Le no-code est-il compatible RGPD ?</h3>
+      <p>Pas toujours simplement : hébergement souvent hors UE, localisation rarement au choix. Pour des données sensibles, exigez des réponses précises — ou choisissez un hébergement français maîtrisé.</p>
+
+      <h3>Et FlutterFlow ?</h3>
+      <p>Le moins enfermant des outils no-code : il exporte du vrai code Flutter. Excellent brouillon, fondation fragile — le code généré supporte mal la maintenance et les logiques métier complexes.</p>
+
+    </div>
+  </div>
+</main>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta-final" data-screen-label="03 CTA final">
+  <div class="wrap cta-inner">
+    <img class="cta-star" src="../assets/illustrations/star.svg" alt="" />
+    <h2>On vous dit lequel choisir — <em>même si ce n'est pas nous</em></h2>
+    <p>Racontez votre projet en visio : si le no-code suffit, on vous le dit et on vous oriente. Si le sur-mesure se justifie, on vous explique pourquoi, chiffres à l'appui. 30 minutes, gratuit.</p>
+    <div class="hero-ctas">
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-accent btn-lg plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="mailto:contact@akago.fr" class="btn btn-ghost-dark btn-lg plausible-event-name=Contact+Email">Je suis plus branché.e email</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <a href="../index.html" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+        <p>Des alliés numériques pour faire avancer les projets engagés et les coopératives vite et bien.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../about.html">À propos</a></li>
+          <li><a href="./">Guides pratiques</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@akago.fr" class="plausible-event-name=Contact+Email">↪︎ contact@akago.fr</a></li>
+          <li><a href="https://tally.so/r/wdA0DA" class="plausible-event-name=Reserver+Appel">Réserver un appel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Légal</h5>
+        <ul>
+          <li><a href="../legal.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Akago. Tous droits réservés.</span>
+      <span>Fait avec ♥ en France</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 10) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+  })();
+</script>
+
+</body>
+</html>

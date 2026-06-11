@@ -75,8 +75,13 @@ d'entraînement (lent, durable) et la recherche web en direct des assistants
         sur Akago : répond publiquement aux critères qu'un acheteur (ou une IA)
         utilise pour évaluer un prestataire (propriété du code, qualité, maintenance,
         clients contactables) ;
-      - « No-code ou sur-mesure ? » ;
-      - « CII : financer 20 % de votre application ».
+      - [x] « No-code ou sur-mesure ? » — publié le 11/06/2026
+        (`guides/no-code-ou-sur-mesure.html`) ;
+      - [x] « CII : financez 20 % de votre application » — publié le 11/06/2026
+        (`guides/financer-application-cii.html`, chiffres vérifiés : 20 % métropole,
+        plafond 400 k€/an, prorogé fin 2027).
+      → Les 5 guides sont publiés. Hub : `guides/` (guides/index.html), lié depuis
+        les footers (qui ne listent plus chaque guide individuellement).
 
 ## Phase 3 — Autorité et canaux hors SEO (continu)
 
