@@ -33,6 +33,26 @@ function toUrl(target) {
   return pathToFileURL(abs).href;
 }
 
+// Déclenche le chargement des images loading="lazy" hors viewport : défile
+// la page jusqu'en bas par paliers, attend que toutes les images soient
+// décodées, puis remonte en haut avant la capture.
+async function loadLazyImages(page) {
+  await page.evaluate(async () => {
+    const step = window.innerHeight;
+    for (let y = 0; y <= document.body.scrollHeight; y += step) {
+      window.scrollTo(0, y);
+      await new Promise((r) => setTimeout(r, 100));
+    }
+    await Promise.all(
+      Array.from(document.images, (img) =>
+        img.complete ? null : new Promise((r) => { img.onload = img.onerror = r; })
+      )
+    );
+    window.scrollTo(0, 0);
+  });
+  await page.waitForLoadState('networkidle');
+}
+
 const browser = await chromium.launch();
 try {
   for (const target of targets) {
@@ -41,6 +61,7 @@ try {
     for (const [vp, size] of Object.entries(viewports)) {
       const page = await browser.newPage({ viewport: size, deviceScaleFactor: 2 });
       await page.goto(url, { waitUntil: 'networkidle' });
+      await loadLazyImages(page);
       const out = resolve(outDir, `${name}-${vp}.png`);
       await page.screenshot({ path: out, fullPage: true });
       await page.close();
