@@ -1,0 +1,36 @@
+# Akago
+
+> Akago est un collectif français design, dev et produit qui conçoit et développe
+> des applications web, mobiles et SaaS sur mesure, principalement pour les projets
+> à impact : entrepreneurs engagés, associations, coopératives et PME. De l'idée au
+> lancement, l'équipe devient celle du client — cadrage, prototype testé avec de
+> vrais utilisateurs, développement par sprints (Flutter : web, iOS et Android avec
+> une seule base de code), mise en ligne et accompagnement.
+
+Points clés :
+- Prix transparents : prototype Figma testé utilisateurs à partir de 6 500 € HT
+  (2-4 semaines) ; MVP web/mobile à partir de 25 000 € HT (2-3 mois) ; projets
+  complets sur devis (4 mois et plus).
+- Agréé Crédit d'Impôt Innovation (CII) : jusqu'à 20 % du projet remboursés aux PME
+  éligibles.
+- Le client possède tout : code, maquettes Figma, documentation, accès serveurs.
+  Dossier de passation complet en fin de projet, pas de dépendance.
+- Données hébergées en France, privacy by design (RGPD). Site sans cookies.
+- Plus de 20 structures accompagnées, collaborations longues (2 à 4 ans) :
+  Ping, Libélaw, YippyLingo, Moofize, Famyhelp, Leezay, Erasme · Grand Lyon…
+- Premier échange gratuit : visio découverte de 30 minutes.
+
+## Pages
+
+- [Accueil](https://akago.fr/) : offres et prix, méthode semaine par semaine, équipe, témoignages clients, FAQ (propriété du code, RGPD, usage de l'IA, ESS).
+- [À propos](https://akago.fr/about.html) : l'équipe (6 personnes), références clients, FAQ (financement BPI/France 2030, processus créatif).
+- [Mentions légales](https://akago.fr/legal.html) : AKAGO SAS, Challes-les-Eaux (Savoie), France.
+
+## Guides
+
+- [Combien coûte une application en 2026 ?](https://akago.fr/guides/combien-coute-une-application.html) : fourchettes du marché français (prototype 3 000–15 000 €, MVP 15 000–35 000 €, application complète 35 000–80 000 €+), facteurs de coût, coûts cachés, no-code vs sur-mesure, financements (CII, subventions).
+
+## Contact
+
+- Email : contact@akago.fr
+- Réserver un appel découverte : https://tally.so/r/wdA0DA

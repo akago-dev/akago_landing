@@ -37,6 +37,25 @@ Constat clé : le site ne contient presque pas les mots que la cible tape dans G
       Reste côté Plausible : ajouter le site akago.fr au compte, puis créer les goals
       « Reserver Appel » et « Contact Email » (Site Settings → Goals → Custom event).
 
+## Volet GEO — visibilité dans les assistants IA (Claude, Mistral, ChatGPT…)
+
+Même logique que le SEO, orientée « être citable ». Deux canaux : les corpus
+d'entraînement (lent, durable) et la recherche web en direct des assistants
+(ChatGPT/Copilot s'appuient sur Bing → compte Bing Webmaster déjà actif).
+
+- [x] **robots.txt ouvert aux crawlers IA** (ClaudeBot, GPTBot, MistralAI…) — fait.
+- [x] **llms.txt** à la racine (11/06/2026) : résumé du site en markdown pour les LLM.
+      À tenir à jour quand l'offre ou les pages changent.
+- [ ] **Contenu citable** : les guides de la phase 2 (les assistants citent les pages
+      qui répondent factuellement, avec des chiffres — les prix publics d'Akago sont
+      l'atout n°1).
+- [ ] **Sources que les IA consultent** : annuaire CII Bpifrance, Malt, Sortlist,
+      avis Google, LinkedIn (cf. phase 3). Pour Mistral : sources françaises ++.
+- [ ] **Cohérence d'entité** : même nom/description/domaine partout.
+- [ ] **Mesure** : referrers `claude.ai`, `chatgpt.com`, `perplexity.ai`… dans
+      Plausible ; test mensuel « que sais-tu d'Akago ? » dans Claude et Le Chat.
+- [ ] *(Optionnel)* Entrée **Wikidata** pour Akago.
+
 ## Phase 2 — Contenu qui capte la recherche (mois 1-3)
 
 - [ ] **Pages réalisations** : une page par cas client (problème → solution → résultat
@@ -46,8 +65,9 @@ Constat clé : le site ne contient presque pas les mots que la cible tape dans G
       « Développer votre SaaS sur mesure » — une page par requête commerciale,
       maillées depuis les packs.
 - [ ] **3 à 5 guides** sur les requêtes de la phase de réflexion :
-      - « Combien coûte une application en 2026 ? » (requête n°1 — et Akago affiche
-        ses prix, avantage rare) ;
+      - [x] « Combien coûte une application en 2026 ? » — publié le 11/06/2026
+        (`guides/combien-coute-une-application.html`, gabarit CSS `GUIDE` réutilisable
+        dans `style.css` pour les guides suivants) ;
       - « MVP : budget et délais » ;
       - « No-code ou sur-mesure ? » ;
       - « CII : financer 20 % de votre application ».
