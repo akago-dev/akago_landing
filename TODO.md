@@ -4,6 +4,30 @@ Liste des évolutions à apporter au site. Cocher une fois fait.
 
 ## Contenu
 
+### Pages réalisations — collecte par client (phase 2 du plan de visibilité)
+
+Infos à récupérer pour chaque projet avant de rédiger sa page :
+
+| # | Info | Usage |
+|---|------|-------|
+| 1 | Problème de départ (1-2 phrases) | Accroche de la page |
+| 2 | Mission : formule, durée, plateformes, depuis quand | Fiche d'identité |
+| 3 | 2-3 fonctionnalités marquantes | Section solution |
+| 4 | **1 à 3 résultats chiffrés** (utilisateurs, volume/mois, note stores, financement…) | Le cœur de la page (retour Charlotte) |
+| 5 | Citation + signataire (nom, fonction) | Crédibilité du témoignage |
+| 6 | Lien public actif (site, stores) — à vérifier | Preuve « utilisez l'app » |
+| 7 | **Accord écrit** : page détaillée + chiffres + (option) mise en relation prospects | Indispensable avant publication |
+| 8 | (Bonus) anecdote de collaboration | Touche vivante |
+
+État par client :
+
+- [ ] **Moofize** (4 ans, priorité 1) — manque : chiffres, signataire, accord.
+- [ ] **Libélaw** (priorité 1, brouillon démarré dans `_drafts/`) — manque : chiffres, signataire, accord.
+- [ ] **Famyhelp** — manque : chiffres, signataire, accord.
+- [ ] **Ping** — manque : chiffres (ou angle « de l'idée au lancement »), accord.
+- [ ] **YippyLingo** — manque : chiffres, 2-3 captures supplémentaires, accord.
+- [ ] **Leezay** — manque : tout (citation, chiffres, captures, accord).
+
 - [x] **Témoignages** : ~~ajouter un lien vers le site du projet sur chaque carte~~ — abandonné : plusieurs sites projets n'existent plus.
 - [ ] **Témoignages** : récupérer puis réintégrer la citation de **Leezay** (sa carte est retirée du site en attendant). YippyLingo, Ping, Libélaw, Moofize, Famyhelp affichées.
 - [x] **RGPD** : Q/R ajoutée à la FAQ accueil (hébergement en France, privacy by design, accompagnement conformité + DPO). Pas de contrat de sous-traitance art. 28 mentionné (pas encore en place).
