@@ -4,6 +4,7 @@
 exclude:
   - TODO.md
   - ASSETS-TODO.md
+  - PLAN-VISIBILITE.md
   - CLAUDE.md
   - package.json
   - package-lock.json

@@ -46,7 +46,7 @@ Après une modif CSS/HTML, faire un `npm run shot <page>` et **regarder le rendu
 - `frontend-design` (plugin) — création de nouveaux composants/sections. **À ancrer sur le design-system existant** (tokens `:root`, palette crème + `--accent`, Bricolage Grotesque) : l'utiliser pour la qualité d'exécution, **pas** pour réinventer la direction visuelle d'Akago à chaque fois.
 - MCP **Figma** — parité avec le design-system source.
 
-Baseline Lighthouse `index.html` : Perf 99 · A11y 93 · Best Practices 100 · SEO 100 — ne pas régresser.
+Baseline Lighthouse `index.html` (11/06/2026) : Perf 93 · A11y 94 · Best Practices 100 · SEO 100 — ne pas régresser. (La perf est bornée par le LCP du h1 sur l'émulation mobile throttlée ; aller au-delà demanderait d'inliner le CSS critique.)
 
 ## Déploiement
 
