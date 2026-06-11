@@ -22,7 +22,7 @@ Infos à récupérer pour chaque projet avant de rédiger sa page :
 État par client :
 
 - [ ] **Moofize** (4 ans, priorité 1) — manque : chiffres, signataire, accord.
-- [ ] **Libélaw** (priorité 1, brouillon démarré dans `_drafts/`) — manque : chiffres, signataire, accord.
+- [ ] **Libélaw** (priorité 1, brouillon démarré dans `_drafts/`) — signataire ✓ (Maxence Laurent, CEO) ; manque : chiffres, accord.
 - [ ] **Famyhelp** — manque : chiffres, signataire, accord.
 - [ ] **Ping** — manque : chiffres (ou angle « de l'idée au lancement »), accord.
 - [ ] **YippyLingo** — manque : chiffres, 2-3 captures supplémentaires, accord.
