@@ -1,0 +1,88 @@
+<!doctype html>
+<!-- Source de l'image de partage social (og:image).
+     Régénérer après modif : node tools/og-shot.mjs -> assets/akago/og-image.png -->
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<style>
+  /* Valeurs répliquées des tokens :root de style.css (page outil autonome). */
+  @font-face {
+    font-family: 'Bricolage Grotesque';
+    font-weight: 400 700;
+    font-stretch: 100%;
+    src: url(../assets/fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    font-weight: 400 700;
+    src: url(../assets/fonts/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: local('JetBrains Mono');
+  }
+  * { margin: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 630px;
+    background: #FBF7F0;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    color: #1C1814;
+    padding: 72px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .logo {
+    align-self: flex-start;
+    width: 84px;
+    height: 84px;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+  h1 {
+    font-size: 72px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+    max-width: 900px;
+  }
+  h1 em {
+    font-style: italic;
+    color: #E25E3E;
+  }
+  .sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 30px;
+    color: #5C5347;
+    max-width: 820px;
+    line-height: 1.4;
+    margin-top: 26px;
+  }
+  .url {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 24px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #E25E3E;
+  }
+  .star {
+    position: absolute;
+    right: 64px;
+    top: 56px;
+    width: 120px;
+  }
+</style>
+</head>
+<body>
+  <img class="logo" src="../assets/akago/logo.png" alt="" />
+  <div>
+    <h1>Votre application web, mobile ou SaaS, de <em>l'idée à l'impact</em></h1>
+    <p class="sub">Un collectif design, dev et produit qui devient votre équipe, le temps du projet. Sans jargon, sans surprise.</p>
+  </div>
+  <p class="url">akago.fr</p>
+  <img class="star" src="../assets/illustrations/star.svg" alt="" />
+</body>
+</html>
