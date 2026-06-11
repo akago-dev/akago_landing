@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MVP : quel budget et quels délais en 2026 ? — Akago</title>
+<meta name="description" content="Un MVP coûte 15 000 à 35 000 € et prend 2 à 3 mois avec une équipe dédiée. Ce qu'il contient vraiment, le déroulé semaine par semaine, les erreurs qui coûtent cher et comment le financer." />
+<link rel="canonical" href="https://akago.fr/guides/mvp-budget-delais.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Akago" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://akago.fr/guides/mvp-budget-delais.html" />
+<meta property="og:title" content="MVP : quel budget et quels délais en 2026 ?" />
+<meta property="og:description" content="Un MVP coûte 15 000 à 35 000 € et prend 2 à 3 mois avec une équipe dédiée. Le déroulé semaine par semaine, les erreurs qui coûtent cher et comment le financer." />
+<meta property="og:image" content="https://akago.fr/assets/akago/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="MVP : quel budget et quels délais en 2026 ?" />
+<meta name="twitter:description" content="Un MVP coûte 15 000 à 35 000 € et prend 2 à 3 mois avec une équipe dédiée. Le déroulé semaine par semaine et les erreurs qui coûtent cher." />
+<meta name="twitter:image" content="https://akago.fr/assets/akago/og-image.png" />
+
+<link rel="icon" type="image/png" href="../assets/akago/logo.png" />
+<link rel="preload" href="../assets/fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2" as="font" type="font/woff2" crossorigin />
+<!-- Analytics (Plausible, sans cookie) -->
+<script defer data-domain="akago.fr" data-api="https://plausible.io/api/event" src="../assets/js/stats.js"></script>
+<link rel="stylesheet" href="../style.css" />
+
+<!-- Données structurées -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "MVP : quel budget et quels délais en 2026 ?",
+  "description": "Budget, délais et périmètre d'un MVP en France en 2026 : ce qu'il contient vraiment, le déroulé semaine par semaine, les erreurs courantes et les pistes de financement.",
+  "image": "https://akago.fr/assets/akago/og-image.png",
+  "datePublished": "2026-06-11",
+  "dateModified": "2026-06-11",
+  "inLanguage": "fr",
+  "author": { "@type": "Organization", "name": "Akago", "url": "https://akago.fr/" },
+  "publisher": { "@type": "Organization", "name": "Akago", "url": "https://akago.fr/", "logo": { "@type": "ImageObject", "url": "https://akago.fr/assets/akago/logo.png" } },
+  "mainEntityOfPage": "https://akago.fr/guides/mvp-budget-delais.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://akago.fr/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://akago.fr/guides/mvp-budget-delais.html" },
+    { "@type": "ListItem", "position": 3, "name": "MVP : budget et délais" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quelle différence entre un prototype et un MVP ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Un prototype est une maquette cliquable (Figma) qui ressemble à l'application mais ne contient aucun code : il sert à tester l'idée avec de vrais utilisateurs pour quelques milliers d'euros. Un MVP est une vraie application, développée et mise en production, que vos utilisateurs utilisent au quotidien. Le bon ordre : prototype d'abord, MVP ensuite — chaque étape valide la suivante." }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on développer un MVP en 1 mois ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Rarement, et seulement si le périmètre est minuscule et le cadrage déjà fait. Les promesses de MVP en 3 semaines cachent souvent un template habillé ou l'impasse sur la recherche utilisateurs — ce qui se paie ensuite. Un MVP sérieux, recherche et design compris, demande 2 à 3 mois." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien d'écrans contient un MVP typique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Un MVP couvre un parcours clé de bout en bout, ce qui représente généralement 8 à 15 écrans : inscription, cœur de l'usage, et le minimum d'administration. Si la liste dépasse 20 écrans, ce n'est plus un MVP — c'est une v1 complète qui se déguise." }
+    },
+    {
+      "@type": "Question",
+      "name": "MVP web ou mobile : que choisir ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cela dépend d'où sont vos utilisateurs : une app métier s'utilise souvent au bureau (web), un service du quotidien dans la poche (mobile). Avec Flutter, la question perd de son poids : une seule base de code produit l'application web, iOS et Android — vous choisissez ce que vous publiez en premier sans redévelopper." }
+    },
+    {
+      "@type": "Question",
+      "name": "Que se passe-t-il après le lancement du MVP ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Les retours utilisateurs arrivent dès la première semaine : prévoyez une enveloppe d'itération post-lancement. Chez Akago, 30 jours de support sont inclus (corrections, formation), puis vous choisissez : voler de vos propres ailes avec un dossier de passation complet, ou continuer ensemble en forfait." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="../index.html" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Accueil</a>
+      <a href="../about.html">À propos</a>
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-primary plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero compact" data-screen-label="01 Guide Hero">
+  <div class="wrap-narrow">
+    <span class="eyebrow">Guide pratique</span>
+    <h1 class="display">MVP : quel budget et quels délais en <em>2026</em> ?</h1>
+    <p class="lead">« On voudrait une première version pour tester » — très bien, mais combien, en combien de temps, et avec quoi dedans ? Voici des réponses chiffrées, le déroulé réel semaine par semaine, et les pièges qui font déraper les budgets.</p>
+  </div>
+</header>
+
+<!-- ============================ GUIDE ============================ -->
+<main class="section guide" data-screen-label="02 Guide contenu">
+  <div class="wrap-narrow">
+
+    <div class="guide-meta">
+      <span>Mis à jour le 11 juin 2026</span>
+      <span>Lecture : 7 minutes</span>
+      <span>Par l'équipe Akago</span>
+    </div>
+
+    <div class="guide-tldr">
+      <span class="label">La réponse courte</span>
+      <p>En France, en 2026, un MVP développé par une équipe professionnelle coûte entre <strong>15 000 et 35 000 €</strong> et demande <strong>2 à 3 mois</strong>, recherche utilisateurs et design compris. La vraie variable d'ajustement n'est ni le tarif jour ni le planning : c'est le <strong>périmètre</strong>. Un MVP réussi couvre un seul parcours clé, de bout en bout, pour de vrais utilisateurs.</p>
+    </div>
+
+    <nav class="guide-toc" aria-label="Sommaire">
+      <ol>
+        <li><a href="#definition">Un MVP, c'est quoi (et ce que ça n'est pas)</a></li>
+        <li><a href="#budget">Le budget : où va l'argent</a></li>
+        <li><a href="#delais">Les délais : 2 à 3 mois, semaine par semaine</a></li>
+        <li><a href="#perimetre">Le périmètre : la vraie variable d'ajustement</a></li>
+        <li><a href="#erreurs">Les erreurs qui coûtent cher</a></li>
+        <li><a href="#financer">Financer son MVP</a></li>
+        <li><a href="#faq">Vos questions sur les MVP</a></li>
+      </ol>
+    </nav>
+
+    <div class="guide-body">
+
+      <h2 id="definition">Un MVP, c'est <em>quoi</em> (et ce que ça n'est pas)</h2>
+      <p>MVP : <em>Minimum Viable Product</em>, ou « produit minimum viable ». C'est la première version de votre application <strong>réellement mise en production</strong>, entre les mains de vrais utilisateurs. Son but n'est pas d'être complète : c'est d'<strong>apprendre vite</strong> — tester un marché, valider un usage, convaincre des financeurs avec des preuves plutôt que des promesses.</p>
+      <p>Ce qu'un MVP n'est <strong>pas</strong> :</p>
+      <ul>
+        <li><strong>Un brouillon.</strong> Il est en production, il doit être fiable, agréable et sûr — sinon il teste votre idée dans de mauvaises conditions et vous apprend… de fausses leçons.</li>
+        <li><strong>Une version au rabais de l'app finale.</strong> Toutes les fonctionnalités « en moins bien » est la pire formule : mieux vaut un seul parcours excellent que dix parcours médiocres.</li>
+        <li><strong>Une maquette.</strong> Ça, c'est le prototype — l'étape d'avant, dix fois moins chère, à faire d'abord si l'idée n'a jamais été confrontée à des utilisateurs.</li>
+      </ul>
+
+      <h2 id="budget">Le budget : où va <em>l'argent</em></h2>
+      <p>La fourchette du marché français : <strong>15 000 à 35 000 €</strong> pour un MVP réalisé par une équipe professionnelle (le détail des fourchettes par stade est dans notre <a href="combien-coute-une-application.html">guide sur le prix d'une application</a>). Voici comment ce budget se répartit typiquement :</p>
+
+      <table class="guide-table">
+        <thead>
+          <tr>
+            <th>Poste</th>
+            <th>Part du budget</th>
+            <th>Ce que ça couvre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cadrage &amp; recherche</td>
+            <td class="price">~15 %</td>
+            <td>Ateliers, interviews d'utilisateurs cibles, définition du parcours clé et des critères de succès.</td>
+          </tr>
+          <tr>
+            <td>Design</td>
+            <td class="price">~25 %</td>
+            <td>Maquettes cliquables, tests avec votre cible, itérations — rien n'est codé sans validation.</td>
+          </tr>
+          <tr>
+            <td>Développement</td>
+            <td class="price">~50 %</td>
+            <td>Le code de l'application, les mises en production continues, les tests.</td>
+          </tr>
+          <tr>
+            <td>Lancement &amp; support</td>
+            <td class="price">~10 %</td>
+            <td>Publication (stores, web), formation, corrections des premières semaines.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Un devis MVP qui ne mentionne ni recherche utilisateurs, ni tests, ni support post-lancement n'est pas moins cher : il est <strong>incomplet</strong> — ces postes reviendront, en urgence et au prix fort.</p>
+
+      <h2 id="delais">Les délais : 2 à 3 mois, <em>semaine par semaine</em></h2>
+      <p>Avec une équipe dédiée et un périmètre cadré, comptez 2 à 3 mois du premier atelier à la mise en production. Voici le déroulé réel chez nous — et le temps que <strong>vous</strong> y consacrez :</p>
+
+      <table class="guide-table">
+        <thead>
+          <tr>
+            <th>Période</th>
+            <th>Ce qui se passe</th>
+            <th>Votre temps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Semaines 1–3</td>
+            <td>Ateliers de cadrage, interviews de vos utilisateurs potentiels, définition du parcours clé.</td>
+            <td>3 à 5 demi-journées</td>
+          </tr>
+          <tr>
+            <td>Semaines 4–8</td>
+            <td>Maquettes cliquables testées et itérées. Rien n'est codé sans votre « oui, c'est ça ».</td>
+            <td>1 visio par semaine</td>
+          </tr>
+          <tr>
+            <td>Semaines 9–16</td>
+            <td>Développement par sprints, démo chaque vendredi, mises en production continues.</td>
+            <td>30 min chaque vendredi</td>
+          </tr>
+          <tr>
+            <td>Semaine 17+</td>
+            <td>Mise en ligne, formation, 30 jours de support pour les ajustements.</td>
+            <td>Vous lancez 🍾</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Deux signaux d'alarme sur les plannings : la promesse à <strong>3 semaines</strong> (un template habillé, ou l'impasse sur la recherche — vous le paierez) et le planning à <strong>12 mois sans jalon</strong> (vous découvrirez le produit trop tard pour corriger). Le bon rythme : une démo par semaine, du concret à chaque fois. <a href="../index.html#comment">Le déroulé complet est ici</a>.</p>
+
+      <h2 id="perimetre">Le périmètre : la vraie variable <em>d'ajustement</em></h2>
+      <p>À tarif jour équivalent, c'est le périmètre qui fait passer un MVP de 15 000 à 35 000 € — pas la négociation. La méthode pour le tenir :</p>
+      <ul>
+        <li><strong>Un problème, une cible, un parcours.</strong> Le MVP prouve une chose : que votre solution résout le problème de votre utilisateur principal. Tout le reste attend la v2.</li>
+        <li><strong>Coupez ce qui se contourne.</strong> Paiement automatisé ? Un virement et une facture suffisent les trois premiers mois. Back-office complet ? Un tableur partagé fait l'affaire. Notifications fines ? Un email hebdomadaire d'abord.</li>
+        <li><strong>8 à 15 écrans.</strong> C'est la taille d'un MVP sain : inscription, cœur d'usage, minimum d'administration. Au-delà de 20, ce n'est plus un MVP.</li>
+        <li><strong>Un bon prestataire vous aide à couper.</strong> S'il dit oui à tout, il vous vend du périmètre — pas un produit qui apprend.</li>
+      </ul>
+
+      <h2 id="erreurs">Les erreurs qui coûtent <em>cher</em></h2>
+      <ul>
+        <li><strong>Tout mettre dans la v1.</strong> La moitié des fonctionnalités imaginées ne sera pas utilisée — mais vous l'aurez payée, en argent et en délai.</li>
+        <li><strong>Coder avant d'avoir parlé aux utilisateurs.</strong> Quelques interviews coûtent quelques centaines d'euros ; pivoter après 3 mois de développement en coûte des dizaines de milliers.</li>
+        <li><strong>Choisir au chiffre le plus bas.</strong> Comparez ce qui est inclus (recherche, tests, support, propriété du code) — pas le montant en bas de page.</li>
+        <li><strong>Oublier l'après.</strong> Les retours arrivent dès la semaine 1. Sans enveloppe d'itération, votre MVP apprend… et vous ne pouvez pas en tirer parti.</li>
+        <li><strong>Le no-code par défaut pour un produit cœur de métier.</strong> Pertinent pour tester une demande simple ; piégeux dès que l'app <em>est</em> le projet — le passage au sur-mesure est une réécriture, pas une migration.</li>
+      </ul>
+
+      <h2 id="financer">Financer son <em>MVP</em></h2>
+      <ul>
+        <li><strong>Crédit d'Impôt Innovation (CII)</strong> : jusqu'à 20 % des dépenses de prototypage et de développement récupérées, si vous êtes une PME éligible et votre prestataire agréé (c'est notre cas).</li>
+        <li><strong>Subventions</strong> : Bourse French Tech, aides régionales, France 2030, fondations pour les projets d'utilité sociale. Les parties techniques de ces dossiers, nous savons les rédiger — plusieurs de nos clients ont financé leur projet ainsi.</li>
+        <li><strong>Phasage</strong> : un prototype testé (dès 6 500 €) sert de preuve pour débloquer le financement du MVP. Personne ne finance à l'aveugle.</li>
+        <li><strong>Mutualisation</strong> : pour les coopératives et structures de l'ESS, un logiciel métier partagé entre organisations similaires divise le coût de chacune.</li>
+      </ul>
+
+      <div class="guide-note">
+        <p><strong>Agréés CII</strong> — si vous êtes une PME éligible, jusqu'à 20 % des frais de R&amp;D engagés sur votre MVP vous reviennent en crédit d'impôt. On vous aide à monter le dossier.</p>
+      </div>
+
+      <h2 id="faq">Vos questions sur les <em>MVP</em></h2>
+
+      <h3>Quelle différence entre un prototype et un MVP ?</h3>
+      <p>Le prototype est une maquette cliquable (Figma) : il ressemble à l'app, ne contient aucun code, et teste l'idée pour quelques milliers d'euros. Le MVP est une vraie application en production. Le bon ordre : <strong>prototype d'abord, MVP ensuite</strong> — chaque étape valide la suivante.</p>
+
+      <h3>Peut-on faire un MVP en 1 mois ?</h3>
+      <p>Rarement, et seulement si le périmètre est minuscule et le cadrage déjà fait. Les promesses ultra-courtes cachent souvent un template habillé ou l'impasse sur la recherche utilisateurs — ce qui se paie ensuite.</p>
+
+      <h3>Combien d'écrans dans un MVP typique ?</h3>
+      <p>8 à 15 écrans : un parcours clé de bout en bout, plus le minimum d'administration. Au-delà de 20 écrans, c'est une v1 complète qui se déguise en MVP.</p>
+
+      <h3>MVP web ou mobile ?</h3>
+      <p>Selon l'usage : app métier au bureau → web ; service du quotidien → mobile. Avec <strong>Flutter</strong>, une seule base de code produit le web, iOS et Android : vous choisissez ce que vous publiez en premier, sans redévelopper.</p>
+
+      <h3>Et après le lancement ?</h3>
+      <p>Les retours arrivent dès la première semaine — prévoyez une enveloppe d'itération. Chez nous, 30 jours de support sont inclus, puis vous choisissez : autonomie complète avec dossier de passation, ou on continue ensemble.</p>
+
+    </div>
+  </div>
+</main>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta-final" data-screen-label="03 CTA final">
+  <div class="wrap cta-inner">
+    <img class="cta-star" src="../assets/illustrations/star.svg" alt="" />
+    <h2>Cadrons votre MVP en <em>30 minutes</em></h2>
+    <p>Racontez-nous votre idée en visio : on vous dit ce qu'on garderait dans le MVP, ce qu'on couperait, le budget réaliste et le planning. Gratuit, sans engagement, sans jargon.</p>
+    <div class="hero-ctas">
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-accent btn-lg plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="mailto:contact@akago.fr" class="btn btn-ghost-dark btn-lg plausible-event-name=Contact+Email">Je suis plus branché.e email</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <a href="../index.html" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+        <p>Des alliés numériques pour faire avancer les projets engagés et les coopératives vite et bien.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../about.html">À propos</a></li>
+          <li><a href="combien-coute-une-application.html">Guide : le prix d'une app</a></li>
+          <li><a href="mvp-budget-delais.html">Guide : réussir son MVP</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@akago.fr" class="plausible-event-name=Contact+Email">↪︎ contact@akago.fr</a></li>
+          <li><a href="https://tally.so/r/wdA0DA" class="plausible-event-name=Reserver+Appel">Réserver un appel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Légal</h5>
+        <ul>
+          <li><a href="../legal.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Akago. Tous droits réservés.</span>
+      <span>Fait avec ♥ en France</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 10) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+  })();
+</script>
+
+</body>
+</html>

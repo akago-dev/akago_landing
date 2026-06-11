@@ -68,7 +68,8 @@ d'entraînement (lent, durable) et la recherche web en direct des assistants
       - [x] « Combien coûte une application en 2026 ? » — publié le 11/06/2026
         (`guides/combien-coute-une-application.html`, gabarit CSS `GUIDE` réutilisable
         dans `style.css` pour les guides suivants) ;
-      - « MVP : budget et délais » ;
+      - [x] « MVP : quel budget et quels délais en 2026 ? » — publié le 11/06/2026
+        (`guides/mvp-budget-delais.html`) ;
       - « No-code ou sur-mesure ? » ;
       - « CII : financer 20 % de votre application ».
 
