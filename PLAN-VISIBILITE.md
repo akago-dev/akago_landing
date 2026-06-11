@@ -25,15 +25,17 @@ Constat clé : le site ne contient presque pas les mots que la cible tape dans G
 - [x] **Title/meta d'index.html** élargis au vocabulaire de recherche :
       « Akago — Création d'applications web, mobiles et SaaS pour projets à impact ».
 
-### Côté Antoine (comptes à créer, ~1 h)
+### Côté Antoine (comptes)
 
-- [ ] **Google Search Console** : valider la propriété akago.fr (DNS), soumettre sitemap.xml.
-- [ ] **Bing Webmaster Tools** : import direct depuis Search Console possible.
-- [ ] **Google Business Profile** : fiche établissement (les requêtes « agence application
-      + ville » font sortir les fiches locales avant les sites). Y collecter les avis Google
-      des 5 clients témoins (Ping, Libélaw, YippyLingo, Moofize, Famyhelp).
-- [ ] **Analytics sans cookie** (Plausible ou Matomo — cohérent avec le discours RGPD,
-      pas de bandeau de consentement) + suivre les soumissions Tally comme conversions.
+- [x] **Google Search Console** : propriété akago.fr validée, sitemap soumis (11/06/2026).
+- [x] **Bing Webmaster Tools** : importé depuis Search Console (11/06/2026).
+- [x] **Google Business Profile** : fiche créée (11/06/2026). Reste : collecter les avis
+      Google des 5 clients témoins (Ping, Libélaw, YippyLingo, Moofize, Famyhelp) et
+      ajouter des photos d'équipe « humaines » quand disponibles.
+- [x] **Analytics : Plausible** — script posé sur les 3 pages (sans cookie, pas de bandeau).
+      Liens Tally taggés `Reserver Appel`, liens email taggés `Contact Email`.
+      Reste côté Plausible : ajouter le site akago.fr au compte, puis créer les goals
+      « Reserver Appel » et « Contact Email » (Site Settings → Goals → Custom event).
 
 ## Phase 2 — Contenu qui capte la recherche (mois 1-3)
 
