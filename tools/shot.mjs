@@ -33,22 +33,20 @@ function toUrl(target) {
   return pathToFileURL(abs).href;
 }
 
-// Déclenche le chargement des images loading="lazy" hors viewport : défile
-// la page jusqu'en bas par paliers, attend que toutes les images soient
-// décodées, puis remonte en haut avant la capture.
+// Force le chargement des images loading="lazy" avant la capture. Scroller ne
+// suffit pas : les images jamais intersectées (défilé horizontal, éléments
+// masqués selon le viewport) ne se chargeraient jamais — d'où le passage en
+// eager, et une attente bornée pour ne pas bloquer sur une image cassée.
 async function loadLazyImages(page) {
   await page.evaluate(async () => {
-    const step = window.innerHeight;
-    for (let y = 0; y <= document.body.scrollHeight; y += step) {
-      window.scrollTo(0, y);
-      await new Promise((r) => setTimeout(r, 100));
-    }
-    await Promise.all(
-      Array.from(document.images, (img) =>
-        img.complete ? null : new Promise((r) => { img.onload = img.onerror = r; })
-      )
-    );
-    window.scrollTo(0, 0);
+    for (const img of document.querySelectorAll('img[loading="lazy"]')) img.loading = 'eager';
+    const pending = Array.from(document.images)
+      .filter((img) => !img.complete)
+      .map((img) => new Promise((r) => { img.onload = img.onerror = r; }));
+    await Promise.race([
+      Promise.all(pending),
+      new Promise((r) => setTimeout(r, 5000)),
+    ]);
   });
   await page.waitForLoadState('networkidle');
 }
