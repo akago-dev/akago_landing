@@ -1403,6 +1403,7 @@ h3.display { font-size: clamp(30px, 3.4vw, 44px); }
   color: var(--bg-cream);
   max-width: 24ch;
 }
+.team-card h3 a:hover, .tq-card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .team-card h3 {
   font-family: var(--display);
   font-weight: 500;
