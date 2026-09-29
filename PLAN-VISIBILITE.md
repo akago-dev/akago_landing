@@ -83,6 +83,14 @@ d'entraînement (lent, durable) et la recherche web en direct des assistants
         plafond 400 k€/an, prorogé fin 2027).
       → Les 5 guides sont publiés. Hub : `guides/` (guides/index.html), lié depuis
         les footers (qui ne listent plus chaque guide individuellement).
+- [x] **Guide « Bourse French Tech : jusqu'à 50 000 € pour votre application »** — ajouté
+      le 29/09/2026 (`guides/bourse-french-tech-application.html`). Vise la longue traîne
+      « bourse french tech + prestataire / dépenses éligibles / développement » (« French
+      Tech » seul = requêtes institutionnelles). Angle : le calendrier de l'aide vu côté
+      prestataire (rien avant le dépôt, facturation calée sur les tranches, justificatifs)
+      + cumul avec le CII (la subvention se déduit de l'assiette ; le prototype fait avant
+      le dépôt reste 100 % dans la base CII). Références : Moofize et Libélaw ont obtenu la
+      BFT. Maillage : hub, guides CII / MVP / prix, `llms.txt`, sitemap.
 
 ## Phase 3 — Autorité et canaux hors SEO (continu)
 
