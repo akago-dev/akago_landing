@@ -89,8 +89,9 @@ d'entraînement (lent, durable) et la recherche web en direct des assistants
       Tech » seul = requêtes institutionnelles). Angle : le calendrier de l'aide vu côté
       prestataire (rien avant le dépôt, facturation calée sur les tranches, justificatifs)
       + cumul avec le CII (la subvention se déduit de l'assiette ; le prototype fait avant
-      le dépôt reste 100 % dans la base CII). Références : Moofize et Libélaw ont obtenu la
-      BFT. Maillage : hub, guides CII / MVP / prix, `llms.txt`, sitemap.
+      le dépôt reste 100 % dans la base CII). Références : chez Moofize et Libélaw, la BFT a
+      financé notre travail (dossiers montés sans nous : ne pas écrire qu'on les a rédigés).
+      Maillage : hub, guides CII / MVP / prix, `llms.txt`, sitemap.
 
 ## Phase 3 — Autorité et canaux hors SEO (continu)
 
