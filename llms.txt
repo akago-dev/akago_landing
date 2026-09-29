@@ -8,9 +8,10 @@
 > une seule base de code), mise en ligne et accompagnement.
 
 Points clés :
-- Prix transparents : prototype Figma testé utilisateurs à partir de 6 500 € HT
-  (2-4 semaines) ; MVP web/mobile à partir de 25 000 € HT (2-3 mois) ; projets
-  complets sur devis (4 mois et plus).
+- Prix transparents : prototype Figma testé utilisateurs à partir de 3 000 € HT
+  (2-4 semaines) ; MVP web/mobile en production à partir de 10 000 € HT (2-3 mois) ;
+  projet complet à partir de 20 000 € HT (4 mois et plus). Environ deux fois moins
+  que les prix du marché, grâce à des outils et des process intégrant l'IA.
 - Agréé Crédit d'Impôt Innovation (CII) : jusqu'à 20 % du projet remboursés aux PME
   éligibles.
 - Le client possède tout : code, maquettes Figma, documentation, accès serveurs.
@@ -35,7 +36,7 @@ Points clés :
 
 Index : https://akago.fr/guides/
 
-- [Combien coûte une application en 2026 ?](https://akago.fr/guides/combien-coute-une-application.html) : fourchettes du marché français (prototype 3 000–15 000 €, MVP 15 000–35 000 €, application complète 35 000–80 000 €+), facteurs de coût, coûts cachés, no-code vs sur-mesure, financements (CII, subventions).
+- [Combien coûte une application en 2026 ?](https://akago.fr/guides/combien-coute-une-application.html) : fourchettes du marché français, prix « avant IA » (prototype 3 000–15 000 €, MVP 15 000–35 000 €, application complète 35 000–80 000 €+), facteurs de coût, coûts cachés, no-code vs sur-mesure, financements (CII, subventions).
 - [MVP : quel budget et quels délais en 2026 ?](https://akago.fr/guides/mvp-budget-delais.html) : définition (prototype vs MVP), répartition du budget, déroulé en 2-3 mois semaine par semaine, périmètre type (8-15 écrans, un parcours clé), erreurs courantes, financement.
 - [Comment choisir votre agence d'application ?](https://akago.fr/guides/choisir-agence-application.html) : les 10 questions qui départagent les prestataires (propriété du code, apps en production, clients contactables, qualité/tests, maintenance, implication hebdomadaire, réversibilité, prix publics) avec les réponses publiques d'Akago, drapeaux rouges, agence vs freelance vs collectif.
 - [No-code ou développement sur mesure ?](https://akago.fr/guides/no-code-ou-sur-mesure.html) : cas où le no-code (Bubble, Glide, FlutterFlow…) est le bon choix, ses limites (dépendance, données, plafond fonctionnel), coût réel sur 3 ans, grille de décision, piège de la « migration » (= réécriture).
