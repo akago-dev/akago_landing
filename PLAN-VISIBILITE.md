@@ -61,6 +61,11 @@ d'entraînement (lent, durable) et la recherche web en direct des assistants
 - [ ] **Pages réalisations** : une page par cas client (problème → solution → résultat
       chiffré + témoignage). Répond au retour de Charlotte (du concret, du chiffré)
       et capte la longue traîne (« application pour avocats », « app pour aidants »…).
+      - [x] 26/10/2026 : hub `realisations/` + Libélaw, Ping, YippyLingo, Famyhelp, chacun en deux
+        niveaux : présentation visuelle + étude de cas détaillée (`<projet>-etude-de-cas.html`). Liées depuis
+        les témoignages (accueil, page mobile, page SaaS), le footer de toutes les pages,
+        le guide Bourse French Tech, `llms.txt` et le sitemap.
+      - [ ] Reste : Moofize, Leezay (cf. TODO.md).
 - [x] **Deux pages d'offre dédiées** — publiées le 11/06/2026 :
       `creer-application-mobile.html` et `developper-saas.html`. Pages commerciales
       (Service + FAQPage en JSON-LD), témoignages ciblés (mobile : Ping/YippyLingo/

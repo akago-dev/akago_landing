@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Étude de cas Famyhelp : une app pour les aidants — Akago</title>
+<meta name="description" content="Comment Akago a repris Famyhelp, l'app gratuite pour les aidants de proches âgés, et livré ses évolutions jusqu'à la V2 : carte, back-office des prestataires, abonnements Stripe, Flutter et Firebase." />
+<link rel="canonical" href="https://akago.fr/realisations/famyhelp-etude-de-cas.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Akago" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://akago.fr/realisations/famyhelp-etude-de-cas.html" />
+<meta property="og:title" content="Étude de cas : Famyhelp, reprendre une app pour les aidants et outiller son modèle" />
+<meta property="og:description" content="Comment Akago a repris Famyhelp, l'app gratuite pour les aidants de proches âgés, et livré ses évolutions jusqu'à la V2 : carte, back-office des prestataires, abonnements Stripe, Flutter et Firebase." />
+<meta property="og:image" content="https://akago.fr/assets/akago/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Étude de cas : Famyhelp, reprendre une app pour les aidants et outiller son modèle" />
+<meta name="twitter:description" content="Comment Akago a repris Famyhelp, l'app gratuite pour les aidants de proches âgés, et livré ses évolutions jusqu'à la V2 : carte, back-office des prestataires, abonnements Stripe, Flutter et Firebase." />
+<meta name="twitter:image" content="https://akago.fr/assets/akago/og-image.png" />
+
+<link rel="icon" type="image/png" href="../assets/akago/logo.png" />
+<link rel="preload" href="../assets/fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2" as="font" type="font/woff2" crossorigin />
+<!-- Analytics (Plausible, sans cookie) -->
+<script defer data-domain="akago.fr" data-api="https://plausible.io/api/event" src="../assets/js/stats.js"></script>
+<link rel="stylesheet" href="../style.css" />
+<link rel="stylesheet" href="realisations.css" />
+
+<!-- Données structurées -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Étude de cas : Famyhelp, reprendre une app pour les aidants et outiller son modèle",
+  "description": "Comment Akago a repris Famyhelp, l'app gratuite pour les aidants de proches âgés, et livré ses évolutions jusqu'à la V2 : carte, back-office des prestataires, abonnements Stripe, Flutter et Firebase.",
+  "image": "https://akago.fr/assets/akago/og-image.png",
+  "datePublished": "2026-10-26",
+  "dateModified": "2026-10-26",
+  "inLanguage": "fr",
+  "author": {
+    "@type": "Organization",
+    "name": "Akago",
+    "url": "https://akago.fr/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Akago",
+    "url": "https://akago.fr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://akago.fr/assets/akago/logo.png"
+    }
+  },
+  "mainEntityOfPage": "https://akago.fr/realisations/famyhelp-etude-de-cas.html",
+  "about": {
+    "@type": "MobileApplication",
+    "name": "Famyhelp",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "HealthApplication"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://akago.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Réalisations",
+      "item": "https://akago.fr/realisations/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Famyhelp",
+      "item": "https://akago.fr/realisations/famyhelp.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Étude de cas"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="../" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+    <div class="nav-links">
+      <a href="./">Réalisations</a>
+      <a href="../about.html">À propos</a>
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-primary plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero compact" data-screen-label="01 Étude de cas Hero">
+  <div class="wrap-narrow">
+    <a class="case-back" href="famyhelp.html"><img src="../assets/icons/famyhelp.png" alt="" width="1024" height="1024" /><span class="case-where">Famyhelp · voir la présentation</span></a>
+    <span class="eyebrow">Étude de cas · App mobile pour les aidants</span>
+    <h1 class="display">Étude de cas : Famyhelp, reprendre une app pour les aidants et <em>outiller son modèle</em></h1>
+    <p class="lead">Comment nous avons repris Famyhelp après sa première version et livré ses évolutions jusqu'à la V2 : le contexte des aidants, la reprise, le back-office des prestataires, les abonnements et les choix techniques.</p>
+  </div>
+</header>
+
+<!-- ============================ ÉTUDE DE CAS ============================ -->
+<main class="section guide" data-screen-label="02 Étude de cas">
+  <div class="wrap-narrow">
+
+    <div class="guide-meta">
+      <span>Publié le 26 octobre 2026</span>
+      <span>Lecture : 4 minutes</span>
+      <span>Par l'équipe Akago</span>
+    </div>
+
+    <div class="case-stage is-phones">
+      <img class="phone" src="../assets/showcase/mobile-famyhelp-map.webp" alt="Famyhelp — la carte des professionnels autour du domicile" width="400" height="867" />
+      <img class="phone" src="../assets/showcase/mobile-famyhelp-bottomsheet.webp" alt="Famyhelp — les prestataires triés par distance" width="400" height="867" />
+    </div>
+
+    <div class="guide-tldr">
+      <span class="label">En bref</span>
+      <p>Famyhelp localisait les professionnels de santé et du maintien à domicile autour d'un proche âgé. Gratuite pour les aidants, elle était financée par les abonnements des prestataires. Akago a <strong>repris l'app en avril 2020</strong> après une première version, puis livré ses évolutions et sa <strong>V2 jusqu'en 2023</strong> : carte repensée, back-office web des prestataires, abonnements Stripe, notifications géolocalisées. Une seule base de code Flutter pour iOS, Android et le back-office.</p>
+    </div>
+
+    <nav class="guide-toc" aria-label="Sommaire">
+      <ol>
+        <li><a href="#contexte">Le contexte</a></li>
+        <li><a href="#reprise">Reprendre une V1 publiée</a></li>
+        <li><a href="#developpe">Ce que nous avons développé</a></li>
+        <li><a href="#technique">Architecture et choix techniques</a></li>
+        <li><a href="#chiffres">Chiffres clés</a></li>
+        <li><a href="#lecons">Ce que ce projet illustre</a></li>
+      </ol>
+    </nav>
+
+    <div class="guide-body">
+      <h2 id="contexte">Le <em>contexte</em></h2>
+      <p>Quand un parent perd en autonomie, ses proches deviennent aidants sans y être préparés. Infirmière, aide à domicile, portage de repas, point d'information pour l'aide à l'autonomie : les interlocuteurs sont nombreux et l'information est éparpillée. On estimait alors à près de 11 millions le nombre d'aidants en France (<a href="https://www.planetegrandesecoles.com/rencontre-avec-agnes-dupuy-la-fondatrice-de-famyhelp" rel="noopener">interview de la fondatrice</a>).</p>
+      <p>Famyhelp a été fondée par une dirigeante qui a passé plus de quinze ans à la tête d'agences d'aide à domicile autour de Lyon. Lancée en 2019, l'app réunissait sur une carte les professionnels autour du domicile de la personne aidée : services publics pour les seniors, vie à domicile, soins et santé. Gratuite pour les aidants, elle était financée par l'abonnement des prestataires qui voulaient y être visibles.</p>
+
+      <h2 id="reprise">Reprendre une <em>V1 publiée</em></h2>
+      <p>La première version avait été réalisée par un autre développeur. Nous avons repris l'application en avril 2020, avec une contrainte simple : elle avait déjà des utilisateurs. Pas question de tout arrêter pour reconstruire. Les premières évolutions sont sorties dès avril et mai 2020, sur la même app ; la V2 a suivi en 2022, à partir du cahier des charges de l'équipe Famyhelp.</p>
+
+      <h2 id="developpe">Ce que nous avons <em>développé</em></h2>
+      <h3>Une carte plus lisible</h3>
+      <p>Les fiches et les listes de professionnels s'affichent dans un panneau coulissant au-dessus de la carte, triées par distance autour du domicile, avec des transitions fluides entre carte et liste.</p>
+      <h3>Un onglet « En ligne »</h3>
+      <p>Certains services n'ont pas d'agence physique : téléassistance, matériel médical. Un onglet dédié leur donne une place, comme le prévoyait le cahier des charges.</p>
+      <h3>Le back-office des prestataires</h3>
+      <p>La V2 a apporté un back-office web pour les partenaires : marques, groupes et points de vente, administrateurs, coupons, abonnements, articles et vidéos, export des données. Il a remplacé le premier outil d'administration et partage la base de code Flutter de l'app.</p>
+      <h3>Les abonnements des prestataires</h3>
+      <p>Le modèle économique de Famyhelp reposait sur les prestataires. Nous l'avons outillé de bout en bout : abonnements récurrents par carte ou prélèvement SEPA avec Stripe, synchronisés automatiquement, en plus des achats intégrés sur iOS et Android.</p>
+      <h3>Des notifications qui ramènent au bon endroit</h3>
+      <p>Nouveau professionnel ou coupon à proximité : la notification ouvre directement la fiche concernée. Des rappels mensuels invitaient aussi à revenir dans l'app ou à la noter.</p>
+      <h3>Une app tenue à jour</h3>
+      <p>Migrations successives de Flutter, passage à la null safety, environnements de test et de production séparés, suppression de compte conforme aux règles des stores : le travail invisible qui garde une app publiable.</p>
+      <p>Le chat anonyme entre aidants proches, le compte lié à la personne aidée, les vidéos et les articles existaient dès la V1 : nous les avons maintenus et fait évoluer avec le reste.</p>
+
+      <h2 id="technique">Architecture et <em>choix techniques</em></h2>
+      <table class="guide-table">
+        <thead><tr><th>Composant</th><th>Technologie</th></tr></thead>
+        <tbody>
+          <tr><td>App iOS et Android</td><td>Flutter, gestion d'état avec Provider</td></tr>
+          <tr><td>Back-office des prestataires</td><td>Flutter Web, même base de code</td></tr>
+          <tr><td>Données</td><td>Firebase Firestore, en temps réel</td></tr>
+          <tr><td>Serveur</td><td>Cloud Functions (TypeScript)</td></tr>
+          <tr><td>Notifications</td><td>Firebase Cloud Messaging</td></tr>
+          <tr><td>Carte</td><td>Google Maps</td></tr>
+          <tr><td>Paiement</td><td>Stripe (abonnements, prélèvement SEPA) et achats intégrés iOS et Android</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Firebase pour aller vite sans serveur à gérer.</strong> Pour une petite structure, Firestore et les Cloud Functions évitent d'administrer des serveurs : les lieux, les coupons et les ressources arrivent en temps réel dans l'app.</p>
+      <p><strong>Le back-office en Flutter Web.</strong> Plutôt qu'une seconde technologie pour l'administration, le back-office réutilise les modèles et les composants de l'app. Une évolution des données se fait une fois, pour l'app comme pour le back-office.</p>
+
+      <h2 id="chiffres">Chiffres <em>clés</em></h2>
+      <table class="guide-table">
+        <thead><tr><th>Indicateur</th><th>Valeur</th></tr></thead>
+        <tbody>
+          <tr><td>Reprise</td><td>Avril 2020</td></tr>
+          <tr><td>V2</td><td>2022, sur cahier des charges</td></tr>
+          <tr><td>Collaboration</td><td>2020 → 2023, par phases</td></tr>
+          <tr><td>Versions</td><td>De la 1.1 à la 1.3</td></tr>
+          <tr><td>Catégories de professionnels</td><td>23, en 3 familles</td></tr>
+          <tr><td>Rayon de recherche</td><td>40 km autour du domicile</td></tr>
+          <tr><td>Plateformes</td><td>iOS, Android, back-office web</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="lecons">Ce que ce projet <em>illustre</em></h2>
+      <h3>Le modèle économique se code aussi</h3>
+      <p>Un service gratuit pour ses utilisateurs n'existe que si quelqu'un d'autre paie. Abonnements, prélèvements, back-office des prestataires : chez Famyhelp, une bonne part du travail consistait à rendre ce modèle simple à faire tourner.</p>
+      <h3>Faire évoluer une app sans perdre ses utilisateurs</h3>
+      <p>Reprendre une app publiée, c'est la transformer en marche : chaque version doit rester compatible avec la précédente et ne rien casser pour ceux qui l'utilisent.</p>
+      <h3>Un back-office est un produit</h3>
+      <p>Les prestataires étaient des clients à part entière. Leur outil méritait le même soin que l'app des aidants : c'est aussi lui qui leur donne envie de renouveler leur abonnement.</p>
+
+      <h2>Ils le disent <em>mieux que nous</em></h2>
+      <blockquote class="case-quote">« J'ai travaillé avec Akago pendant environ 2 ans, ils ont été de bons conseils et ont su s'adapter à nos demandes ! »</blockquote>
+      <p class="case-quote-by">Famyhelp</p>
+
+      <div class="guide-note">
+        <p style="margin-bottom: 16px;"><strong>Un projet similaire ?</strong> Carte et géolocalisation, annuaire de professionnels, abonnements, back-office pour vos partenaires : ce sont des briques que nous maîtrisons, y compris quand l'app existe déjà. Parlez-nous du vôtre.</p>
+        <a href="https://tally.so/r/wdA0DA" class="btn btn-accent plausible-event-name=Reserver+Appel">
+          Contactez-nous directement
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+
+      <p><a href="famyhelp.html">← Retour à la présentation du projet Famyhelp</a> · <a href="./">Toutes nos réalisations</a></p>
+    </div>
+
+  </div>
+</main>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta-final" data-screen-label="CTA final">
+  <div class="wrap cta-inner">
+    <img class="cta-star" src="../assets/illustrations/star.svg" alt="" />
+    <h2>Une app utile, et un modèle <em>qui la fait vivre</em></h2>
+    <p>Racontez-nous votre projet : on vous dit quoi construire en premier, comment le financer et pour quel budget. 30 minutes, gratuit.</p>
+    <div class="hero-ctas">
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-accent btn-lg plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="mailto:contact@akago.fr" class="btn btn-ghost-dark btn-lg plausible-event-name=Contact+Email">Je suis plus branché.e email</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <a href="../" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+        <p>Des alliés numériques pour faire avancer les projets engagés et les coopératives vite et bien.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="../">Accueil</a></li>
+          <li><a href="../about.html">À propos</a></li>
+          <li><a href="../creer-application-mobile.html">Créer une app mobile</a></li>
+          <li><a href="../developper-saas.html">Développer un SaaS</a></li>
+          <li><a href="./">Réalisations</a></li>
+          <li><a href="../guides/">Guides pratiques</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@akago.fr" class="plausible-event-name=Contact+Email">↪︎ contact@akago.fr</a></li>
+          <li><a href="https://tally.so/r/wdA0DA" class="plausible-event-name=Reserver+Appel">Réserver un appel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Légal</h5>
+        <ul>
+          <li><a href="../legal.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Akago. Tous droits réservés.</span>
+      <span>Fait avec ♥ en France</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 10) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+  })();
+</script>
+
+</body>
+</html>

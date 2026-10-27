@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Étude de cas YippyLingo : reprendre et publier une app — Akago</title>
+<meta name="description" content="Comment Akago a repris l'app de YippyLingo en plein développement, l'a publiée sur l'App Store et Google Play en 10 semaines, puis l'a fait évoluer près de 2 ans : reprise, CMS Directus, choix techniques." />
+<link rel="canonical" href="https://akago.fr/realisations/yippylingo-etude-de-cas.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Akago" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://akago.fr/realisations/yippylingo-etude-de-cas.html" />
+<meta property="og:title" content="Étude de cas : YippyLingo, une app reprise en route et publiée en 10 semaines" />
+<meta property="og:description" content="Comment Akago a repris l'app de YippyLingo en plein développement, l'a publiée sur l'App Store et Google Play en 10 semaines, puis l'a fait évoluer près de 2 ans : reprise, CMS Directus, choix techniques." />
+<meta property="og:image" content="https://akago.fr/assets/akago/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Étude de cas : YippyLingo, une app reprise en route et publiée en 10 semaines" />
+<meta name="twitter:description" content="Comment Akago a repris l'app de YippyLingo en plein développement, l'a publiée sur l'App Store et Google Play en 10 semaines, puis l'a fait évoluer près de 2 ans : reprise, CMS Directus, choix techniques." />
+<meta name="twitter:image" content="https://akago.fr/assets/akago/og-image.png" />
+
+<link rel="icon" type="image/png" href="../assets/akago/logo.png" />
+<link rel="preload" href="../assets/fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2" as="font" type="font/woff2" crossorigin />
+<!-- Analytics (Plausible, sans cookie) -->
+<script defer data-domain="akago.fr" data-api="https://plausible.io/api/event" src="../assets/js/stats.js"></script>
+<link rel="stylesheet" href="../style.css" />
+<link rel="stylesheet" href="realisations.css" />
+
+<!-- Données structurées -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Étude de cas : YippyLingo, une app reprise en route et publiée en 10 semaines",
+  "description": "Comment Akago a repris l'app de YippyLingo en plein développement, l'a publiée sur l'App Store et Google Play en 10 semaines, puis l'a fait évoluer près de 2 ans : reprise, CMS Directus, choix techniques.",
+  "image": "https://akago.fr/assets/akago/og-image.png",
+  "datePublished": "2026-10-26",
+  "dateModified": "2026-10-26",
+  "inLanguage": "fr",
+  "author": {
+    "@type": "Organization",
+    "name": "Akago",
+    "url": "https://akago.fr/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Akago",
+    "url": "https://akago.fr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://akago.fr/assets/akago/logo.png"
+    }
+  },
+  "mainEntityOfPage": "https://akago.fr/realisations/yippylingo-etude-de-cas.html",
+  "about": {
+    "@type": "MobileApplication",
+    "name": "YippyLingo",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "EducationalApplication",
+    "url": "https://apps.apple.com/fr/app/yippylingo/id6466095953"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://akago.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Réalisations",
+      "item": "https://akago.fr/realisations/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "YippyLingo",
+      "item": "https://akago.fr/realisations/yippylingo.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Étude de cas"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="../" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+    <div class="nav-links">
+      <a href="./">Réalisations</a>
+      <a href="../about.html">À propos</a>
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-primary plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero compact" data-screen-label="01 Étude de cas Hero">
+  <div class="wrap-narrow">
+    <a class="case-back" href="yippylingo.html"><img src="../assets/icons/yippylingo.png" alt="" width="180" height="180" /><span class="case-where">YippyLingo · voir la présentation</span></a>
+    <span class="eyebrow">Étude de cas · App mobile éducative</span>
+    <h1 class="display">Étude de cas : YippyLingo, une app reprise en route et <em>publiée en 10 semaines</em></h1>
+    <p class="lead">Comment nous avons repris l'app de YippyLingo en plein développement, l'avons publiée sur les stores puis fait évoluer pendant près de deux ans : le contexte, la reprise, ce que fait l'app et les choix techniques.</p>
+  </div>
+</header>
+
+<!-- ============================ ÉTUDE DE CAS ============================ -->
+<main class="section guide" data-screen-label="02 Étude de cas">
+  <div class="wrap-narrow">
+
+    <div class="guide-meta">
+      <span>Publié le 26 octobre 2026</span>
+      <span>Lecture : 4 minutes</span>
+      <span>Par l'équipe Akago</span>
+    </div>
+
+    <div class="case-stage is-phones">
+      <img class="phone" src="../assets/showcase/mobile-yippylingo-homepage.webp" alt="YippyLingo — l'accueil : la mascotte Joy et l'activation du kit" width="600" height="1299" />
+      <img class="phone" src="../assets/showcase/mobile-yippylingo-content-player.webp" alt="YippyLingo — « Écoute et répète après Joy »" width="600" height="1299" />
+      <img class="phone" src="../assets/showcase/mobile-yippylingo-quiz-matching.webp" alt="YippyLingo — quiz : faire glisser les sons sur les bonnes images" width="600" height="1299" />
+    </div>
+
+    <div class="guide-tldr">
+      <span class="label">En bref</span>
+      <p>YippyLingo vend des kits d'activités pour apprendre l'anglais aux enfants, accompagnés d'une app. En septembre 2023, l'app était en plein développement chez deux premiers développeurs. Akago a <strong>repris le code</strong>, l'a finalisé et l'a <strong>publiée sur l'App Store le 20 novembre 2023</strong>, puis l'a fait évoluer jusqu'en 2025. Flutter pour iOS, Android et le web ; un contenu piloté depuis le CMS Directus.</p>
+    </div>
+
+    <nav class="guide-toc" aria-label="Sommaire">
+      <ol>
+        <li><a href="#contexte">Le contexte</a></li>
+        <li><a href="#reprise">Reprendre un code en cours</a></li>
+        <li><a href="#app">Ce que fait l'app</a></li>
+        <li><a href="#suivi">Après le lancement</a></li>
+        <li><a href="#technique">Architecture et choix techniques</a></li>
+        <li><a href="#chiffres">Chiffres clés</a></li>
+        <li><a href="#lecons">Ce que ce projet illustre</a></li>
+      </ol>
+    </nav>
+
+    <div class="guide-body">
+      <h2 id="contexte">Le <em>contexte</em></h2>
+      <p>Beaucoup de parents veulent faire entrer l'anglais tôt à la maison, sans que tout passe par un écran. YippyLingo, marque née à Lyon en 2023, répond avec des kits d'activités concrètes : chaque kit propose quatre séances d'une vingtaine de minutes autour d'un thème (dessin, musique, cuisine, sport…), avec un livret. L'app apporte l'audio guidé, les vidéos et les quiz ; YippyLingo la décrit comme 80 % d'audio et 20 % de quiz.</p>
+      <p>À l'été 2023, l'app était en plein développement avec deux premiers développeurs, et le lancement approchait. YippyLingo cherchait une équipe pour reprendre le code en cours, le finaliser et franchir la dernière marche : la publication sur les stores.</p>
+
+      <h2 id="reprise">Reprendre un code <em>en cours</em></h2>
+      <p>Nous sommes arrivés en septembre 2023. Première étape : comprendre l'existant plutôt que le réécrire. L'architecture en place, une clean architecture avec une gestion d'état BLoC, tenait la route : nous l'avons gardée et complétée.</p>
+      <p>Ensuite, finaliser : écrans à terminer, corrections, notes et avis des activités à fiabiliser, puis toute la partie que l'on découvre souvent tard, la configuration et la signature des versions iOS et Android, les fiches des stores, la validation. Le 20 novembre 2023, dix semaines après notre arrivée, la première version était sur l'App Store.</p>
+
+      <h2 id="app">Ce que fait <em>l'app</em></h2>
+      <ul>
+        <li><strong>Six formats de mission</strong> : audio court ou long, vidéo, quiz de répétition, QCM en images ou en texte, association par glisser-déposer, avec sons et animations de réussite.</li>
+        <li><strong>Un contenu piloté depuis un CMS</strong> : activités, missions et médias se publient sans nouvelle version de l'app.</li>
+        <li><strong>Un compte parent pour plusieurs enfants</strong> : chacun a ses activités débloquées et sa progression, enregistrée à chaque étape.</li>
+        <li><strong>Un « profil aventurier »</strong> qui motive : mots appris, activités terminées, missions réussies, badges animés.</li>
+        <li><strong>Un contrôle parental</strong> à l'entrée des réglages, pour que les enfants restent dans les activités.</li>
+      </ul>
+      <div class="case-stage is-phones">
+        <img class="phone" src="../assets/showcase/mobile-yippylingo-select-profile.webp" alt="YippyLingo — choisir les enfants qui font la mission" width="600" height="1299" loading="lazy" />
+        <img class="phone" src="../assets/showcase/mobile-yippylingo-quiz-buttons.webp" alt="YippyLingo — quiz : sélectionner la bonne image" width="600" height="1299" loading="lazy" />
+        <img class="phone" src="../assets/showcase/mobile-yippylingo-progression.webp" alt="YippyLingo — la progression : mots appris, missions, badges" width="600" height="1299" loading="lazy" />
+      </div>
+
+      <h2 id="suivi">Après <em>le lancement</em></h2>
+      <p>Nous avons ensuite assuré le suivi de l'app jusqu'en 2025 : corrections, mises à jour et nouvelles fonctionnalités, comme le matériel à télécharger pour chaque activité, ajouté en 2025. La dernière version que nous avons publiée, la 1.0.18, date de mai 2025.</p>
+
+      <h2 id="technique">Architecture et <em>choix techniques</em></h2>
+      <table class="guide-table">
+        <thead><tr><th>Composant</th><th>Technologie</th></tr></thead>
+        <tbody>
+          <tr><td>Application</td><td>Flutter (Dart 3), une base de code pour iOS, Android et le web</td></tr>
+          <tr><td>Architecture</td><td>Clean architecture, BLoC et Cubit, injection avec GetIt, navigation GoRouter</td></tr>
+          <tr><td>Contenu</td><td>Directus, CMS headless</td></tr>
+          <tr><td>Authentification</td><td>Firebase Auth, dont le jeton ouvre une session Directus</td></tr>
+          <tr><td>Bêtas</td><td>Firebase App Distribution</td></tr>
+          <tr><td>Version web</td><td>Firebase Hosting</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Un CMS pour rendre le client autonome.</strong> Les activités changent chaque mois. Si chaque nouveauté demandait une version de l'app, il faudrait repasser par Apple et Google à chaque fois. Avec Directus, l'équipe YippyLingo publie elle-même ses activités, missions et médias : l'app les affiche aussitôt.</p>
+      <p><strong>Un seul compte, deux briques.</strong> L'authentification passe par Firebase, simple et fiable sur mobile ; son jeton est échangé contre une session Directus, qui gère les droits d'accès au contenu. Chaque outil fait ce qu'il fait le mieux.</p>
+
+      <h2 id="chiffres">Chiffres <em>clés</em></h2>
+      <table class="guide-table">
+        <thead><tr><th>Indicateur</th><th>Valeur</th></tr></thead>
+        <tbody>
+          <tr><td>Arrivée sur le projet</td><td>Septembre 2023</td></tr>
+          <tr><td>Sortie sur l'App Store</td><td>20 novembre 2023, dix semaines plus tard</td></tr>
+          <tr><td>Suivi</td><td>Jusqu'en mai 2025 (version 1.0.18)</td></tr>
+          <tr><td>Formats d'exercices</td><td>6, alimentés depuis le CMS</td></tr>
+          <tr><td>Plateformes</td><td>iOS, Android, web</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="lecons">Ce que ce projet <em>illustre</em></h2>
+      <h3>Reprendre plutôt que réécrire</h3>
+      <p>Face à un code commencé par d'autres, la tentation est de tout refaire. C'est rarement le bon calcul : on garde ce qui tient, on corrige ce qui bloque, et on livre. C'est ce qui a permis de sortir l'app en dix semaines.</p>
+      <h3>La publication est un chantier à part entière</h3>
+      <p>Signatures, comptes développeur, fiches, captures, règles d'Apple et de Google : la dernière marche est souvent la plus sous-estimée d'un projet mobile. Elle fait partie de nos projets, pas d'une annexe.</p>
+      <h3>Un produit vivant se pilote sans développeur</h3>
+      <p>Grâce au CMS, le rythme éditorial de YippyLingo ne dépend pas du nôtre. C'est une décision d'architecture qui change le quotidien du client.</p>
+
+      <h2>Ils le disent <em>mieux que nous</em></h2>
+      <blockquote class="case-quote">« Collaboration au top sur le développement de notre application : consciencieux, organisés et très impliqués, ils nous tiennent régulièrement informés des évolutions à prévoir. 👌 »</blockquote>
+      <p class="case-quote-by">YippyLingo</p>
+
+      <div class="guide-note">
+        <p style="margin-bottom: 16px;"><strong>Une app commencée ailleurs, à terminer ?</strong> Code repris d'un freelance ou d'une autre agence, lancement qui piétine, publication bloquée : on fait le point sur l'existant et on vous dit honnêtement ce qu'on garde. Parlez-nous du vôtre.</p>
+        <a href="https://tally.so/r/wdA0DA" class="btn btn-accent plausible-event-name=Reserver+Appel">
+          Contactez-nous directement
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+
+      <p><a href="yippylingo.html">← Retour à la présentation du projet YippyLingo</a> · <a href="./">Toutes nos réalisations</a></p>
+    </div>
+
+  </div>
+</main>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta-final" data-screen-label="CTA final">
+  <div class="wrap cta-inner">
+    <img class="cta-star" src="../assets/illustrations/star.svg" alt="" />
+    <h2>Votre app mérite d'arriver <em>jusqu'aux stores</em></h2>
+    <p>Projet neuf ou code à reprendre : racontez-nous où vous en êtes, on vous dit ce qu'il reste à faire, en combien de temps et pour quel budget. 30 minutes, gratuit.</p>
+    <div class="hero-ctas">
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-accent btn-lg plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="mailto:contact@akago.fr" class="btn btn-ghost-dark btn-lg plausible-event-name=Contact+Email">Je suis plus branché.e email</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <a href="../" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+        <p>Des alliés numériques pour faire avancer les projets engagés et les coopératives vite et bien.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="../">Accueil</a></li>
+          <li><a href="../about.html">À propos</a></li>
+          <li><a href="../creer-application-mobile.html">Créer une app mobile</a></li>
+          <li><a href="../developper-saas.html">Développer un SaaS</a></li>
+          <li><a href="./">Réalisations</a></li>
+          <li><a href="../guides/">Guides pratiques</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@akago.fr" class="plausible-event-name=Contact+Email">↪︎ contact@akago.fr</a></li>
+          <li><a href="https://tally.so/r/wdA0DA" class="plausible-event-name=Reserver+Appel">Réserver un appel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Légal</h5>
+        <ul>
+          <li><a href="../legal.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Akago. Tous droits réservés.</span>
+      <span>Fait avec ♥ en France</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 10) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+  })();
+</script>
+
+</body>
+</html>

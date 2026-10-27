@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Étude de cas Libélaw : un SaaS pour 4 500 avocats — Akago</title>
+<meta name="description" content="Comment Akago conçoit et développe Libélaw, la place de marché de la postulation entre avocats : contexte, fonctionnalités, paiement Stripe Connect, choix techniques, chiffres clés et enseignements." />
+<link rel="canonical" href="https://akago.fr/realisations/libelaw-etude-de-cas.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Akago" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://akago.fr/realisations/libelaw-etude-de-cas.html" />
+<meta property="og:title" content="Étude de cas : Libélaw, 4 500 avocats sur une seule plateforme" />
+<meta property="og:description" content="Comment Akago conçoit et développe Libélaw, la place de marché de la postulation entre avocats : contexte, fonctionnalités, paiement Stripe Connect, choix techniques, chiffres clés et enseignements." />
+<meta property="og:image" content="https://akago.fr/assets/akago/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Étude de cas : Libélaw, 4 500 avocats sur une seule plateforme" />
+<meta name="twitter:description" content="Comment Akago conçoit et développe Libélaw, la place de marché de la postulation entre avocats : contexte, fonctionnalités, paiement Stripe Connect, choix techniques, chiffres clés et enseignements." />
+<meta name="twitter:image" content="https://akago.fr/assets/akago/og-image.png" />
+
+<link rel="icon" type="image/png" href="../assets/akago/logo.png" />
+<link rel="preload" href="../assets/fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2" as="font" type="font/woff2" crossorigin />
+<!-- Analytics (Plausible, sans cookie) -->
+<script defer data-domain="akago.fr" data-api="https://plausible.io/api/event" src="../assets/js/stats.js"></script>
+<link rel="stylesheet" href="../style.css" />
+<link rel="stylesheet" href="realisations.css" />
+
+<!-- Données structurées -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Étude de cas : Libélaw, 4 500 avocats sur une seule plateforme",
+  "description": "Comment Akago conçoit et développe Libélaw, la place de marché de la postulation entre avocats : contexte, fonctionnalités, paiement Stripe Connect, choix techniques, chiffres clés et enseignements.",
+  "image": "https://akago.fr/assets/akago/og-image.png",
+  "datePublished": "2026-10-26",
+  "dateModified": "2026-10-26",
+  "inLanguage": "fr",
+  "author": {
+    "@type": "Organization",
+    "name": "Akago",
+    "url": "https://akago.fr/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Akago",
+    "url": "https://akago.fr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://akago.fr/assets/akago/logo.png"
+    }
+  },
+  "mainEntityOfPage": "https://akago.fr/realisations/libelaw-etude-de-cas.html",
+  "about": {
+    "@type": "WebApplication",
+    "name": "Libélaw",
+    "applicationCategory": "BusinessApplication",
+    "url": "https://www.libelaw.fr/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://akago.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Réalisations",
+      "item": "https://akago.fr/realisations/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Libélaw",
+      "item": "https://akago.fr/realisations/libelaw.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Étude de cas"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="../" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+    <div class="nav-links">
+      <a href="./">Réalisations</a>
+      <a href="../about.html">À propos</a>
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-primary plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero compact" data-screen-label="01 Étude de cas Hero">
+  <div class="wrap-narrow">
+    <a class="case-back" href="libelaw.html"><img src="../assets/icons/libelaw.png" alt="" width="192" height="192" /><span class="case-where">Libélaw · voir la présentation</span></a>
+    <span class="eyebrow">Étude de cas · SaaS juridique</span>
+    <h1 class="display">Étude de cas : Libélaw, <em>4&nbsp;500 avocats</em> sur une seule plateforme</h1>
+    <p class="lead">Comment nous concevons et développons, avec l'équipe Libélaw, la place de marché qui organise la postulation et la substitution entre avocats : le contexte, les fonctionnalités, les choix techniques et ce que ce projet nous apprend.</p>
+  </div>
+</header>
+
+<!-- ============================ ÉTUDE DE CAS ============================ -->
+<main class="section guide" data-screen-label="02 Étude de cas">
+  <div class="wrap-narrow">
+
+    <div class="guide-meta">
+      <span>Publié le 26 octobre 2026</span>
+      <span>Lecture : 5 minutes</span>
+      <span>Par l'équipe Akago</span>
+    </div>
+
+    <div class="case-stage is-desktop">
+      <img class="screen" src="../assets/showcase/desktop-libelaw-dashboard.webp" alt="Libélaw — tableau de bord d'un avocat" width="1140" height="760" />
+    </div>
+
+    <div class="guide-tldr">
+      <span class="label">En bref</span>
+      <p>Libélaw met en relation un avocat qui ne peut pas se rendre à une audience avec un confrère proche du tribunal. Akago <strong>conçoit et développe la plateforme depuis fin 2024</strong> : web, iOS et Android en Flutter, API AdonisJS, paiement de place de marché avec Stripe Connect. Lancée en avril 2025, elle réunit <strong>4&nbsp;500 avocats</strong>, a organisé <strong>plus de 3&nbsp;000 missions</strong> et a reçu le prix spécial du jury du Conseil national des barreaux.</p>
+    </div>
+
+    <nav class="guide-toc" aria-label="Sommaire">
+      <ol>
+        <li><a href="#contexte">Le contexte</a></li>
+        <li><a href="#developpe">Ce que nous avons développé</a></li>
+        <li><a href="#technique">Architecture et choix techniques</a></li>
+        <li><a href="#chiffres">Chiffres clés</a></li>
+        <li><a href="#lecons">Ce que ce projet illustre</a></li>
+      </ol>
+    </nav>
+
+    <div class="guide-body">
+      <h2 id="contexte">Le <em>contexte</em></h2>
+      <p>Quand un avocat ne peut pas assister à une audience, faute de temps ou parce que la juridiction est loin, il se fait remplacer par un confrère : c'est la substitution, ou la postulation lorsque la procédure impose un avocat du barreau local. Trouver ce confrère, c'était jusque-là des appels en cascade, des e-mails sans réponse, parfois des heures de train pour quelques minutes d'audience. Autant de temps facturable perdu, sans garantie de trouver quelqu'un à temps.</p>
+      <p>Libélaw, startup lyonnaise de la LegalTech, a imaginé une place de marché de confiance réservée aux avocats : on y publie un besoin, on fixe sa rémunération, et la plateforme s'occupe du reste. Elle l'a conçue avec 250 avocats pilotes. Notre rôle, depuis fin 2024 : concevoir et développer cette plateforme avec son équipe, sur le web et sur mobile.</p>
+      <p>La difficulté tient en une phrase : chaque mission engage la responsabilité d'un avocat et de l'argent entre confrères. Le parcours de publication devait être très rapide, la mise en relation fiable, et le paiement irréprochable.</p>
+
+      <h2 id="developpe">Ce que nous avons <em>développé</em></h2>
+      <h3>Publier une mission en moins d'une minute</h3>
+      <p>Un assistant pas à pas guide l'avocat : type de mission (postulation, substitution ou vacation), juridiction, date, consignes, rémunération. Le paiement est enregistré dès la création, ce qui engage les deux parties. Libélaw annonce 55 secondes pour publier une mission.</p>
+      <h3>Une mise en relation géolocalisée</h3>
+      <p>Dès qu'une mission est publiée, les avocats sont alertés selon leur profil et leur distance au tribunal. Une carte affiche les missions disponibles, juridiction par juridiction.</p>
+      <h3>Une messagerie par mission</h3>
+      <p>Chaque mission a son fil d'échanges : candidatures, acceptation ou refus, réattribution à un collègue du cabinet, pièces jointes. Les notifications push et les e-mails tiennent chacun informé sans avoir à ouvrir la plateforme.</p>
+      <h3>Le paiement d'une vraie place de marché</h3>
+      <p>Le paiement repose sur Stripe Connect : l'avocat qui publie paie à la création, les honoraires sont reversés à celui qui intervient, par carte ou par virement, avec paiement différé. Les factures PDF sont générées automatiquement. Nous avons aussi étudié et chiffré le passage à la facture électronique (format Factur-X), pour anticiper sa généralisation.</p>
+      <h3>Un espace cabinet et un back-office</h3>
+      <p>Un cabinet peut inviter ses collaborateurs, partager ses disponibilités au calendrier et suivre son activité dans des tableaux de bord. Côté Libélaw, un back-office d'administration donne les statistiques de la plateforme.</p>
+      <div class="case-gallery">
+        <img class="" src="../assets/showcase/desktop-libelaw-missions.webp" alt="Libélaw — suivi des missions" width="1140" height="760" loading="lazy" />
+        <img class="" src="../assets/showcase/desktop-libelaw-analytics.webp" alt="Libélaw — statistiques d'activité" width="1140" height="760" loading="lazy" />
+      </div>
+      <h3>Une app mobile native</h3>
+      <p>Depuis juillet 2026, Libélaw existe aussi en application native iOS et Android. Elle n'a pas demandé de nouveau projet : elle sort de la même base de code que la version web.</p>
+
+      <h2 id="technique">Architecture et <em>choix techniques</em></h2>
+      <table class="guide-table">
+        <thead><tr><th>Composant</th><th>Technologie</th></tr></thead>
+        <tbody>
+          <tr><td>Application web, iOS et Android</td><td>Flutter, une seule base de code, sur notre socle de composants maison</td></tr>
+          <tr><td>API</td><td>AdonisJS (Node.js, TypeScript)</td></tr>
+          <tr><td>Base de données</td><td>PostgreSQL, tâches de fond avec pg-boss</td></tr>
+          <tr><td>Paiement</td><td>Stripe Connect</td></tr>
+          <tr><td>Notifications</td><td>Firebase Cloud Messaging et e-mails transactionnels</td></tr>
+          <tr><td>Documents</td><td>Factures PDF générées côté serveur</td></tr>
+          <tr><td>Hébergement</td><td>Conteneurs Docker ; environnements de développement, de recette et de production ; données hébergées en France</td></tr>
+          <tr><td>Suivi</td><td>Sentry, pour les erreurs en production</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Pourquoi Flutter.</strong> Les avocats travaillent au cabinet sur ordinateur et au tribunal sur téléphone. Une base de code unique garantit le même produit partout, et a permis d'ajouter l'app native en 2026 sans repartir de zéro.</p>
+      <p><strong>Pourquoi AdonisJS.</strong> Un framework TypeScript structuré, avec ce qu'une place de marché demande dès le départ : authentification, validation, files de tâches, e-mails. On livre vite sans bricoler les fondations.</p>
+      <p><strong>Des performances suivies dans la durée.</strong> En 2026, nous avons revu le rafraîchissement de la messagerie : une mise à jour toutes les 15 secondes et immédiatement après chaque action, au lieu d'un rechargement quasi permanent. Résultat : vingt fois moins de requêtes, sans perte de réactivité puisque chaque action recharge aussitôt la conversation.</p>
+
+      <h2 id="chiffres">Chiffres <em>clés</em></h2>
+      <table class="guide-table">
+        <thead><tr><th>Indicateur</th><th>Valeur</th></tr></thead>
+        <tbody>
+          <tr><td>Collaboration</td><td>Depuis novembre 2024, en cours</td></tr>
+          <tr><td>Mise en production</td><td>Mars 2025, lancement public en avril 2025</td></tr>
+          <tr><td>Avocats référencés</td><td>4&nbsp;500</td></tr>
+          <tr><td>Missions organisées</td><td>Plus de 3&nbsp;000, avec 100 % de réussite revendiquée</td></tr>
+          <tr><td>Barreaux couverts</td><td>164</td></tr>
+          <tr><td>Plateformes</td><td>Web, iOS, Android</td></tr>
+          <tr><td>Distinctions</td><td>Prix spécial du jury au Prix des incubateurs du CNB ; 1er prix du concours de pitch Lyon Start-up 2024</td></tr>
+          <tr><td>Financement</td><td>Bourse French Tech (<a href="../guides/bourse-french-tech-application.html">notre guide</a>)</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size: 14px; color: var(--ink-mute);">Chiffres d'usage publiés par <a href="https://www.libelaw.fr/notre-communaute/" rel="noopener">Libélaw</a> (octobre 2026). Distinctions : <a href="https://cnb.avocat.fr/les-avocats-innovent-le-prix-des-incubateurs-les-propulse" rel="noopener">Conseil national des barreaux</a>, <a href="https://www.lyoncapitale.fr/actualite/le-client-na-plus-a-payer-les-frais-de-deplacement-de-son-avocat-assure-victoire-bern" rel="noopener">Lyon Capitale</a>.</p>
+
+      <h2 id="lecons">Ce que ce projet <em>illustre</em></h2>
+      <h3>Une place de marché, c'est d'abord un paiement</h3>
+      <p>La mise en relation est la partie visible. La confiance, elle, se joue sur l'argent : qui paie, quand, qui reçoit, et quelle facture en sort. Nous avons intégré Stripe Connect dès les premières versions plutôt que de l'ajouter après coup.</p>
+      <h3>On construit avec les utilisateurs, pas pour eux</h3>
+      <p>Libélaw a conçu sa plateforme avec 250 avocats pilotes. De notre côté, des sprints courts et des démos régulières : chaque parcours est confronté à la pratique réelle avant d'être figé.</p>
+      <h3>Une base de code, trois plateformes</h3>
+      <p>Le choix de Flutter au départ a permis d'ajouter l'app native plus tard, sans recommencer. C'est toute la différence entre une évolution et un nouveau projet, et donc entre deux budgets.</p>
+
+      <h2>Ils le disent <em>mieux que nous</em></h2>
+      <blockquote class="case-quote">« Ça fait 2 ans qu'on bosse avec la team Akago : livraison en avance, features bonus et exigence qualité au top. 💪 Une équipe qui n'a pas peur des sprints et qui délivre, foncez ! 🚀 »</blockquote>
+      <p class="case-quote-by">Maxence Laurent · CEO, Libélaw</p>
+
+      <div class="guide-note">
+        <p style="margin-bottom: 16px;"><strong>Un projet similaire ?</strong> Place de marché métier, mise en relation de professionnels, paiement entre utilisateurs, workflows de validation : ce sont des briques que nous maîtrisons (<a href="../developper-saas.html">notre offre SaaS</a>). Parlez-nous du vôtre.</p>
+        <a href="https://tally.so/r/wdA0DA" class="btn btn-accent plausible-event-name=Reserver+Appel">
+          Contactez-nous directement
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+
+      <p><a href="libelaw.html">← Retour à la présentation du projet Libélaw</a> · <a href="./">Toutes nos réalisations</a></p>
+    </div>
+
+  </div>
+</main>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta-final" data-screen-label="CTA final">
+  <div class="wrap cta-inner">
+    <img class="cta-star" src="../assets/illustrations/star.svg" alt="" />
+    <h2>Votre secteur mérite son <em>Libélaw</em></h2>
+    <p>Racontez-nous le problème de votre métier : on vous dit comment une plateforme peut le résoudre, en combien de temps et pour quel budget. 30 minutes, gratuit.</p>
+    <div class="hero-ctas">
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-accent btn-lg plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="mailto:contact@akago.fr" class="btn btn-ghost-dark btn-lg plausible-event-name=Contact+Email">Je suis plus branché.e email</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <a href="../" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+        <p>Des alliés numériques pour faire avancer les projets engagés et les coopératives vite et bien.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="../">Accueil</a></li>
+          <li><a href="../about.html">À propos</a></li>
+          <li><a href="../creer-application-mobile.html">Créer une app mobile</a></li>
+          <li><a href="../developper-saas.html">Développer un SaaS</a></li>
+          <li><a href="./">Réalisations</a></li>
+          <li><a href="../guides/">Guides pratiques</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@akago.fr" class="plausible-event-name=Contact+Email">↪︎ contact@akago.fr</a></li>
+          <li><a href="https://tally.so/r/wdA0DA" class="plausible-event-name=Reserver+Appel">Réserver un appel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Légal</h5>
+        <ul>
+          <li><a href="../legal.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Akago. Tous droits réservés.</span>
+      <span>Fait avec ♥ en France</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 10) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+  })();
+</script>
+
+</body>
+</html>

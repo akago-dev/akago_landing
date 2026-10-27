@@ -5,7 +5,7 @@ Landing page **statique** d'Akago (collectif numérique pour projets engagés). 
 ## Pile
 
 - HTML écrit à la main, **aucun framework, aucun build**.
-- Un seul `style.css` (~1000 lignes), CSS vanilla avec variables.
+- Un `style.css` commun (~2 000 lignes), CSS vanilla avec variables. Seule exception : `realisations/realisations.css`, chargé uniquement sur les pages réalisations (pour ne pas alourdir le CSS bloquant des autres pages).
 - Quelques `<script>` inline (nav au scroll, etc.). Pas de JS externe.
 - Polices : Google Fonts (Bricolage Grotesque, DM Sans, JetBrains Mono).
 - Formulaires délégués à **Tally** ; contact en `mailto:`.
@@ -15,7 +15,9 @@ Landing page **statique** d'Akago (collectif numérique pour projets engagés). 
 - `index.html` — page d'accueil (hero, vision, équipe, packs, contact).
 - `about.html` — à propos.
 - `legal.html` — mentions légales.
-- `style.css` — toutes les styles. Sections balisées par des bandeaux `/* ===== ZONE ===== */`.
+- `realisations/` — hub + deux niveaux par projet : `<projet>.html` (présentation visuelle : logo, captures en grand, fiche, technologies) et `<projet>-etude-de-cas.html` (étude détaillée, gabarit des guides). Styles dans `realisations/realisations.css`.
+- `guides/` — guides pratiques (hub `guides/index.html`).
+- `style.css` — les styles communs. Sections balisées par des bandeaux `/* ===== ZONE ===== */`.
 - `assets/` — images, organisées par usage (noms intelligibles en minuscules-tirets) :
   - `akago/` — logo / marque · `people/` — photos d'équipe · `clients/` — logos clients
   - `showcase/` — captures d'app du défilé (`desktop-*`, `mobile-*`) · `illustrations/` — icônes SVG (packs, étoile)
@@ -28,7 +30,7 @@ Landing page **statique** d'Akago (collectif numérique pour projets engagés). 
 - **Design tokens** : tout passe par les variables CSS de `:root` (couleurs `--accent` #E25E3E, `--ink`, `--bg` #FBF7F0…, rayons `--radius*`, polices `--display/--sans/--mono`). Ne pas coder de couleurs/tailles en dur — réutiliser les tokens existants.
 - Conteneurs : `.wrap` (1240px), `.wrap-tight` (1040px), `.wrap-narrow` (820px).
 - Le site est en **français** (lang="fr").
-- Garder les pages cohérentes entre elles (nav/footer identiques).
+- Garder les pages cohérentes entre elles (nav/footer identiques). Menu du header : Réalisations · À propos + bouton d'appel ; sur la page courante, l'entrée devient `<span class="is-current" aria-current="page">` (non cliquable). Le logo ramène à l'accueil.
 
 ## Développement
 

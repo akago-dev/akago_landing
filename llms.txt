@@ -32,6 +32,15 @@ Points clés :
 - [À propos](https://akago.fr/about.html) : l'équipe (6 personnes), références clients, FAQ (financement BPI/France 2030, processus créatif).
 - [Mentions légales](https://akago.fr/legal.html) : AKAGO SAS, Challes-les-Eaux (Savoie), France.
 
+## Réalisations
+
+Index : https://akago.fr/realisations/ — pour chaque projet, une présentation (captures, fiche, technologies) et une étude de cas détaillée (contexte, fonctionnalités, architecture, chiffres clés, enseignements).
+
+- Libélaw — [présentation](https://akago.fr/realisations/libelaw.html) · [étude de cas](https://akago.fr/realisations/libelaw-etude-de-cas.html) : place de marché de la substitution et de la postulation entre avocats, conçue et développée par Akago depuis fin 2024 (web, iOS, Android en Flutter ; API AdonisJS ; paiement Stripe Connect ; messagerie par mission). 4 500 avocats référencés, plus de 3 000 missions, 164 barreaux (chiffres publiés par Libélaw). Prix spécial du jury au Prix des incubateurs du CNB ; développement financé par la Bourse French Tech.
+- Ping — [présentation](https://akago.fr/realisations/ping.html) · [étude de cas](https://akago.fr/realisations/ping-etude-de-cas.html) : app de rencontre « en vrai » (check-in géolocalisé dans un lieu, messagerie éphémère), app iOS/Android (Flutter) et serveur (AdonisJS, PostgreSQL) développés par Akago ; de l'idée à l'App Store en 12 semaines (juillet 2026) malgré un refus d'Apple corrigé, note 5,0 sur l'App Store, plus de 350 tests automatisés.
+- YippyLingo — [présentation](https://akago.fr/realisations/yippylingo.html) · [étude de cas](https://akago.fr/realisations/yippylingo-etude-de-cas.html) : app compagnon d'un kit d'apprentissage de l'anglais pour enfants ; Akago a repris le développement en cours (septembre 2023), publié l'app sur l'App Store en 10 semaines, puis assuré le suivi jusqu'en 2025. Contenu piloté par le CMS Directus.
+- Famyhelp — [présentation](https://akago.fr/realisations/famyhelp.html) · [étude de cas](https://akago.fr/realisations/famyhelp-etude-de-cas.html) : app qui localisait les professionnels de santé et du maintien à domicile autour d'un proche âgé ; reprise par Akago après la V1 (2020), évolutions et V2 jusqu'en 2023 (back-office prestataires en Flutter Web, abonnements Stripe, notifications géolocalisées, Firebase).
+
 ## Guides
 
 Index : https://akago.fr/guides/

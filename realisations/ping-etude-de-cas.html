@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Étude de cas Ping : une app de rencontre en 12 semaines — Akago</title>
+<meta name="description" content="Comment Akago a développé Ping, l'app de rencontre en vrai : check-in géolocalisé, messagerie éphémère, refus d'Apple corrigé, Flutter et AdonisJS, plus de 350 tests. De l'idée à l'App Store en 12 semaines." />
+<link rel="canonical" href="https://akago.fr/realisations/ping-etude-de-cas.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Akago" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://akago.fr/realisations/ping-etude-de-cas.html" />
+<meta property="og:title" content="Étude de cas : Ping, une app de rencontre sur les stores en 12 semaines" />
+<meta property="og:description" content="Comment Akago a développé Ping, l'app de rencontre en vrai : check-in géolocalisé, messagerie éphémère, refus d'Apple corrigé, Flutter et AdonisJS, plus de 350 tests. De l'idée à l'App Store en 12 semaines." />
+<meta property="og:image" content="https://akago.fr/assets/akago/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Étude de cas : Ping, une app de rencontre sur les stores en 12 semaines" />
+<meta name="twitter:description" content="Comment Akago a développé Ping, l'app de rencontre en vrai : check-in géolocalisé, messagerie éphémère, refus d'Apple corrigé, Flutter et AdonisJS, plus de 350 tests. De l'idée à l'App Store en 12 semaines." />
+<meta name="twitter:image" content="https://akago.fr/assets/akago/og-image.png" />
+
+<link rel="icon" type="image/png" href="../assets/akago/logo.png" />
+<link rel="preload" href="../assets/fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2" as="font" type="font/woff2" crossorigin />
+<!-- Analytics (Plausible, sans cookie) -->
+<script defer data-domain="akago.fr" data-api="https://plausible.io/api/event" src="../assets/js/stats.js"></script>
+<link rel="stylesheet" href="../style.css" />
+<link rel="stylesheet" href="realisations.css" />
+
+<!-- Données structurées -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Étude de cas : Ping, une app de rencontre sur les stores en 12 semaines",
+  "description": "Comment Akago a développé Ping, l'app de rencontre en vrai : check-in géolocalisé, messagerie éphémère, refus d'Apple corrigé, Flutter et AdonisJS, plus de 350 tests. De l'idée à l'App Store en 12 semaines.",
+  "image": "https://akago.fr/assets/akago/og-image.png",
+  "datePublished": "2026-10-26",
+  "dateModified": "2026-10-26",
+  "inLanguage": "fr",
+  "author": {
+    "@type": "Organization",
+    "name": "Akago",
+    "url": "https://akago.fr/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Akago",
+    "url": "https://akago.fr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://akago.fr/assets/akago/logo.png"
+    }
+  },
+  "mainEntityOfPage": "https://akago.fr/realisations/ping-etude-de-cas.html",
+  "about": {
+    "@type": "MobileApplication",
+    "name": "Ping",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "SocialNetworkingApplication",
+    "url": "https://apps.apple.com/fr/app/ping-brise-la-glace/id6762347950"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://akago.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Réalisations",
+      "item": "https://akago.fr/realisations/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Ping",
+      "item": "https://akago.fr/realisations/ping.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Étude de cas"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="../" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+    <div class="nav-links">
+      <a href="./">Réalisations</a>
+      <a href="../about.html">À propos</a>
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-primary plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero compact" data-screen-label="01 Étude de cas Hero">
+  <div class="wrap-narrow">
+    <a class="case-back" href="ping.html"><img src="../assets/icons/ping.png" alt="" width="167" height="167" /><span class="case-where">Ping · voir la présentation</span></a>
+    <span class="eyebrow">Étude de cas · App mobile de rencontre</span>
+    <h1 class="display">Étude de cas : Ping, une app de rencontre sur les stores <em>en 12 semaines</em></h1>
+    <p class="lead">Comment nous avons développé Ping, l'app qui fait se rencontrer les gens au bar ou en terrasse : le concept, les fonctionnalités, le refus d'Apple et comment nous l'avons passé, les choix techniques et ce que ce lancement nous a appris.</p>
+  </div>
+</header>
+
+<!-- ============================ ÉTUDE DE CAS ============================ -->
+<main class="section guide" data-screen-label="02 Étude de cas">
+  <div class="wrap-narrow">
+
+    <div class="guide-meta">
+      <span>Publié le 26 octobre 2026</span>
+      <span>Lecture : 5 minutes</span>
+      <span>Par l'équipe Akago</span>
+    </div>
+
+    <div class="case-stage is-phones">
+      <img class="phone" src="../assets/showcase/mobile-ping-home.webp" alt="Ping — les lieux autour de soi" width="400" height="870" />
+      <img class="phone" src="../assets/showcase/mobile-ping-venue.webp" alt="Ping — la salle d'un lieu : qui est là, les pings" width="400" height="870" />
+      <img class="phone" src="../assets/showcase/mobile-ping-settings.webp" alt="Ping — le profil" width="400" height="866" />
+    </div>
+
+    <div class="guide-tldr">
+      <span class="label">En bref</span>
+      <p>Ping est une app de rencontre « en vrai » : check-in dans un lieu, ping, conversation éphémère. Akago a développé <strong>l'app iOS et Android</strong> (Flutter), <strong>son serveur</strong> (AdonisJS, PostgreSQL) et la chaîne de publication. Premier commit le 10 avril 2026, Google Play en juin, <strong>App Store le 2 juillet</strong> après un refus d'Apple corrigé. Note de 5,0 sur l'App Store et plus de 350 tests automatisés.</p>
+    </div>
+
+    <nav class="guide-toc" aria-label="Sommaire">
+      <ol>
+        <li><a href="#contexte">Le contexte</a></li>
+        <li><a href="#developpe">Ce que nous avons développé</a></li>
+        <li><a href="#stores">Le passage par les stores</a></li>
+        <li><a href="#technique">Architecture et choix techniques</a></li>
+        <li><a href="#chiffres">Chiffres clés</a></li>
+        <li><a href="#lecons">Ce que ce projet illustre</a></li>
+      </ol>
+    </nav>
+
+    <div class="guide-body">
+      <h2 id="contexte">Le <em>contexte</em></h2>
+      <p>Les applications de rencontre ont installé le swipe, les longues bios et les algorithmes de matching, et beaucoup d'utilisateurs s'en lassent. Dans la vraie vie, la situation est inverse : on croise un regard au bar, et on n'ose pas aborder.</p>
+      <p>Ping part de ce moment-là. On fait un check-in dans le lieu où l'on se trouve, on voit qui est présent et ouvert à la rencontre, et on envoie un « ping ». S'il est accepté, la conversation s'ouvre ; elle se ferme quand on quitte le lieu. Pas de profil à rallonge, pas d'algorithme : juste un signal pour briser la glace.</p>
+      <p>Le projet est porté par WIR TECH, une jeune société d'Annecy. Le besoin : une équipe capable de développer l'app et son serveur, puis de la mener jusqu'aux stores rapidement, pour tester le concept en conditions réelles.</p>
+
+      <h2 id="developpe">Ce que nous avons <em>développé</em></h2>
+      <h3>Un check-in qu'on ne peut pas tricher</h3>
+      <p>Tout repose sur la présence réelle dans un lieu. Chaque lieu a son propre rayon, et la position est vérifiée côté serveur, pas seulement dans l'app. Autour : des lieux recommandés, la couverture ville par ville, la possibilité de demander l'ouverture d'une nouvelle ville, de suggérer un lieu ou de signaler un problème.</p>
+      <h3>La salle du lieu</h3>
+      <p>Une fois sur place, on voit qui est là et on envoie des pings, qui sont acceptés ou refusés. Un quota quotidien, dix pings par jour par défaut, garde à chaque ping sa valeur et limite les comportements insistants.</p>
+      <h3>Une messagerie éphémère</h3>
+      <p>La conversation s'ouvre quand un ping est accepté et disparaît à la sortie du lieu. Si l'on s'éloigne plus de cinq minutes, la sortie est automatique ; chaque matin, tout est remis à zéro. Chaque soirée repart d'une page blanche.</p>
+      <h3>La sécurité d'une app de rencontre</h3>
+      <p>Connexion par SMS, app réservée aux adultes, signalement et blocage, liste des comptes bloqués, suppression du compte. Les photos de profil sont converties et débarrassées de leurs métadonnées, dont la position où elles ont été prises, avant d'être stockées.</p>
+      <h3>Ce que nous avons volontairement laissé de côté</h3>
+      <p>Pas de notifications push dans la première version : elles sont prévues, mais repoussées après le lancement. Pas de paiement non plus, et une géolocalisation par GPS uniquement. Un <a href="../guides/mvp-budget-delais.html">MVP</a> se définit autant par ce qu'il ne fait pas que par ce qu'il fait : chaque fonctionnalité reportée, c'est du temps gagné pour vérifier que le concept plaît.</p>
+
+      <h2 id="stores">Le passage par <em>les stores</em></h2>
+      <p>Google Play a publié l'app en juin. Apple, lui, a refusé la première soumission : une app inutilisable sans géolocalisation enfreint l'une de ses règles de confidentialité, la règle 5.1.1. Pour une app dont tout le principe est d'être dans un lieu, il fallait une réponse qui ne dénature pas le produit.</p>
+      <p>Nous avons ajouté un parcours qui fonctionne sans GPS et un mode démo pour les équipes de validation d'Apple. L'app a été acceptée, et Ping est sur l'App Store depuis le 2 juillet 2026. Les versions partent automatiquement vers TestFlight et la console Google Play depuis l'intégration continue : chaque correction repart en validation sans manipulation manuelle.</p>
+
+      <h2 id="technique">Architecture et <em>choix techniques</em></h2>
+      <table class="guide-table">
+        <thead><tr><th>Composant</th><th>Technologie</th></tr></thead>
+        <tbody>
+          <tr><td>Application iOS et Android</td><td>Flutter, architecture BLoC, sur notre socle de composants maison</td></tr>
+          <tr><td>API</td><td>AdonisJS (Node.js, TypeScript)</td></tr>
+          <tr><td>Base de données</td><td>PostgreSQL ; tâches planifiées (sorties automatiques, remise à zéro du matin) avec pg-boss</td></tr>
+          <tr><td>Authentification</td><td>Firebase Auth, connexion par SMS</td></tr>
+          <tr><td>Photos</td><td>Stockage objet, conversion en WebP et suppression des métadonnées</td></tr>
+          <tr><td>Infrastructure</td><td>Conteneurs Docker derrière Traefik (HTTPS automatique), sauvegardes</td></tr>
+          <tr><td>Livraison</td><td>GitHub Actions et Fastlane, vers TestFlight et Google Play</td></tr>
+          <tr><td>Qualité</td><td>181 tests sur l'app, 147 sur le serveur, 25 parcours de bout en bout (Maestro)</td></tr>
+          <tr><td>Suivi</td><td>Sentry pour les erreurs, Metabase pour l'activité</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Des tests à deux téléphones.</strong> Le cœur de Ping se joue à deux : l'un envoie un ping, l'autre l'accepte, la conversation s'ouvre. Certains de nos parcours automatisés pilotent donc deux téléphones en même temps, pour vérifier ce scénario de bout en bout.</p>
+      <p><strong>Des règles appliquées côté serveur.</strong> La sortie automatique d'un lieu et la remise à zéro du matin ne dépendent pas de l'app ouverte sur le téléphone : ce sont des tâches planifiées sur le serveur, ce qui garantit le même comportement pour tout le monde.</p>
+
+      <h2 id="chiffres">Chiffres <em>clés</em></h2>
+      <table class="guide-table">
+        <thead><tr><th>Indicateur</th><th>Valeur</th></tr></thead>
+        <tbody>
+          <tr><td>Premier commit</td><td>10 avril 2026</td></tr>
+          <tr><td>Serveur de production</td><td>En service le 21 mai 2026</td></tr>
+          <tr><td>Google Play</td><td>Juin 2026</td></tr>
+          <tr><td>App Store</td><td>2 juillet 2026, 12 semaines après le premier commit</td></tr>
+          <tr><td>Versions livrées</td><td>Plus de 40, entre avril et juillet 2026</td></tr>
+          <tr><td>Écrans</td><td>13, plus les panneaux et fenêtres</td></tr>
+          <tr><td>Tests automatisés</td><td>Plus de 350</td></tr>
+          <tr><td>Note App Store</td><td>5,0 (9 avis, octobre 2026)</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="lecons">Ce que ce projet <em>illustre</em></h2>
+      <h3>La validation d'Apple se prépare dès la conception</h3>
+      <p>Les règles des stores ne sont pas une formalité de fin de projet. Une app fondée sur la géolocalisation doit prévoir dès le départ ce qui se passe quand l'utilisateur la refuse : mieux vaut y penser au cadrage qu'au moment de la soumission.</p>
+      <h3>Aller vite n'empêche pas de tester</h3>
+      <p>Douze semaines et plus de 350 tests automatisés : ce n'est pas contradictoire. Les tests permettent de livrer souvent sans casser ce qui marche, et c'est précisément ce qui rend un rythme rapide tenable.</p>
+      <h3>Un produit qui tient dans quelques règles</h3>
+      <p>Rayon par lieu, quota de pings, conversation éphémère, remise à zéro du matin : quelques règles bien appliquées donnent à Ping son caractère. Le travail consiste à les rendre fiables, pas à multiplier les fonctionnalités.</p>
+
+      <h2>Ils le disent <em>mieux que nous</em></h2>
+      <blockquote class="case-quote">« Une équipe très compétente que je recommande sans hésiter. De véritables partenaires, investis et force de proposition, qui ont su s'adapter à mes contraintes et dépasser ma vision initiale. 🚀 »</blockquote>
+      <p class="case-quote-by">Fondateur de Ping</p>
+
+      <div class="guide-note">
+        <p style="margin-bottom: 16px;"><strong>Un projet similaire ?</strong> Géolocalisation, mise en relation, messagerie, modération : ce sont des briques que nous maîtrisons, et nous savons les faire passer chez Apple et Google (<a href="../creer-application-mobile.html">notre offre application mobile</a>). Parlez-nous du vôtre.</p>
+        <a href="https://tally.so/r/wdA0DA" class="btn btn-accent plausible-event-name=Reserver+Appel">
+          Contactez-nous directement
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+
+      <p><a href="ping.html">← Retour à la présentation du projet Ping</a> · <a href="./">Toutes nos réalisations</a></p>
+    </div>
+
+  </div>
+</main>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta-final" data-screen-label="CTA final">
+  <div class="wrap cta-inner">
+    <img class="cta-star" src="../assets/illustrations/star.svg" alt="" />
+    <h2>Et si votre app était sur les stores <em>dans 3 mois</em> ?</h2>
+    <p>Racontez-nous votre idée : on vous dit ce qu'il faut construire en premier, en combien de temps et pour quel budget. 30 minutes, gratuit.</p>
+    <div class="hero-ctas">
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-accent btn-lg plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="mailto:contact@akago.fr" class="btn btn-ghost-dark btn-lg plausible-event-name=Contact+Email">Je suis plus branché.e email</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <a href="../" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+        <p>Des alliés numériques pour faire avancer les projets engagés et les coopératives vite et bien.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="../">Accueil</a></li>
+          <li><a href="../about.html">À propos</a></li>
+          <li><a href="../creer-application-mobile.html">Créer une app mobile</a></li>
+          <li><a href="../developper-saas.html">Développer un SaaS</a></li>
+          <li><a href="./">Réalisations</a></li>
+          <li><a href="../guides/">Guides pratiques</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@akago.fr" class="plausible-event-name=Contact+Email">↪︎ contact@akago.fr</a></li>
+          <li><a href="https://tally.so/r/wdA0DA" class="plausible-event-name=Reserver+Appel">Réserver un appel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Légal</h5>
+        <ul>
+          <li><a href="../legal.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Akago. Tous droits réservés.</span>
+      <span>Fait avec ♥ en France</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 10) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+  })();
+</script>
+
+</body>
+</html>

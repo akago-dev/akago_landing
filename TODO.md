@@ -6,6 +6,8 @@ Liste des évolutions à apporter au site. Cocher une fois fait.
 
 ### Pages réalisations — collecte par client (phase 2 du plan de visibilité)
 
+Deux niveaux par projet (modèle : bob-le-developpeur.com/portfolio) : `realisations/<projet>.html` = présentation visuelle (logo, captures en grand, fiche, technologies, description courte) ; `realisations/<projet>-etude-de-cas.html` = étude détaillée (contexte, fonctionnalités, architecture, chiffres clés, enseignements). Les pages sont générées une fois puis maintenues à la main.
+
 Infos à récupérer pour chaque projet avant de rédiger sa page :
 
 | # | Info | Usage |
@@ -22,14 +24,14 @@ Infos à récupérer pour chaque projet avant de rédiger sa page :
 État par client :
 
 - [ ] **Moofize** (4 ans, priorité 1) — financement ✓ (la Bourse French Tech a financé notre travail ; dossier monté sans nous) ; manque : chiffres, signataire, accord.
-- [ ] **Libélaw** (priorité 1, brouillon démarré dans `_drafts/`) — signataire ✓ (Maxence Laurent, CEO) ; financement ✓ (la Bourse French Tech a financé notre travail ; dossier monté sans nous) ; manque : chiffres, accord.
-- [ ] **Famyhelp** — manque : chiffres, signataire, accord.
-- [ ] **Ping** — manque : chiffres (ou angle « de l'idée au lancement »), accord.
-- [ ] **YippyLingo** — manque : chiffres, 2-3 captures supplémentaires, accord.
+- [x] **Libélaw** — `realisations/libelaw.html` + `libelaw-etude-de-cas.html` (26/10/2026). Chiffres et distinctions repris de libelaw.fr, qui vaut confirmation (décision d'Antoine) : 3 000+ missions, 4 500 avocats, 164 barreaux ; prix spécial du jury CNB (Prix des incubateurs), 1er prix pitch Lyon Start-up 2024. « Labellisé BPI / France 2030 » retiré (non confirmé). À rafraîchir quand libelaw.fr met ses chiffres à jour.
+- [x] **Ping** — `realisations/ping.html` + `ping-etude-de-cas.html` (26/10/2026). Angle « de l'idée aux stores en 12 semaines » ; note App Store 5,0 (9 avis, oct. 2026), 350+ tests. Publication validée par Antoine (27/10/2026). Nom du fondateur non cité (absent du site et des stores). Les captures `mobile-ping-*` sont des maquettes un peu datées : à remplacer par de vraies captures.
+- [x] **YippyLingo** — `realisations/yippylingo.html` + `yippylingo-etude-de-cas.html` (26/10/2026), publiée sans validation (décision d'Antoine). Angle « reprise » : Akago a rejoint le projet en sept. 2023 (2 devs avant), App Store le 20/11/2023, suivi jusqu'en mai 2025. Pas de chiffre public exploitable (50+ téléchargements). Captures : 9 écrans repris du portfolio perso d'Antoine (`~/Developer/front/portfolio/assets/showcase/yippylingo-*`), le 27/10/2026.
+- [x] **Famyhelp** — `realisations/famyhelp.html` + `famyhelp-etude-de-cas.html` (26/10/2026), publiée sans validation (décision d'Antoine). Reprise de la V1 en avril 2020, évolutions + V2 jusqu'en 2023. ⚠️ App retirée des stores et **famyhelp.com sert désormais un casino** : ne jamais lier le domaine. Page rédigée au passé, sans lien vers l'app.
 - [ ] **Leezay** — manque : tout (citation, chiffres, captures, accord).
 
 - [x] **Témoignages** : ~~ajouter un lien vers le site du projet sur chaque carte~~ — abandonné : plusieurs sites projets n'existent plus.
-- [ ] **Témoignages** : récupérer puis réintégrer la citation de **Leezay** (sa carte est retirée du site en attendant). YippyLingo, Ping, Libélaw, Moofize, Famyhelp affichées.
+- [ ] **Témoignages** : récupérer puis réintégrer la citation de **Leezay** (sa carte est retirée du site en attendant). YippyLingo, Ping, Libélaw, Moofize, Famyhelp affichées (avec lien « Lire l'étude de cas » sauf Moofize).
 - [x] **RGPD** : Q/R ajoutée à la FAQ accueil (hébergement en France, privacy by design, accompagnement conformité + DPO). Pas de contrat de sous-traitance art. 28 mentionné (pas encore en place).
 - [x] **IA** : Q/R « Vous utilisez de l'IA pour coder mon app ? » ajoutée à la FAQ accueil (transparence dev). Reste optionnel : en parler aussi dans le bloc 2 (section *Approche*).
 
