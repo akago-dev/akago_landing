@@ -65,7 +65,9 @@ d'entraînement (lent, durable) et la recherche web en direct des assistants
         niveaux : présentation visuelle + étude de cas détaillée (`<projet>-etude-de-cas.html`). Liées depuis
         les témoignages (accueil, page mobile, page SaaS), le footer de toutes les pages,
         le guide Bourse French Tech, `llms.txt` et le sitemap.
-      - [ ] Reste : Moofize, Leezay (cf. TODO.md).
+      - [x] 28/10/2026 : Moofize (présentation + étude de cas), liée depuis ses témoignages (accueil, page SaaS),
+        le guide Bourse French Tech, `llms.txt` et le sitemap.
+      - [ ] Reste : Leezay (cf. TODO.md).
 - [x] **Deux pages d'offre dédiées** — publiées le 11/06/2026 :
       `creer-application-mobile.html` et `developper-saas.html`. Pages commerciales
       (Service + FAQPage en JSON-LD), témoignages ciblés (mobile : Ping/YippyLingo/

@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Étude de cas Moofize : une app santé web et mobile — Akago</title>
+<meta name="description" content="Comment Akago développe et fait évoluer Moofize depuis 2020 : l'app qui relie professionnels de santé et industrie (rendez-vous, agenda Outlook, messagerie, visio), sur iOS, Android et web avec Flutter, Firebase et Node.js." />
+<link rel="canonical" href="https://akago.fr/realisations/moofize-etude-de-cas.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Akago" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://akago.fr/realisations/moofize-etude-de-cas.html" />
+<meta property="og:title" content="Étude de cas : Moofize, six ans pour digitaliser la visite médicale" />
+<meta property="og:description" content="Comment Akago développe et fait évoluer Moofize depuis 2020 : l'app qui relie professionnels de santé et industrie (rendez-vous, agenda Outlook, messagerie, visio), sur iOS, Android et web avec Flutter, Firebase et Node.js." />
+<meta property="og:image" content="https://akago.fr/assets/akago/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Étude de cas : Moofize, six ans pour digitaliser la visite médicale" />
+<meta name="twitter:description" content="Comment Akago développe et fait évoluer Moofize depuis 2020 : l'app qui relie professionnels de santé et industrie (rendez-vous, agenda Outlook, messagerie, visio), sur iOS, Android et web avec Flutter, Firebase et Node.js." />
+<meta name="twitter:image" content="https://akago.fr/assets/akago/og-image.png" />
+
+<link rel="icon" type="image/png" href="../assets/akago/logo.png" />
+<link rel="preload" href="../assets/fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2" as="font" type="font/woff2" crossorigin />
+<!-- Analytics (Plausible, sans cookie) -->
+<script defer data-domain="akago.fr" data-api="https://plausible.io/api/event" src="../assets/js/stats.js"></script>
+<link rel="stylesheet" href="../style.css" />
+<link rel="stylesheet" href="realisations.css" />
+
+<!-- Données structurées -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Étude de cas : Moofize, six ans pour digitaliser la visite médicale",
+  "description": "Comment Akago développe et fait évoluer Moofize depuis 2020 : l'app qui relie professionnels de santé et industrie (rendez-vous, agenda Outlook, messagerie, visio), sur iOS, Android et web avec Flutter, Firebase et Node.js.",
+  "image": "https://akago.fr/assets/akago/og-image.png",
+  "datePublished": "2026-10-28",
+  "dateModified": "2026-10-28",
+  "inLanguage": "fr",
+  "author": {
+    "@type": "Organization",
+    "name": "Akago",
+    "url": "https://akago.fr/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Akago",
+    "url": "https://akago.fr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://akago.fr/assets/akago/logo.png"
+    }
+  },
+  "mainEntityOfPage": "https://akago.fr/realisations/moofize-etude-de-cas.html",
+  "about": {
+    "@type": "MobileApplication",
+    "name": "Moofize",
+    "operatingSystem": "iOS, Android, Web",
+    "applicationCategory": "HealthApplication",
+    "url": "https://www.moofize.fr/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://akago.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Réalisations",
+      "item": "https://akago.fr/realisations/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Moofize",
+      "item": "https://akago.fr/realisations/moofize.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Étude de cas"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="../" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+    <div class="nav-links">
+      <a href="./">Réalisations</a>
+      <a href="../about.html">À propos</a>
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-primary plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero compact" data-screen-label="01 Étude de cas Hero">
+  <div class="wrap-narrow">
+    <a class="case-back" href="moofize.html"><img src="../assets/icons/moofize.png" alt="" width="512" height="512" /><span class="case-where">Moofize · voir la présentation</span></a>
+    <span class="eyebrow">Étude de cas · SaaS santé, web et mobile</span>
+    <h1 class="display">Étude de cas : Moofize, six ans pour <em>digitaliser la visite médicale</em></h1>
+    <p class="lead">Comment nous développons Moofize depuis sa première ligne de code : une app mobile, puis une web app sortie de la même base, et six ans d'évolutions pour relier les professionnels de santé et l'industrie.</p>
+  </div>
+</header>
+
+<!-- ============================ ÉTUDE DE CAS ============================ -->
+<main class="section guide" data-screen-label="02 Étude de cas">
+  <div class="wrap-narrow">
+
+    <div class="guide-meta">
+      <span>Publié le 28 octobre 2026</span>
+      <span>Lecture : 5 minutes</span>
+      <span>Par l'équipe Akago</span>
+    </div>
+
+    <div class="case-stage is-desktop">
+      <img class="screen" src="../assets/showcase/desktop-moofize-dashboard.webp" alt="Moofize — l'accueil de la web app : les rendez-vous à venir" width="1140" height="760" />
+    </div>
+
+    <div class="guide-tldr">
+      <span class="label">En bref</span>
+      <p>Moofize organise les rendez-vous entre les professionnels de santé et l'industrie de la santé : créneaux de réception, demandes de rendez-vous, messagerie et visio. Akago la <strong>développe entièrement depuis fin 2020</strong> : app iOS et Android publiée en 2021, <strong>web app en 2024</strong> à partir de la même base de code Flutter, serveur Node.js, puis un agenda synchronisé avec Outlook depuis 2025.</p>
+    </div>
+
+    <nav class="guide-toc" aria-label="Sommaire">
+      <ol>
+        <li><a href="#contexte">Le contexte</a></li>
+        <li><a href="#publics">Deux publics, deux parcours</a></li>
+        <li><a href="#web">Du mobile au web, sans tout réécrire</a></li>
+        <li><a href="#evolutions">Six ans d'évolutions</a></li>
+        <li><a href="#technique">Architecture et choix techniques</a></li>
+        <li><a href="#chiffres">Chiffres clés</a></li>
+        <li><a href="#lecons">Ce que ce projet illustre</a></li>
+      </ol>
+    </nav>
+
+    <div class="guide-body">
+      <h2 id="contexte">Le <em>contexte</em></h2>
+      <p>La visite médicale, c'est la rencontre entre un professionnel de santé et un représentant de l'industrie : délégué d'un laboratoire, d'un fabricant de matériel, d'un fournisseur. Côté praticien, les sollicitations arrivent par téléphone ou à l'accueil du cabinet, rarement au bon moment. Côté industrie, décrocher un rendez-vous demande des appels répétés, sans visibilité sur les disponibilités.</p>
+      <p>Moofize, startup lyonnaise, a imaginé une application pour remettre de l'ordre dans ces échanges : le praticien décide quand il reçoit, et sous quelle forme ; le délégué voit les créneaux ouverts et réserve. L'app est gratuite pour les professionnels de santé ; les entreprises de santé s'abonnent.</p>
+      <p>Nous avons rejoint le projet dès les maquettes, fin 2020. Tout restait à construire : l'architecture, l'app, le serveur, la publication sur les stores. Depuis, tout le développement de Moofize est fait chez Akago : choix techniques, app, serveur, back-office, mises en ligne et maintenance.</p>
+
+      <h2 id="publics">Deux publics, <em>deux parcours</em></h2>
+      <h3>Pour les professionnels de santé</h3>
+      <p>Médecins, pharmaciens, vétérinaires, établissements : chacun crée ses créneaux de réception, ponctuels ou récurrents, au cabinet ou en visio, et peut en suspendre certaines dates. Les demandes arrivent dans l'app et s'acceptent ou se refusent en un clic. À l'inscription, le numéro RPPS du praticien est vérifié par le serveur.</p>
+      <h3>Pour l'industrie de la santé</h3>
+      <p>Le délégué cherche ses interlocuteurs dans un carnet d'adresses filtré par profession, spécialité et département, consulte les créneaux libres et demande un rendez-vous, avec un message s'il le souhaite. Son accueil regroupe les rendez-vous à venir, en attente ou refusés.</p>
+      <h3>Une messagerie et une visio intégrées</h3>
+      <p>Les échanges restent dans un canal professionnel, séparé des messageries personnelles : messages, pièces jointes, notifications. Le jour du rendez-vous, la visio se lance depuis Moofize, sur le téléphone comme sur l'ordinateur, sans autre outil à installer.</p>
+      <h3>Un espace entreprise et un back-office</h3>
+      <p>Une entreprise invite ses collaborateurs et gère son abonnement ; l'équipe Moofize administre les sociétés et les utilisateurs depuis un back-office.</p>
+      <div class="case-stage is-phones">
+        <img class="phone" src="../assets/showcase/mobile-moofize-carnet.webp" alt="Moofize sur mobile — le carnet d'adresses des professionnels de santé" width="600" height="1299" loading="lazy" />
+        <img class="phone" src="../assets/showcase/mobile-moofize-messagerie.webp" alt="Moofize sur mobile — la messagerie professionnelle" width="600" height="1299" loading="lazy" />
+        <img class="phone" src="../assets/showcase/mobile-moofize-visio.webp" alt="Moofize sur mobile — un rendez-vous en visio" width="600" height="1299" loading="lazy" />
+      </div>
+
+      <h2 id="web">Du mobile au web, <em>sans tout réécrire</em></h2>
+      <p>L'app iPhone et Android est sortie sur les stores en 2021. Restait l'ordinateur : au cabinet comme dans les entreprises de santé, l'agenda se gère aussi sur grand écran.</p>
+      <p>Nous avons construit la web app en parallèle des évolutions de l'app mobile, sur environ dix-huit mois ; elle est sortie en avril 2024. Elle n'a pas demandé un second projet : la logique métier (données, règles, états) est commune, seules les interfaces diffèrent entre mobile et web. Une correction faite une fois profite aux trois plateformes.</p>
+      <div class="case-gallery">
+        <img class="" src="../assets/showcase/desktop-moofize-messenger.webp" alt="Moofize — la messagerie de la web app" width="1140" height="760" loading="lazy" />
+        <img class="" src="../assets/showcase/desktop-moofize-visio.webp" alt="Moofize — un rendez-vous en visio dans le navigateur" width="1140" height="760" loading="lazy" />
+      </div>
+
+      <h2 id="evolutions">Six ans <em>d'évolutions</em></h2>
+      <h3>L'agenda synchronisé avec Outlook</h3>
+      <p>Depuis 2025, l'agenda des praticiens est connecté à Outlook. Les rendez-vous Outlook apparaissent dans l'agenda Moofize, et un créneau déjà occupé n'est plus proposé aux délégués. La synchronisation se fait côté serveur : les accès Microsoft du praticien restent sur le serveur.</p>
+      <h3>Le travail invisible</h3>
+      <p>Montées de version de Flutter et de Firebase, refonte de l'architecture en 2025, premiers tests automatisés, déploiement continu vers les stores : c'est ce qui garde une app publiable et maintenable après six ans.</p>
+
+      <h2 id="technique">Architecture et <em>choix techniques</em></h2>
+      <table class="guide-table">
+        <thead><tr><th>Composant</th><th>Technologie</th></tr></thead>
+        <tbody>
+          <tr><td>App iOS, Android et web</td><td>Flutter, une seule base de code : logique commune, interfaces mobile et web distinctes</td></tr>
+          <tr><td>Données en temps réel</td><td>Firebase Firestore</td></tr>
+          <tr><td>Authentification</td><td>Firebase Authentication</td></tr>
+          <tr><td>Serveur</td><td>Node.js et TypeScript (Express), en conteneurs Docker</td></tr>
+          <tr><td>Visio</td><td>Agora, sur mobile et dans le navigateur</td></tr>
+          <tr><td>Agenda</td><td>Synchronisation Outlook (Microsoft Graph), export au format iCal</td></tr>
+          <tr><td>Notifications</td><td>Firebase Cloud Messaging et e-mails transactionnels</td></tr>
+          <tr><td>Hébergement de la web app</td><td>Firebase Hosting</td></tr>
+          <tr><td>Suivi</td><td>Sentry, pour les erreurs en production</td></tr>
+          <tr><td>Publication</td><td>Déploiement continu vers l'App Store et Google Play</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Pourquoi Flutter.</strong> Moofize a commencé par le mobile, mais l'ordinateur était une évidence pour la suite. Avec Flutter, la web app est sortie de la même base de code que l'app : pas de seconde équipe, pas de fonctionnalités qui divergent d'une plateforme à l'autre.</p>
+      <p><strong>Firestore pour le temps réel, un serveur pour le reste.</strong> Messagerie, demandes de rendez-vous, notifications : l'essentiel de Moofize se passe en direct. Firestore pousse chaque changement vers les appareils concernés sans serveur de temps réel à maintenir. Le serveur Node.js garde ce qui doit rester côté serveur : vérification RPPS, jetons de visio, disponibilités, synchronisation Outlook, e-mails.</p>
+
+      <h2 id="chiffres">Chiffres <em>clés</em></h2>
+      <table class="guide-table">
+        <thead><tr><th>Indicateur</th><th>Valeur</th></tr></thead>
+        <tbody>
+          <tr><td>Collaboration</td><td>Depuis novembre 2020, en cours</td></tr>
+          <tr><td>App iOS et Android</td><td>Sur les stores depuis 2021</td></tr>
+          <tr><td>Web app</td><td>Avril 2024</td></tr>
+          <tr><td>Plateformes</td><td>iOS, Android, web</td></tr>
+          <tr><td>Commits</td><td>Plus de 1&nbsp;700, sur l'app et le serveur</td></tr>
+          <tr><td>Agenda</td><td>Synchronisé avec Outlook depuis 2025</td></tr>
+          <tr><td>Financement</td><td>En partie par la Bourse French Tech (<a href="../guides/bourse-french-tech-application.html">notre guide</a>)</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="lecons">Ce que ce projet <em>illustre</em></h2>
+      <h3>Un produit se construit dans la durée</h3>
+      <p>Six ans après, Moofize n'est pas « terminé » : nouvelles demandes des utilisateurs, intégrations comme Outlook, montées de version. Un partenaire technique stable évite de réapprendre le projet à chaque étape.</p>
+      <h3>Penser au web dès le mobile</h3>
+      <p>Partir sur une base de code partagée a rendu la web app possible sans réécriture. C'est un choix fait en 2020 qui a fait la différence trois ans plus tard, et donc sur le budget.</p>
+      <h3>Une seule équipe, du serveur aux stores</h3>
+      <p>App, serveur, back-office, publication : tout est fait chez Akago. Une équipe responsable de bout en bout, c'est moins de coordination entre prestataires et des évolutions qui ne restent pas bloquées entre l'app et le serveur.</p>
+
+      <h2>Ils le disent <em>mieux que nous</em></h2>
+      <blockquote class="case-quote">« Nous collaborons avec Akago depuis 4 ans pour le développement de notre application web et mobile, nous sommes pleinement satisfaits de leur accompagnement. »</blockquote>
+      <p class="case-quote-by">Moofize</p>
+
+      <div class="guide-note">
+        <p style="margin-bottom: 16px;"><strong>Un projet similaire ?</strong> Prise de rendez-vous, agendas synchronisés, messagerie, visio, une app mobile et web à partir d'une même base : ce sont des briques que nous maîtrisons (<a href="../developper-saas.html">notre offre SaaS</a>). Parlez-nous du vôtre.</p>
+        <a href="https://tally.so/r/wdA0DA" class="btn btn-accent plausible-event-name=Reserver+Appel">
+          Contactez-nous directement
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+
+      <p><a href="moofize.html">← Retour à la présentation du projet Moofize</a> · <a href="./">Toutes nos réalisations</a></p>
+    </div>
+
+  </div>
+</main>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="cta-final" data-screen-label="CTA final">
+  <div class="wrap cta-inner">
+    <img class="cta-star" src="../assets/illustrations/star.svg" alt="" />
+    <h2>Un produit qui dure, <em>ça se construit</em></h2>
+    <p>Racontez-nous votre projet : on vous dit quoi construire en premier, comment le faire évoluer et pour quel budget. 30 minutes, gratuit.</p>
+    <div class="hero-ctas">
+      <a href="https://tally.so/r/wdA0DA" class="btn btn-accent btn-lg plausible-event-name=Reserver+Appel">
+        Réserver un appel découverte
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="mailto:contact@akago.fr" class="btn btn-ghost-dark btn-lg plausible-event-name=Contact+Email">Je suis plus branché.e email</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <a href="../" class="logo">
+      <img src="../assets/akago/logo.png" alt="Akago" />
+    </a>
+        <p>Des alliés numériques pour faire avancer les projets engagés et les coopératives vite et bien.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="../">Accueil</a></li>
+          <li><a href="../about.html">À propos</a></li>
+          <li><a href="../creer-application-mobile.html">Créer une app mobile</a></li>
+          <li><a href="../developper-saas.html">Développer un SaaS</a></li>
+          <li><a href="./">Réalisations</a></li>
+          <li><a href="../guides/">Guides pratiques</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@akago.fr" class="plausible-event-name=Contact+Email">↪︎ contact@akago.fr</a></li>
+          <li><a href="https://tally.so/r/wdA0DA" class="plausible-event-name=Reserver+Appel">Réserver un appel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Légal</h5>
+        <ul>
+          <li><a href="../legal.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Akago. Tous droits réservés.</span>
+      <span>Fait avec ♥ en France</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 10) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+  })();
+</script>
+
+</body>
+</html>

@@ -23,7 +23,7 @@ Infos à récupérer pour chaque projet avant de rédiger sa page :
 
 État par client :
 
-- [ ] **Moofize** (4 ans, priorité 1) — financement ✓ (la Bourse French Tech a financé notre travail ; dossier monté sans nous) ; manque : chiffres, signataire, accord.
+- [x] **Moofize** — `realisations/moofize.html` + `moofize-etude-de-cas.html` (28/10/2026), publiée sans validation (décision d'Antoine). Angle « six ans de développement, tout fait chez Akago » (P.O Marec en faisait partie) : app iOS/Android (stores 2021) puis web app (avril 2024) depuis une base Flutter commune ; sync Outlook depuis 2025 (changelog de `moofize_app`). Ne pas parler du chantier performance (démarrage 12 s → 2 s) : ce serait avouer que notre app était lente. Financement BFT ✓ (en partie : le dire ainsi). 1 700+ commits (app 1 278 + serveur 424 sur les branches principales GitHub, oct. 2026). Pas de chiffre d'usage public (App Store : 2 avis) ; témoignage non signé. Captures mobiles = maquettes 2021 de moofize.fr (carnet, messagerie, visio ; l'écran « demandes » écarté car il montre des noms de vrais laboratoires) : à remplacer par de vraies captures.
 - [x] **Libélaw** — `realisations/libelaw.html` + `libelaw-etude-de-cas.html` (26/10/2026). Chiffres et distinctions repris de libelaw.fr, qui vaut confirmation (décision d'Antoine) : 3 000+ missions, 4 500 avocats, 164 barreaux ; prix spécial du jury CNB (Prix des incubateurs), 1er prix pitch Lyon Start-up 2024. « Labellisé BPI / France 2030 » retiré (non confirmé). À rafraîchir quand libelaw.fr met ses chiffres à jour.
 - [x] **Ping** — `realisations/ping.html` + `ping-etude-de-cas.html` (26/10/2026). Angle « de l'idée aux stores en 12 semaines » ; note App Store 5,0 (9 avis, oct. 2026), 350+ tests. Publication validée par Antoine (27/10/2026). Nom du fondateur non cité (absent du site et des stores). Les captures `mobile-ping-*` sont des maquettes un peu datées : à remplacer par de vraies captures.
 - [x] **YippyLingo** — `realisations/yippylingo.html` + `yippylingo-etude-de-cas.html` (26/10/2026), publiée sans validation (décision d'Antoine). Angle « reprise » : Akago a rejoint le projet en sept. 2023 (2 devs avant), App Store le 20/11/2023, suivi jusqu'en mai 2025. Pas de chiffre public exploitable (50+ téléchargements). Captures : 9 écrans repris du portfolio perso d'Antoine (`~/Developer/front/portfolio/assets/showcase/yippylingo-*`), le 27/10/2026.
@@ -31,7 +31,7 @@ Infos à récupérer pour chaque projet avant de rédiger sa page :
 - [ ] **Leezay** — manque : tout (citation, chiffres, captures, accord).
 
 - [x] **Témoignages** : ~~ajouter un lien vers le site du projet sur chaque carte~~ — abandonné : plusieurs sites projets n'existent plus.
-- [ ] **Témoignages** : récupérer puis réintégrer la citation de **Leezay** (sa carte est retirée du site en attendant). YippyLingo, Ping, Libélaw, Moofize, Famyhelp affichées (avec lien « Lire l'étude de cas » sauf Moofize).
+- [ ] **Témoignages** : récupérer puis réintégrer la citation de **Leezay** (sa carte est retirée du site en attendant). YippyLingo, Ping, Libélaw, Moofize, Famyhelp affichées, toutes avec un lien « Voir la réalisation ».
 - [x] **RGPD** : Q/R ajoutée à la FAQ accueil (hébergement en France, privacy by design, accompagnement conformité + DPO). Pas de contrat de sous-traitance art. 28 mentionné (pas encore en place).
 - [x] **IA** : Q/R « Vous utilisez de l'IA pour coder mon app ? » ajoutée à la FAQ accueil (transparence dev). Reste optionnel : en parler aussi dans le bloc 2 (section *Approche*).
 
